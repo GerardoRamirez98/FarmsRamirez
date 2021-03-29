@@ -1,0 +1,9 @@
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\FarmsRamirezDAL.dll
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\FarmsRamirezDAL.pdb
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\Dapper.dll
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\Dapper.xml
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csprojAssemblyReference.cache
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csproj.CoreCompileInputs.cache
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csproj.CopyComplete
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.dll
+C:\Users\Gerardo Ramirez\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.pdb

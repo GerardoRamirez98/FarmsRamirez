@@ -125,6 +125,7 @@ namespace SimiSoft
             this.btnProductos.Caption = "Productos";
             this.btnProductos.Id = 5;
             this.btnProductos.Name = "btnProductos";
+            this.btnProductos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductos_ItemClick);
             // 
             // bar3
             // 

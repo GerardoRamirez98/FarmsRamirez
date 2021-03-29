@@ -256,6 +256,7 @@ namespace SimiSoft
             this.colactivo});
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
+            this.gvProductos.OptionsBehavior.Editable = false;
             this.gvProductos.OptionsView.ColumnAutoWidth = false;
             this.gvProductos.OptionsView.EnableAppearanceEvenRow = true;
             this.gvProductos.OptionsView.ShowAutoFilterRow = true;
@@ -367,18 +368,21 @@ namespace SimiSoft
             this.btnNuevoProducto.Caption = "Nuevo";
             this.btnNuevoProducto.Id = 1;
             this.btnNuevoProducto.Name = "btnNuevoProducto";
+            this.btnNuevoProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoProducto_ItemClick);
             // 
             // btnModificarProducto
             // 
             this.btnModificarProducto.Caption = "Modificar";
             this.btnModificarProducto.Id = 2;
             this.btnModificarProducto.Name = "btnModificarProducto";
+            this.btnModificarProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificarProducto_ItemClick);
             // 
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.Caption = "Eliminar";
             this.btnEliminarProducto.Id = 3;
             this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarProducto_ItemClick);
             // 
             // skinBarSubItem1
             // 

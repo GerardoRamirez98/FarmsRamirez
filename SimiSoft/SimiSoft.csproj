@@ -74,11 +74,11 @@
     <Compile Include="frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="NMProducto.cs">
+    <Compile Include="frmNMProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NMProducto.Designer.cs">
-      <DependentUpon>NMProducto.cs</DependentUpon>
+    <Compile Include="frmNMProducto.Designer.cs">
+      <DependentUpon>frmNMProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +91,8 @@
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NMProducto.resx">
-      <DependentUpon>NMProducto.cs</DependentUpon>
+    <EmbeddedResource Include="frmNMProducto.resx">
+      <DependentUpon>frmNMProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
