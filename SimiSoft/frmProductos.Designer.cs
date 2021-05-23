@@ -267,6 +267,12 @@ namespace SimiSoft
             this.colidProducto.Caption = "ID";
             this.colidProducto.FieldName = "idProducto";
             this.colidProducto.Name = "colidProducto";
+            this.colidProducto.OptionsColumn.AllowEdit = false;
+            this.colidProducto.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colidProducto.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colidProducto.OptionsColumn.AllowMove = false;
+            this.colidProducto.OptionsColumn.AllowSize = false;
+            this.colidProducto.OptionsColumn.FixedWidth = true;
             this.colidProducto.Visible = true;
             this.colidProducto.VisibleIndex = 0;
             // 
@@ -275,6 +281,12 @@ namespace SimiSoft
             this.coldescripcion.Caption = "Descripcion";
             this.coldescripcion.FieldName = "descripcion";
             this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.coldescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.coldescripcion.OptionsColumn.AllowMove = false;
+            this.coldescripcion.OptionsColumn.AllowSize = false;
+            this.coldescripcion.OptionsColumn.FixedWidth = true;
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 1;
             // 
@@ -283,6 +295,12 @@ namespace SimiSoft
             this.colunidadMedida.Caption = "UnidadM";
             this.colunidadMedida.FieldName = "unidadMedida";
             this.colunidadMedida.Name = "colunidadMedida";
+            this.colunidadMedida.OptionsColumn.AllowEdit = false;
+            this.colunidadMedida.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colunidadMedida.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colunidadMedida.OptionsColumn.AllowMove = false;
+            this.colunidadMedida.OptionsColumn.AllowSize = false;
+            this.colunidadMedida.OptionsColumn.FixedWidth = true;
             this.colunidadMedida.Visible = true;
             this.colunidadMedida.VisibleIndex = 2;
             // 
@@ -291,6 +309,12 @@ namespace SimiSoft
             this.colcodigo.Caption = "Codigo";
             this.colcodigo.FieldName = "codigo";
             this.colcodigo.Name = "colcodigo";
+            this.colcodigo.OptionsColumn.AllowEdit = false;
+            this.colcodigo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colcodigo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colcodigo.OptionsColumn.AllowMove = false;
+            this.colcodigo.OptionsColumn.AllowSize = false;
+            this.colcodigo.OptionsColumn.FixedWidth = true;
             this.colcodigo.Visible = true;
             this.colcodigo.VisibleIndex = 3;
             // 
@@ -299,6 +323,12 @@ namespace SimiSoft
             this.colprecio.Caption = "Precio";
             this.colprecio.FieldName = "precio";
             this.colprecio.Name = "colprecio";
+            this.colprecio.OptionsColumn.AllowEdit = false;
+            this.colprecio.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colprecio.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colprecio.OptionsColumn.AllowMove = false;
+            this.colprecio.OptionsColumn.AllowSize = false;
+            this.colprecio.OptionsColumn.FixedWidth = true;
             this.colprecio.Visible = true;
             this.colprecio.VisibleIndex = 4;
             // 
@@ -307,6 +337,12 @@ namespace SimiSoft
             this.colstock.Caption = "Stock";
             this.colstock.FieldName = "stock";
             this.colstock.Name = "colstock";
+            this.colstock.OptionsColumn.AllowEdit = false;
+            this.colstock.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colstock.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colstock.OptionsColumn.AllowMove = false;
+            this.colstock.OptionsColumn.AllowSize = false;
+            this.colstock.OptionsColumn.FixedWidth = true;
             this.colstock.Visible = true;
             this.colstock.VisibleIndex = 5;
             // 
@@ -315,6 +351,11 @@ namespace SimiSoft
             this.colmarca.Caption = "Marca";
             this.colmarca.FieldName = "marca";
             this.colmarca.Name = "colmarca";
+            this.colmarca.OptionsColumn.AllowEdit = false;
+            this.colmarca.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colmarca.OptionsColumn.AllowMove = false;
+            this.colmarca.OptionsColumn.AllowSize = false;
+            this.colmarca.OptionsColumn.FixedWidth = true;
             this.colmarca.Visible = true;
             this.colmarca.VisibleIndex = 6;
             // 

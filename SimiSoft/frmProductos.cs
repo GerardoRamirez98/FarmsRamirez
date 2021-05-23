@@ -59,5 +59,6 @@ namespace SimiSoft
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();
         }
+        
     }
 }

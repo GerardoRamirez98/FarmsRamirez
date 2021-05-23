@@ -32,14 +32,18 @@ namespace SimiSoft
                 {
                     username = txtUsuario.Text,
                     password = txtContrasena.Text
-                }.Login()!=null)
+                }.Login() != null)
                 {
                     XtraMessageBox.Show("Acceso correcto");
                     DialogResult = DialogResult.OK;
+                    Misc.actualiza = true;
                 }
                 else
                 {
-                    XtraMessageBox.Show("Error en las credenciales");
+                    XtraMessageBox.Show("Error en las credenciales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsuario.EditValue = null;
+                    txtContrasena.EditValue = null;
+                    txtUsuario.Focus();
                 }
             }
         }
@@ -47,16 +51,16 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
-            if(string.IsNullOrEmpty(txtUsuario.Text))
+            if (string.IsNullOrEmpty(txtUsuario.Text))
             {
                 txtUsuario.ErrorText = "Ingrese el usuario";
                 txtUsuario.Focus();
                 ban = true;
             }
-            if(string.IsNullOrEmpty(txtContrasena.Text))
+            if (string.IsNullOrEmpty(txtContrasena.Text))
             {
                 txtContrasena.ErrorText = "Ingrese la contraseña";
-                if(!ban)
+                if (!ban)
                 {
                     txtContrasena.Focus();
                     ban = true;
@@ -68,6 +72,17 @@ namespace SimiSoft
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", Application.ProductName,
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }

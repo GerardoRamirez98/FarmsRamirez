@@ -97,6 +97,7 @@ namespace SimiSoft
             this.btnSalir.Caption = "Salir";
             this.btnSalir.Id = 1;
             this.btnSalir.Name = "btnSalir";
+            this.btnSalir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSalir_ItemClick);
             // 
             // mnCatalogo
             // 
@@ -188,6 +189,7 @@ namespace SimiSoft
             this.Name = "frmMain";
             this.Text = "FarmaciaRamirez - 2021";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).EndInit();

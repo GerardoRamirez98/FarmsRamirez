@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraSplashScreen;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
+using FarmsRamirezBML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +42,25 @@ namespace SimiSoft
 
             SplashScreenManager.CloseDefaultWaitForm();
 
+        }
+
+        private void btnSalir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (XtraMessageBox.Show("Are you sure to log out?", "Warning",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            this.Close();
+            
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", Application.ProductName,
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }
