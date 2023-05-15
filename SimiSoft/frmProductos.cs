@@ -54,7 +54,7 @@ namespace SimiSoft
         {
             new Producto
             {
-                idProducto = (int)gvProductos.GetFocusedRowCellValue("idProducto")
+                productoID = (int)gvProductos.GetFocusedRowCellValue("idProducto")
             }.Delete();
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();

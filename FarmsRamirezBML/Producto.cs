@@ -24,7 +24,7 @@ namespace FarmsRamirezBML
         public int stock { get; set; }
         public int stockMin { get; set; }
         public int stockMax { get; set; }
-        
+        public byte foto { get; set; }
         public bool status { get; set; }
         public int proveedorID { get; set; }
         public int categoriaID { get; set; }
@@ -36,20 +36,26 @@ namespace FarmsRamirezBML
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("")
+            parametros.Add("codigo", codigo);
+            parametros.Add("codigoBarra", codigoBarra);
+            parametros.Add("nombre",nombre);
             parametros.Add("@descripcion", descripcion);
-            parametros.Add("@unidadMedida", unidadMedida);
-            parametros.Add("@codigo", codigo);
-            parametros.Add("@precio", precio);
-            parametros.Add("@stock", stock);
             parametros.Add("@marca", marca);
+            parametros.Add("@unidadMedida", unidadMedida);
+            parametros.Add("@precioCompra", precioCompra);
+            parametros.Add("@margenGanancia", margenGanancia);
+            parametros.Add("@precioVenta", precioVenta);
+            parametros.Add("@stock", stock);
+            parametros.Add("@stockMin", stockMin);
+            parametros.Add("@stockMax", stockMax);
+            parametros.Add("@foto", foto);
             return dataAccess.Execute("stp_productos_add", parametros);
         }
 
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idProducto", idProducto);
+            parametros.Add("@productoID", productoID);
             return dataAccess.Execute("stp_productos_delete", parametros);
         }
 
@@ -61,20 +67,26 @@ namespace FarmsRamirezBML
         public Producto GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idProducto", idProducto);
+            parametros.Add("@productoID", productoID);
             return dataAccess.QuerySingle<Producto>("stp_productos_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idProducto", idProducto);
+            parametros.Add("codigo", codigo);
+            parametros.Add("codigoBarra", codigoBarra);
+            parametros.Add("nombre", nombre);
             parametros.Add("@descripcion", descripcion);
-            parametros.Add("@unidadMedida", unidadMedida);
-            parametros.Add("@codigo", codigo);
-            parametros.Add("@precio", precio);
-            parametros.Add("@stock", stock);
             parametros.Add("@marca", marca);
+            parametros.Add("@unidadMedida", unidadMedida);
+            parametros.Add("@precioCompra", precioCompra);
+            parametros.Add("@margenGanancia", margenGanancia);
+            parametros.Add("@precioVenta", precioVenta);
+            parametros.Add("@stock", stock);
+            parametros.Add("@stockMin", stockMin);
+            parametros.Add("@stockMax", stockMax);
+            parametros.Add("@foto", foto);
             return dataAccess.Execute("stp_productos_update", parametros);
         }
     }

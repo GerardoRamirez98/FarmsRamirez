@@ -22,20 +22,26 @@ namespace SimiSoft
             txtID.Enabled = false;
         }
         //cuando es modificar producto
-        public frmNMProducto(int idProducto)
+        public frmNMProducto(int productoID)
         {
             InitializeComponent();
             producto = new Producto
             {
-                idProducto = idProducto
+                productoID = productoID
             }.GetById();
-            txtID.Text = producto.idProducto.ToString();
-            txtDescripcion.Text = producto.descripcion;
-            txtUnidadM.Text = producto.unidadMedida;
+            txtID.Text = producto.productoID.ToString();
             txtCodigo.Text = producto.codigo;
-            txtPrecio.Text = producto.precio.ToString();
-            txtStock.Text = producto.stock.ToString();
+            txtCodigoBarra.Text = producto.codigoBarra;
+            txtNombre.Text = producto.nombre;
+            txtDescripcion.Text = producto.descripcion;
             txtMarca.Text = producto.marca;
+            txtUnidadM.Text = producto.unidadMedida;
+            txtPrecioC.Text = producto.precioCompra.ToString();
+            txtMargenG.Text = producto.margenGanancia.ToString();
+            txtPrecioV.Text = producto.precioVenta.ToString();
+            txtStock.Text = producto.stock.ToString();
+            txtStockMin.Text = producto.stockMin.ToString();
+            txtStockMax.Text = producto.stockMax.ToString();
             
         }
 
@@ -60,7 +66,7 @@ namespace SimiSoft
                         descripcion = txtDescripcion.Text,
                         unidadMedida = txtUnidadM.Text,
                         codigo = txtCodigo.Text,
-                        precio = Convert.ToDecimal(txtPrecio.Text),
+                        precioVenta = Convert.ToDecimal(txtPrecioV.Text),
                         stock = Convert.ToInt32(txtStock.Text),
                         marca = txtMarca.Text
                     }.Add() > 0)
@@ -79,7 +85,8 @@ namespace SimiSoft
                     producto.descripcion = txtDescripcion.Text;
                     producto.unidadMedida = txtUnidadM.Text;
                     producto.codigo = txtCodigo.Text;
-                    producto.precio = Convert.ToDecimal(txtPrecio.Text);
+                    producto.precioCompra = Convert.ToDecimal(txtPrecioC.Text);
+                    producto.precioVenta = Convert.ToDecimal(txtPrecioV.Text);
                     producto.stock = Convert.ToInt32(txtStock.Text);
                     producto.marca = txtMarca.Text;
                     if (producto.Update() > 0)
@@ -122,12 +129,12 @@ namespace SimiSoft
                     ban = true;
                 }
             }
-            if (string.IsNullOrEmpty(txtPrecio.Text))
+            if (string.IsNullOrEmpty(txtPrecioV.Text))
             {
-                txtPrecio.ErrorText = "Ingrese un precio";
+                txtPrecioV.ErrorText = "Ingrese un precio";
                 if (!ban)
                 {
-                    txtPrecio.Focus();
+                    txtPrecioV.Focus();
                     ban = true;
                 }
             }
