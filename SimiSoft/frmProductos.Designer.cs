@@ -31,7 +31,6 @@ namespace SimiSoft
         {
             this.components = new System.ComponentModel.Container();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -81,8 +80,6 @@ namespace SimiSoft
             // 
             // barManager1
             // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar3});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -94,19 +91,6 @@ namespace SimiSoft
             this.barSubItem3,
             this.barSubItem4});
             this.barManager1.MaxItemId = 4;
-            this.barManager1.StatusBar = this.bar3;
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Barra de estado";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Barra de estado";
             // 
             // barDockControlTop
             // 
@@ -120,9 +104,9 @@ namespace SimiSoft
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 528);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 548);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(798, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(798, 0);
             // 
             // barDockControlLeft
             // 
@@ -130,7 +114,7 @@ namespace SimiSoft
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 508);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 528);
             // 
             // barDockControlRight
             // 
@@ -138,7 +122,7 @@ namespace SimiSoft
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(798, 20);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 508);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 528);
             // 
             // barSubItem1
             // 
@@ -233,7 +217,7 @@ namespace SimiSoft
             this.gcProductos.MainView = this.gvProductos;
             this.gcProductos.MenuManager = this.barManager1;
             this.gcProductos.Name = "gcProductos";
-            this.gcProductos.Size = new System.Drawing.Size(798, 508);
+            this.gcProductos.Size = new System.Drawing.Size(798, 528);
             this.gcProductos.TabIndex = 8;
             this.gcProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProductos});
@@ -511,7 +495,6 @@ namespace SimiSoft
         #endregion
 
         private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
