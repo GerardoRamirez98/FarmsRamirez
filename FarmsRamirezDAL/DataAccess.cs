@@ -15,7 +15,7 @@ namespace FarmsRamirezDAL
         #region Singleton
         private static volatile DataAccess instance = null;
         private static readonly object padlock = new object();
-        public static string conString = "Server=DESKTOP-MQ4ONOB;Database=SimiDB;User id = sagerardo; Password=123";
+        public static string conString = "Server=USER6663-PC;Database=bd_tecniprint;User id = sa; Password=tecniprint";
 
         private DataAccess() { }
         public static DataAccess Instance()

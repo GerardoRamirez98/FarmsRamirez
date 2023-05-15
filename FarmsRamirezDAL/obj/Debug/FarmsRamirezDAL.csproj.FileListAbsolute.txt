@@ -16,3 +16,12 @@ C:\Users\ramirez\Source\Repos\GerardoRamirez98\FarmsRamirez\FarmsRamirezDAL\obj\
 C:\Users\ramirez\Source\Repos\GerardoRamirez98\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csproj.CopyComplete
 C:\Users\ramirez\Source\Repos\GerardoRamirez98\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.dll
 C:\Users\ramirez\Source\Repos\GerardoRamirez98\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.pdb
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\FarmsRamirezDAL.dll
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\FarmsRamirezDAL.pdb
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\Dapper.dll
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\bin\Debug\Dapper.xml
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.csproj.CopyComplete
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.dll
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezDAL\obj\Debug\FarmsRamirezDAL.pdb

@@ -46,7 +46,7 @@ namespace SimiSoft
 
         private void btnSalir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (XtraMessageBox.Show("Are you sure to log out?", "Warning",
+            if (XtraMessageBox.Show("¿Estás seguro de cerrar sesión?", "Warning",
                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             this.Close();
             

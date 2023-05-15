@@ -187,7 +187,7 @@ namespace SimiSoft
             this.Controls.Add(this.barDockControlTop);
             this.IsMdiContainer = true;
             this.Name = "frmMain";
-            this.Text = "FarmaciaRamirez - 2021";
+            this.Text = "TecniPrint";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
