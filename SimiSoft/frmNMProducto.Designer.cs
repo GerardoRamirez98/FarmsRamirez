@@ -139,14 +139,14 @@ namespace SimiSoft
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(86, 165);
+            this.txtStock.Location = new System.Drawing.Point(278, 139);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 5;
             // 
             // lblStock
             // 
-            this.lblStock.Location = new System.Drawing.Point(12, 168);
+            this.lblStock.Location = new System.Drawing.Point(192, 142);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(30, 13);
             this.lblStock.TabIndex = 10;
@@ -248,7 +248,7 @@ namespace SimiSoft
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(204, 168);
+            this.labelControl5.Location = new System.Drawing.Point(12, 168);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(65, 13);
             this.labelControl5.TabIndex = 22;
@@ -271,21 +271,21 @@ namespace SimiSoft
             // 
             // txtStockMin
             // 
-            this.txtStockMin.Location = new System.Drawing.Point(278, 165);
+            this.txtStockMin.Location = new System.Drawing.Point(86, 165);
             this.txtStockMin.Name = "txtStockMin";
             this.txtStockMin.Size = new System.Drawing.Size(100, 20);
             this.txtStockMin.TabIndex = 21;
             // 
             // txtStockMax
             // 
-            this.txtStockMax.Location = new System.Drawing.Point(458, 165);
+            this.txtStockMax.Location = new System.Drawing.Point(278, 165);
             this.txtStockMax.Name = "txtStockMax";
             this.txtStockMax.Size = new System.Drawing.Size(100, 20);
             this.txtStockMax.TabIndex = 25;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(384, 168);
+            this.labelControl7.Location = new System.Drawing.Point(192, 168);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(69, 13);
             this.labelControl7.TabIndex = 26;
@@ -293,7 +293,7 @@ namespace SimiSoft
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(384, 12);
+            this.pictureEdit1.Location = new System.Drawing.Point(384, 38);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Size = new System.Drawing.Size(174, 121);
@@ -301,15 +301,16 @@ namespace SimiSoft
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(384, 137);
+            this.simpleButton1.Location = new System.Drawing.Point(384, 163);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 28;
             this.simpleButton1.Text = "Abrir";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(483, 136);
+            this.simpleButton2.Location = new System.Drawing.Point(483, 162);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 29;

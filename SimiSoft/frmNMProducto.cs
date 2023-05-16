@@ -158,5 +158,17 @@ namespace SimiSoft
             }
             return !ban;
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+            dlg.Title = "Seleccione una imagen";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string picLoc1 = dlg.FileName.ToString();
+                pictureBox1.ImageLocation = picLoc1;
+            }
+        }
     }
 }
