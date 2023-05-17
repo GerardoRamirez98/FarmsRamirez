@@ -19,7 +19,7 @@ namespace FarmsRamirezBML
         public decimal precioVenta { get; set; }
         public int stock { get; set; }
         public int stockMin { get; set; }
-        public int stockMax { get; set; }
+        public int stockMax { get; set; }        
         public bool status { get; set; }
         public int proveedorID { get; set; }
         public int categoriaID { get; set; }
@@ -43,6 +43,7 @@ namespace FarmsRamirezBML
             parametros.Add("@stock", stock);
             parametros.Add("@stockMin", stockMin);
             parametros.Add("@stockMax", stockMax);
+            
             return dataAccess.Execute("stp_productos_agregar", parametros);
         }
 
@@ -50,7 +51,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@productoID", productoID);
-            return dataAccess.Execute("stp_productos_delete", parametros);
+            return dataAccess.Execute("stp_producto_delete", parametros);
         }
 
         public List<Producto> GetAll()
@@ -62,12 +63,13 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@productoID", productoID);
-            return dataAccess.QuerySingle<Producto>("stp_productos_getbyid", parametros);
+            return dataAccess.QuerySingle<Producto>("stp_producto_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
+            parametros.Add("productoID", productoID);
             parametros.Add("codigo", codigo);
             parametros.Add("codigoBarra", codigoBarra);
             parametros.Add("nombre", nombre);
@@ -80,7 +82,7 @@ namespace FarmsRamirezBML
             parametros.Add("@stock", stock);
             parametros.Add("@stockMin", stockMin);
             parametros.Add("@stockMax", stockMax);
-            return dataAccess.Execute("stp_productos_update", parametros);
+            return dataAccess.Execute("stp_producto_update", parametros);
         }
 
     }

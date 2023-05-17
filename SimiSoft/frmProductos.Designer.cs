@@ -63,8 +63,7 @@ namespace SimiSoft
             this.colStock = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStockMin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStockMax = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colActivo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFoto = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager3 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizarProducto = new DevExpress.XtraBars.BarButtonItem();
@@ -250,8 +249,7 @@ namespace SimiSoft
             this.colStock,
             this.colStockMin,
             this.colStockMax,
-            this.colActivo,
-            this.colFoto});
+            this.colStatus});
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.OptionsBehavior.Editable = false;
@@ -441,25 +439,11 @@ namespace SimiSoft
             this.colStockMax.Visible = true;
             this.colStockMax.VisibleIndex = 12;
             // 
-            // colActivo
+            // colStatus
             // 
-            this.colActivo.Caption = "Activo";
-            this.colActivo.FieldName = "activo";
-            this.colActivo.Name = "colActivo";
-            // 
-            // colFoto
-            // 
-            this.colFoto.Caption = "Foto";
-            this.colFoto.FieldName = "foto";
-            this.colFoto.Name = "colFoto";
-            this.colFoto.OptionsColumn.AllowEdit = false;
-            this.colFoto.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colFoto.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colFoto.OptionsColumn.AllowMove = false;
-            this.colFoto.OptionsColumn.AllowSize = false;
-            this.colFoto.OptionsColumn.FixedWidth = true;
-            this.colFoto.Visible = true;
-            this.colFoto.VisibleIndex = 13;
+            this.colStatus.Caption = "Status";
+            this.colStatus.FieldName = "status";
+            this.colStatus.Name = "colStatus";
             // 
             // barManager3
             // 
@@ -499,6 +483,7 @@ namespace SimiSoft
             this.btnActualizarProducto.Caption = "Actualizar";
             this.btnActualizarProducto.Id = 0;
             this.btnActualizarProducto.Name = "btnActualizarProducto";
+            this.btnActualizarProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizarProducto_ItemClick);
             // 
             // btnNuevoProducto
             // 
@@ -633,7 +618,7 @@ namespace SimiSoft
         private DevExpress.XtraGrid.Columns.GridColumn colPrecioCompra;
         private DevExpress.XtraGrid.Columns.GridColumn colStock;
         private DevExpress.XtraGrid.Columns.GridColumn colMarca;
-        private DevExpress.XtraGrid.Columns.GridColumn colActivo;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarManager barManager3;
         private DevExpress.XtraBars.Bar bar1;
@@ -652,6 +637,5 @@ namespace SimiSoft
         private DevExpress.XtraGrid.Columns.GridColumn colPrecioVenta;
         private DevExpress.XtraGrid.Columns.GridColumn colStockMin;
         private DevExpress.XtraGrid.Columns.GridColumn colStockMax;
-        private DevExpress.XtraGrid.Columns.GridColumn colFoto;
     }
 }

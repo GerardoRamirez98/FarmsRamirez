@@ -120,7 +120,6 @@ namespace SimiSoft
                 MessageBox.Show("Ha ocurrido un problema al subir el archivo");
         }
 
-
         //GUARDAR DATOS
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -142,7 +141,7 @@ namespace SimiSoft
                         stock = Convert.ToInt32(txtStock.Text),
                         stockMin = Convert.ToInt32(txtStockMin.Text),
                         stockMax = Convert.ToInt32(txtStockMax.Text),
-                         
+
                 }.Add() > 0)
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
