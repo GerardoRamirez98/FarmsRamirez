@@ -50,14 +50,21 @@ namespace SimiSoft
             this.gcProductos = new DevExpress.XtraGrid.GridControl();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvProductos = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colidProducto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colunidadMedida = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colcodigo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colprecio = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colstock = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colmarca = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductoID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCodigoBarra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMarca = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUnidadMedida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrecioCompra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMargenGanancia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrecioVenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStock = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStockMin = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStockMax = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFoto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager3 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizarProducto = new DevExpress.XtraBars.BarButtonItem();
@@ -98,7 +105,7 @@ namespace SimiSoft
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 20);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(798, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1236, 0);
             // 
             // barDockControlBottom
             // 
@@ -106,7 +113,7 @@ namespace SimiSoft
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 548);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(798, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1236, 0);
             // 
             // barDockControlLeft
             // 
@@ -120,7 +127,7 @@ namespace SimiSoft
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(798, 20);
+            this.barDockControlRight.Location = new System.Drawing.Point(1236, 20);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 528);
             // 
@@ -162,7 +169,7 @@ namespace SimiSoft
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 20);
             this.barDockControl1.Manager = this.barManager2;
-            this.barDockControl1.Size = new System.Drawing.Size(798, 0);
+            this.barDockControl1.Size = new System.Drawing.Size(1236, 0);
             // 
             // barDockControl2
             // 
@@ -170,7 +177,7 @@ namespace SimiSoft
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControl2.Location = new System.Drawing.Point(0, 548);
             this.barDockControl2.Manager = this.barManager2;
-            this.barDockControl2.Size = new System.Drawing.Size(798, 0);
+            this.barDockControl2.Size = new System.Drawing.Size(1236, 0);
             // 
             // barDockControl3
             // 
@@ -184,7 +191,7 @@ namespace SimiSoft
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(798, 20);
+            this.barDockControl4.Location = new System.Drawing.Point(1236, 20);
             this.barDockControl4.Manager = this.barManager2;
             this.barDockControl4.Size = new System.Drawing.Size(0, 528);
             // 
@@ -217,7 +224,7 @@ namespace SimiSoft
             this.gcProductos.MainView = this.gvProductos;
             this.gcProductos.MenuManager = this.barManager1;
             this.gcProductos.Name = "gcProductos";
-            this.gcProductos.Size = new System.Drawing.Size(798, 528);
+            this.gcProductos.Size = new System.Drawing.Size(1236, 528);
             this.gcProductos.TabIndex = 8;
             this.gcProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProductos});
@@ -230,14 +237,21 @@ namespace SimiSoft
             // gvProductos
             // 
             this.gvProductos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colidProducto,
-            this.coldescripcion,
-            this.colunidadMedida,
-            this.colcodigo,
-            this.colprecio,
-            this.colstock,
-            this.colmarca,
-            this.colactivo});
+            this.colProductoID,
+            this.colCodigo,
+            this.colCodigoBarra,
+            this.colNombre,
+            this.colDescripcion,
+            this.colMarca,
+            this.colUnidadMedida,
+            this.colPrecioCompra,
+            this.colMargenGanancia,
+            this.colPrecioVenta,
+            this.colStock,
+            this.colStockMin,
+            this.colStockMax,
+            this.colActivo,
+            this.colFoto});
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.OptionsBehavior.Editable = false;
@@ -246,108 +260,206 @@ namespace SimiSoft
             this.gvProductos.OptionsView.ShowAutoFilterRow = true;
             this.gvProductos.OptionsView.ShowGroupPanel = false;
             // 
-            // colidProducto
+            // colProductoID
             // 
-            this.colidProducto.Caption = "ID";
-            this.colidProducto.FieldName = "idProducto";
-            this.colidProducto.Name = "colidProducto";
-            this.colidProducto.OptionsColumn.AllowEdit = false;
-            this.colidProducto.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colidProducto.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colidProducto.OptionsColumn.AllowMove = false;
-            this.colidProducto.OptionsColumn.AllowSize = false;
-            this.colidProducto.OptionsColumn.FixedWidth = true;
-            this.colidProducto.Visible = true;
-            this.colidProducto.VisibleIndex = 0;
+            this.colProductoID.Caption = "ProductoID";
+            this.colProductoID.FieldName = "productoID";
+            this.colProductoID.Name = "colProductoID";
+            this.colProductoID.OptionsColumn.AllowEdit = false;
+            this.colProductoID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colProductoID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colProductoID.OptionsColumn.AllowMove = false;
+            this.colProductoID.OptionsColumn.AllowSize = false;
+            this.colProductoID.OptionsColumn.FixedWidth = true;
+            this.colProductoID.Visible = true;
+            this.colProductoID.VisibleIndex = 0;
             // 
-            // coldescripcion
+            // colCodigo
             // 
-            this.coldescripcion.Caption = "Descripcion";
-            this.coldescripcion.FieldName = "descripcion";
-            this.coldescripcion.Name = "coldescripcion";
-            this.coldescripcion.OptionsColumn.AllowEdit = false;
-            this.coldescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.coldescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.coldescripcion.OptionsColumn.AllowMove = false;
-            this.coldescripcion.OptionsColumn.AllowSize = false;
-            this.coldescripcion.OptionsColumn.FixedWidth = true;
-            this.coldescripcion.Visible = true;
-            this.coldescripcion.VisibleIndex = 1;
+            this.colCodigo.Caption = "Codigo";
+            this.colCodigo.FieldName = "codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.OptionsColumn.AllowEdit = false;
+            this.colCodigo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colCodigo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colCodigo.OptionsColumn.AllowMove = false;
+            this.colCodigo.OptionsColumn.AllowSize = false;
+            this.colCodigo.OptionsColumn.FixedWidth = true;
+            this.colCodigo.Visible = true;
+            this.colCodigo.VisibleIndex = 1;
             // 
-            // colunidadMedida
+            // colCodigoBarra
             // 
-            this.colunidadMedida.Caption = "UnidadM";
-            this.colunidadMedida.FieldName = "unidadMedida";
-            this.colunidadMedida.Name = "colunidadMedida";
-            this.colunidadMedida.OptionsColumn.AllowEdit = false;
-            this.colunidadMedida.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colunidadMedida.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colunidadMedida.OptionsColumn.AllowMove = false;
-            this.colunidadMedida.OptionsColumn.AllowSize = false;
-            this.colunidadMedida.OptionsColumn.FixedWidth = true;
-            this.colunidadMedida.Visible = true;
-            this.colunidadMedida.VisibleIndex = 2;
+            this.colCodigoBarra.Caption = "CodigoBarra";
+            this.colCodigoBarra.FieldName = "codigoBarra";
+            this.colCodigoBarra.Name = "colCodigoBarra";
+            this.colCodigoBarra.OptionsColumn.AllowEdit = false;
+            this.colCodigoBarra.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colCodigoBarra.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colCodigoBarra.OptionsColumn.AllowMove = false;
+            this.colCodigoBarra.OptionsColumn.AllowSize = false;
+            this.colCodigoBarra.OptionsColumn.FixedWidth = true;
+            this.colCodigoBarra.Visible = true;
+            this.colCodigoBarra.VisibleIndex = 2;
             // 
-            // colcodigo
+            // colNombre
             // 
-            this.colcodigo.Caption = "Codigo";
-            this.colcodigo.FieldName = "codigo";
-            this.colcodigo.Name = "colcodigo";
-            this.colcodigo.OptionsColumn.AllowEdit = false;
-            this.colcodigo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colcodigo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colcodigo.OptionsColumn.AllowMove = false;
-            this.colcodigo.OptionsColumn.AllowSize = false;
-            this.colcodigo.OptionsColumn.FixedWidth = true;
-            this.colcodigo.Visible = true;
-            this.colcodigo.VisibleIndex = 3;
+            this.colNombre.Caption = "Nombre";
+            this.colNombre.FieldName = "nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.OptionsColumn.AllowEdit = false;
+            this.colNombre.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colNombre.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colNombre.OptionsColumn.AllowMove = false;
+            this.colNombre.OptionsColumn.AllowSize = false;
+            this.colNombre.OptionsColumn.FixedWidth = true;
+            this.colNombre.Visible = true;
+            this.colNombre.VisibleIndex = 3;
             // 
-            // colprecio
+            // colDescripcion
             // 
-            this.colprecio.Caption = "Precio";
-            this.colprecio.FieldName = "precio";
-            this.colprecio.Name = "colprecio";
-            this.colprecio.OptionsColumn.AllowEdit = false;
-            this.colprecio.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colprecio.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colprecio.OptionsColumn.AllowMove = false;
-            this.colprecio.OptionsColumn.AllowSize = false;
-            this.colprecio.OptionsColumn.FixedWidth = true;
-            this.colprecio.Visible = true;
-            this.colprecio.VisibleIndex = 4;
+            this.colDescripcion.Caption = "Descripcion";
+            this.colDescripcion.FieldName = "descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.OptionsColumn.AllowEdit = false;
+            this.colDescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colDescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colDescripcion.OptionsColumn.AllowMove = false;
+            this.colDescripcion.OptionsColumn.AllowSize = false;
+            this.colDescripcion.OptionsColumn.FixedWidth = true;
+            this.colDescripcion.Visible = true;
+            this.colDescripcion.VisibleIndex = 4;
             // 
-            // colstock
+            // colMarca
             // 
-            this.colstock.Caption = "Stock";
-            this.colstock.FieldName = "stock";
-            this.colstock.Name = "colstock";
-            this.colstock.OptionsColumn.AllowEdit = false;
-            this.colstock.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colstock.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colstock.OptionsColumn.AllowMove = false;
-            this.colstock.OptionsColumn.AllowSize = false;
-            this.colstock.OptionsColumn.FixedWidth = true;
-            this.colstock.Visible = true;
-            this.colstock.VisibleIndex = 5;
+            this.colMarca.Caption = "Marca";
+            this.colMarca.FieldName = "marca";
+            this.colMarca.Name = "colMarca";
+            this.colMarca.OptionsColumn.AllowEdit = false;
+            this.colMarca.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colMarca.OptionsColumn.AllowMove = false;
+            this.colMarca.OptionsColumn.AllowSize = false;
+            this.colMarca.OptionsColumn.FixedWidth = true;
+            this.colMarca.Visible = true;
+            this.colMarca.VisibleIndex = 5;
             // 
-            // colmarca
+            // colUnidadMedida
             // 
-            this.colmarca.Caption = "Marca";
-            this.colmarca.FieldName = "marca";
-            this.colmarca.Name = "colmarca";
-            this.colmarca.OptionsColumn.AllowEdit = false;
-            this.colmarca.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colmarca.OptionsColumn.AllowMove = false;
-            this.colmarca.OptionsColumn.AllowSize = false;
-            this.colmarca.OptionsColumn.FixedWidth = true;
-            this.colmarca.Visible = true;
-            this.colmarca.VisibleIndex = 6;
+            this.colUnidadMedida.Caption = "UnidadMedida";
+            this.colUnidadMedida.FieldName = "unidadMedida";
+            this.colUnidadMedida.Name = "colUnidadMedida";
+            this.colUnidadMedida.OptionsColumn.AllowEdit = false;
+            this.colUnidadMedida.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colUnidadMedida.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colUnidadMedida.OptionsColumn.AllowMove = false;
+            this.colUnidadMedida.OptionsColumn.AllowSize = false;
+            this.colUnidadMedida.OptionsColumn.FixedWidth = true;
+            this.colUnidadMedida.Visible = true;
+            this.colUnidadMedida.VisibleIndex = 6;
             // 
-            // colactivo
+            // colPrecioCompra
             // 
-            this.colactivo.Caption = "Activo";
-            this.colactivo.FieldName = "activo";
-            this.colactivo.Name = "colactivo";
+            this.colPrecioCompra.Caption = "PrecioCompra";
+            this.colPrecioCompra.FieldName = "precioCompra";
+            this.colPrecioCompra.Name = "colPrecioCompra";
+            this.colPrecioCompra.OptionsColumn.AllowEdit = false;
+            this.colPrecioCompra.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colPrecioCompra.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colPrecioCompra.OptionsColumn.AllowMove = false;
+            this.colPrecioCompra.OptionsColumn.AllowSize = false;
+            this.colPrecioCompra.OptionsColumn.FixedWidth = true;
+            this.colPrecioCompra.Visible = true;
+            this.colPrecioCompra.VisibleIndex = 7;
+            // 
+            // colMargenGanancia
+            // 
+            this.colMargenGanancia.Caption = "MargenGanancia";
+            this.colMargenGanancia.FieldName = "margenGanancia";
+            this.colMargenGanancia.Name = "colMargenGanancia";
+            this.colMargenGanancia.OptionsColumn.AllowEdit = false;
+            this.colMargenGanancia.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colMargenGanancia.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colMargenGanancia.OptionsColumn.AllowMove = false;
+            this.colMargenGanancia.OptionsColumn.AllowSize = false;
+            this.colMargenGanancia.OptionsColumn.FixedWidth = true;
+            this.colMargenGanancia.Visible = true;
+            this.colMargenGanancia.VisibleIndex = 8;
+            // 
+            // colPrecioVenta
+            // 
+            this.colPrecioVenta.Caption = "PrecioVenta";
+            this.colPrecioVenta.FieldName = "precioVenta";
+            this.colPrecioVenta.Name = "colPrecioVenta";
+            this.colPrecioVenta.OptionsColumn.AllowEdit = false;
+            this.colPrecioVenta.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colPrecioVenta.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colPrecioVenta.OptionsColumn.AllowMove = false;
+            this.colPrecioVenta.OptionsColumn.AllowSize = false;
+            this.colPrecioVenta.OptionsColumn.FixedWidth = true;
+            this.colPrecioVenta.Visible = true;
+            this.colPrecioVenta.VisibleIndex = 9;
+            // 
+            // colStock
+            // 
+            this.colStock.Caption = "Stock";
+            this.colStock.FieldName = "stock";
+            this.colStock.Name = "colStock";
+            this.colStock.OptionsColumn.AllowEdit = false;
+            this.colStock.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colStock.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colStock.OptionsColumn.AllowMove = false;
+            this.colStock.OptionsColumn.AllowSize = false;
+            this.colStock.OptionsColumn.FixedWidth = true;
+            this.colStock.Visible = true;
+            this.colStock.VisibleIndex = 10;
+            // 
+            // colStockMin
+            // 
+            this.colStockMin.Caption = "StockMin";
+            this.colStockMin.FieldName = "stockMin";
+            this.colStockMin.Name = "colStockMin";
+            this.colStockMin.OptionsColumn.AllowEdit = false;
+            this.colStockMin.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colStockMin.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colStockMin.OptionsColumn.AllowMove = false;
+            this.colStockMin.OptionsColumn.AllowSize = false;
+            this.colStockMin.OptionsColumn.FixedWidth = true;
+            this.colStockMin.Visible = true;
+            this.colStockMin.VisibleIndex = 11;
+            // 
+            // colStockMax
+            // 
+            this.colStockMax.Caption = "StockMax";
+            this.colStockMax.FieldName = "stockMax";
+            this.colStockMax.Name = "colStockMax";
+            this.colStockMax.OptionsColumn.AllowEdit = false;
+            this.colStockMax.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colStockMax.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colStockMax.OptionsColumn.AllowMove = false;
+            this.colStockMax.OptionsColumn.AllowSize = false;
+            this.colStockMax.OptionsColumn.FixedWidth = true;
+            this.colStockMax.Visible = true;
+            this.colStockMax.VisibleIndex = 12;
+            // 
+            // colActivo
+            // 
+            this.colActivo.Caption = "Activo";
+            this.colActivo.FieldName = "activo";
+            this.colActivo.Name = "colActivo";
+            // 
+            // colFoto
+            // 
+            this.colFoto.Caption = "Foto";
+            this.colFoto.FieldName = "foto";
+            this.colFoto.Name = "colFoto";
+            this.colFoto.OptionsColumn.AllowEdit = false;
+            this.colFoto.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colFoto.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colFoto.OptionsColumn.AllowMove = false;
+            this.colFoto.OptionsColumn.AllowSize = false;
+            this.colFoto.OptionsColumn.FixedWidth = true;
+            this.colFoto.Visible = true;
+            this.colFoto.VisibleIndex = 13;
             // 
             // barManager3
             // 
@@ -433,7 +545,7 @@ namespace SimiSoft
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl5.Location = new System.Drawing.Point(0, 0);
             this.barDockControl5.Manager = this.barManager3;
-            this.barDockControl5.Size = new System.Drawing.Size(798, 20);
+            this.barDockControl5.Size = new System.Drawing.Size(1236, 20);
             // 
             // barDockControl6
             // 
@@ -441,7 +553,7 @@ namespace SimiSoft
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControl6.Location = new System.Drawing.Point(0, 548);
             this.barDockControl6.Manager = this.barManager3;
-            this.barDockControl6.Size = new System.Drawing.Size(798, 20);
+            this.barDockControl6.Size = new System.Drawing.Size(1236, 20);
             // 
             // barDockControl7
             // 
@@ -455,7 +567,7 @@ namespace SimiSoft
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(798, 20);
+            this.barDockControl8.Location = new System.Drawing.Point(1236, 20);
             this.barDockControl8.Manager = this.barManager3;
             this.barDockControl8.Size = new System.Drawing.Size(0, 528);
             // 
@@ -463,7 +575,7 @@ namespace SimiSoft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 568);
+            this.ClientSize = new System.Drawing.Size(1236, 568);
             this.Controls.Add(this.gcProductos);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -514,14 +626,14 @@ namespace SimiSoft
         private DevExpress.XtraBars.Bar bar5;
         private DevExpress.XtraBars.Bar bar4;
         private System.Windows.Forms.BindingSource productoBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colidProducto;
-        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
-        private DevExpress.XtraGrid.Columns.GridColumn colunidadMedida;
-        private DevExpress.XtraGrid.Columns.GridColumn colcodigo;
-        private DevExpress.XtraGrid.Columns.GridColumn colprecio;
-        private DevExpress.XtraGrid.Columns.GridColumn colstock;
-        private DevExpress.XtraGrid.Columns.GridColumn colmarca;
-        private DevExpress.XtraGrid.Columns.GridColumn colactivo;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductoID;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colUnidadMedida;
+        private DevExpress.XtraGrid.Columns.GridColumn colCodigo;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrecioCompra;
+        private DevExpress.XtraGrid.Columns.GridColumn colStock;
+        private DevExpress.XtraGrid.Columns.GridColumn colMarca;
+        private DevExpress.XtraGrid.Columns.GridColumn colActivo;
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarManager barManager3;
         private DevExpress.XtraBars.Bar bar1;
@@ -534,5 +646,12 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarDockControl barDockControl6;
         private DevExpress.XtraBars.BarDockControl barDockControl8;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCodigoBarra;
+        private DevExpress.XtraGrid.Columns.GridColumn colNombre;
+        private DevExpress.XtraGrid.Columns.GridColumn colMargenGanancia;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrecioVenta;
+        private DevExpress.XtraGrid.Columns.GridColumn colStockMin;
+        private DevExpress.XtraGrid.Columns.GridColumn colStockMax;
+        private DevExpress.XtraGrid.Columns.GridColumn colFoto;
     }
 }

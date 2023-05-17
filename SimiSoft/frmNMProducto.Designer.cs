@@ -57,7 +57,6 @@ namespace SimiSoft
             this.txtStockMin = new DevExpress.XtraEditors.TextEdit();
             this.txtStockMax = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnBorrarImg = new DevExpress.XtraEditors.SimpleButton();
             this.btnAbrirImg = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuardarImg = new DevExpress.XtraEditors.SimpleButton();
             this.pbImagen = new System.Windows.Forms.PictureBox();
@@ -98,7 +97,7 @@ namespace SimiSoft
             this.txtDescripcion.Location = new System.Drawing.Point(278, 61);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.TabIndex = 8;
             // 
             // lblDescripcion
             // 
@@ -113,7 +112,7 @@ namespace SimiSoft
             this.txtUnidadM.Location = new System.Drawing.Point(278, 87);
             this.txtUnidadM.Name = "txtUnidadM";
             this.txtUnidadM.Size = new System.Drawing.Size(100, 20);
-            this.txtUnidadM.TabIndex = 2;
+            this.txtUnidadM.TabIndex = 9;
             // 
             // lblUnidadM
             // 
@@ -128,7 +127,7 @@ namespace SimiSoft
             this.txtPrecioV.Location = new System.Drawing.Point(86, 139);
             this.txtPrecioV.Name = "txtPrecioV";
             this.txtPrecioV.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecioV.TabIndex = 4;
+            this.txtPrecioV.TabIndex = 5;
             // 
             // lblPrecio
             // 
@@ -143,7 +142,7 @@ namespace SimiSoft
             this.txtStock.Location = new System.Drawing.Point(278, 139);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
-            this.txtStock.TabIndex = 5;
+            this.txtStock.TabIndex = 11;
             // 
             // lblStock
             // 
@@ -158,7 +157,7 @@ namespace SimiSoft
             this.txtMarca.Location = new System.Drawing.Point(86, 87);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtMarca.TabIndex = 6;
+            this.txtMarca.TabIndex = 3;
             // 
             // lblMarca
             // 
@@ -174,7 +173,7 @@ namespace SimiSoft
             this.btnCancelar.Location = new System.Drawing.Point(197, 201);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -183,7 +182,7 @@ namespace SimiSoft
             this.btnGuardar.Location = new System.Drawing.Point(278, 201);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -192,7 +191,7 @@ namespace SimiSoft
             this.txtCodigo.Location = new System.Drawing.Point(86, 35);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 13;
+            this.txtCodigo.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -207,7 +206,7 @@ namespace SimiSoft
             this.txtNombre.Location = new System.Drawing.Point(86, 61);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 15;
+            this.txtNombre.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -222,7 +221,7 @@ namespace SimiSoft
             this.txtPrecioC.Location = new System.Drawing.Point(86, 113);
             this.txtPrecioC.Name = "txtPrecioC";
             this.txtPrecioC.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecioC.TabIndex = 17;
+            this.txtPrecioC.TabIndex = 4;
             // 
             // labelControl3
             // 
@@ -237,7 +236,7 @@ namespace SimiSoft
             this.txtMargenG.Location = new System.Drawing.Point(278, 113);
             this.txtMargenG.Name = "txtMargenG";
             this.txtMargenG.Size = new System.Drawing.Size(100, 20);
-            this.txtMargenG.TabIndex = 19;
+            this.txtMargenG.TabIndex = 10;
             // 
             // labelControl4
             // 
@@ -260,7 +259,7 @@ namespace SimiSoft
             this.txtCodigoBarra.Location = new System.Drawing.Point(278, 35);
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoBarra.TabIndex = 23;
+            this.txtCodigoBarra.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -275,14 +274,14 @@ namespace SimiSoft
             this.txtStockMin.Location = new System.Drawing.Point(86, 165);
             this.txtStockMin.Name = "txtStockMin";
             this.txtStockMin.Size = new System.Drawing.Size(100, 20);
-            this.txtStockMin.TabIndex = 21;
+            this.txtStockMin.TabIndex = 6;
             // 
             // txtStockMax
             // 
             this.txtStockMax.Location = new System.Drawing.Point(278, 165);
             this.txtStockMax.Name = "txtStockMax";
             this.txtStockMax.Size = new System.Drawing.Size(100, 20);
-            this.txtStockMax.TabIndex = 25;
+            this.txtStockMax.TabIndex = 12;
             // 
             // labelControl7
             // 
@@ -292,30 +291,21 @@ namespace SimiSoft
             this.labelControl7.TabIndex = 26;
             this.labelControl7.Text = "Stock Maximo:";
             // 
-            // btnBorrarImg
-            // 
-            this.btnBorrarImg.Location = new System.Drawing.Point(483, 165);
-            this.btnBorrarImg.Name = "btnBorrarImg";
-            this.btnBorrarImg.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrarImg.TabIndex = 29;
-            this.btnBorrarImg.Text = "Borrar";
-            this.btnBorrarImg.Click += new System.EventHandler(this.btnBorrarImg_Click);
-            // 
             // btnAbrirImg
             // 
             this.btnAbrirImg.Location = new System.Drawing.Point(384, 165);
             this.btnAbrirImg.Name = "btnAbrirImg";
             this.btnAbrirImg.Size = new System.Drawing.Size(75, 23);
-            this.btnAbrirImg.TabIndex = 30;
+            this.btnAbrirImg.TabIndex = 13;
             this.btnAbrirImg.Text = "Abrir";
             this.btnAbrirImg.Click += new System.EventHandler(this.btnAbrirImg_Click);
             // 
             // btnGuardarImg
             // 
-            this.btnGuardarImg.Location = new System.Drawing.Point(433, 201);
+            this.btnGuardarImg.Location = new System.Drawing.Point(483, 165);
             this.btnGuardarImg.Name = "btnGuardarImg";
             this.btnGuardarImg.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarImg.TabIndex = 31;
+            this.btnGuardarImg.TabIndex = 14;
             this.btnGuardarImg.Text = "Guardar";
             this.btnGuardarImg.Click += new System.EventHandler(this.btnGuardarImg_Click);
             // 
@@ -337,7 +327,6 @@ namespace SimiSoft
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.btnGuardarImg);
             this.Controls.Add(this.btnAbrirImg);
-            this.Controls.Add(this.btnBorrarImg);
             this.Controls.Add(this.txtStockMax);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.txtCodigoBarra);
@@ -422,7 +411,6 @@ namespace SimiSoft
         private DevExpress.XtraEditors.TextEdit txtStockMin;
         private DevExpress.XtraEditors.TextEdit txtStockMax;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnBorrarImg;
         private DevExpress.XtraEditors.SimpleButton btnAbrirImg;
         private DevExpress.XtraEditors.SimpleButton btnGuardarImg;
         private System.Windows.Forms.PictureBox pbImagen;

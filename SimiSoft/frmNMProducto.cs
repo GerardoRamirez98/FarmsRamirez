@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using System.Drawing.Imaging;// para la clase imagen
 using System.Security.Policy;
 using System.Net; // para usar servidor ftp xampp
+using DevExpress.Utils;
 
 namespace SimiSoft
 {
@@ -62,9 +63,10 @@ namespace SimiSoft
             this.Close();
         }
 
-        //variable url para almacenar la direccion de la imagen
+        //VARIABLE PARA ALMACENAR LA URL DEL ARCHIVO A SUBIR
         string url = "";
 
+        //METODO PARA SUBIR ARCHIVO A CARPETA POR FTP
         private int SubirArchivo()
         {
             try
@@ -91,6 +93,7 @@ namespace SimiSoft
             }
         }
 
+        //BOTON PARA ABRIR IMAGEN
         private void btnAbrirImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -106,11 +109,7 @@ namespace SimiSoft
             }
         }
 
-        private void btnBorrarImg_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //BOTON PARA GUARDAR IMAGEN Y VALIDAR QUE SE HAYA ALMACENADO
         private void btnGuardarImg_Click(object sender, EventArgs e)
         {
             int resultado = SubirArchivo();
@@ -121,6 +120,8 @@ namespace SimiSoft
                 MessageBox.Show("Ha ocurrido un problema al subir el archivo");
         }
 
+
+        //GUARDAR DATOS
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (Validar())
@@ -141,8 +142,8 @@ namespace SimiSoft
                         stock = Convert.ToInt32(txtStock.Text),
                         stockMin = Convert.ToInt32(txtStockMin.Text),
                         stockMax = Convert.ToInt32(txtStockMax.Text),
-                        foto = Convert.ToInt32(pbImagen.Image)
-                    }.Add() > 0)
+                         
+                }.Add() > 0)
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
@@ -181,30 +182,13 @@ namespace SimiSoft
                 }
             }            
         }
+
+        //VALIDACIONES
         private bool Validar()
         {
+
             var ban = false;
-            if(string.IsNullOrEmpty(txtNombre.Text)) 
-            {
-                txtNombre.ErrorText = "";
-                txtNombre.Focus();
-                ban = true;
-            }
-            if (string.IsNullOrEmpty(txtDescripcion.Text))
-            {
-                txtDescripcion.ErrorText = "Ingrese la descripcion";
-                txtDescripcion.Focus();
-                ban = true;
-            }
-            if (string.IsNullOrEmpty(txtUnidadM.Text))
-            {
-                txtUnidadM.ErrorText = "Ingrese una unidad de medida";
-                if (!ban)
-                {
-                    txtUnidadM.Focus();
-                    ban = true;
-                }
-            }
+            //codigo
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 txtCodigo.ErrorText = "Ingrese un codigo";
@@ -214,24 +198,21 @@ namespace SimiSoft
                     ban = true;
                 }
             }
-            if (string.IsNullOrEmpty(txtPrecioV.Text))
+            //nombre
+            if (string.IsNullOrEmpty(txtNombre.Text)) 
             {
-                txtPrecioV.ErrorText = "Ingrese un precio";
-                if (!ban)
-                {
-                    txtPrecioV.Focus();
-                    ban = true;
-                }
+                txtNombre.ErrorText = "";
+                txtNombre.Focus();
+                ban = true;
             }
-            if (string.IsNullOrEmpty(txtStock.Text))
+            //descripcion
+            if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
-                txtStock.ErrorText = "Ingrese un stock";
-                if (!ban)
-                {
-                    txtStock.Focus();
-                    ban = true;
-                }
+                txtDescripcion.ErrorText = "Ingrese la descripcion";
+                txtDescripcion.Focus();
+                ban = true;
             }
+            //marca
             if (string.IsNullOrEmpty(txtMarca.Text))
             {
                 txtMarca.ErrorText = "Ingrese una marca";
@@ -241,6 +222,77 @@ namespace SimiSoft
                     ban = true;
                 }
             }
+            //unidadMedida
+            if (string.IsNullOrEmpty(txtUnidadM.Text))
+            {
+                txtUnidadM.ErrorText = "Ingrese una unidad de medida";
+                if (!ban)
+                {
+                    txtUnidadM.Focus();
+                    ban = true;
+                }
+            }
+            //precioCompra
+            if (string.IsNullOrEmpty(txtPrecioC.Text))
+            {
+                txtPrecioC.ErrorText = "Ingrese un precio";
+                if (!ban)
+                {
+                    txtPrecioC.Focus();
+                    ban = true;
+                }
+            }
+            //margenGanancia
+            if (string.IsNullOrEmpty(txtMargenG.Text))
+            {
+                txtMargenG.ErrorText = "Ingrese un precio";
+                if (!ban)
+                {
+                    txtMargenG.Focus();
+                    ban = true;
+                }
+            }
+            //precioVenta
+            if (string.IsNullOrEmpty(txtPrecioV.Text))
+            {
+                txtPrecioV.ErrorText = "Ingrese un precio";
+                if (!ban)
+                {
+                    txtPrecioV.Focus();
+                    ban = true;
+                }
+            }
+            //stock
+            if (string.IsNullOrEmpty(txtStock.Text))
+            {
+                txtStock.ErrorText = "Ingrese un stock";
+                if (!ban)
+                {
+                    txtStock.Focus();
+                    ban = true;
+                }
+            }
+            //stockMinimo
+            if (string.IsNullOrEmpty(txtStockMin.Text))
+            {
+                txtStockMin.ErrorText = "Ingrese un stock";
+                if (!ban)
+                {
+                    txtStockMin.Focus();
+                    ban = true;
+                }
+            }
+            //stockMaximo
+            if (string.IsNullOrEmpty(txtStockMax.Text))
+            {
+                txtStockMax.ErrorText = "Ingrese un stock";
+                if (!ban)
+                {
+                    txtStockMax.Focus();
+                    ban = true;
+                }
+            }
+            //valor devuelto
             return !ban;
         }
 
