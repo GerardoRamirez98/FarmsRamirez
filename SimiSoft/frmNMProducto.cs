@@ -62,35 +62,13 @@ namespace SimiSoft
             this.Close();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Imagenes |*.jpg; *.png";
-            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            ofd.Title = "Seleccionar imagen";
-
-            if(ofd.ShowDialog() == DialogResult.OK)
-            {
-                pictureEdit1.Image = Image.FromFile(ofd.FileName);
-                
-            }
-
-            int resultado = SubirArchivo();
-
-            if (resultado == 1)
-                MessageBox.Show("Archivo subido correctamente");
-            else
-                MessageBox.Show("Ha ocurrido un problema al subir el archivo");
-
-        }
-
         string url = "";
 
         private int SubirArchivo()
         {
             try
             {
-                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.100.17/");
+                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.100.17/Imagen.jpg");
                 request.Method = WebRequestMethods.Ftp.UploadFile;
                 request.Credentials = new NetworkCredential("TECNIPRINT", "12345");
                 request.UsePassive = true;
@@ -112,12 +90,42 @@ namespace SimiSoft
             }
         }
 
+        private void btnAbrirImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = "'c:\'";
+            openFileDialog.Filter = "jpg (*.jpg)|*.jpg|png (*.png)|*.png|gif (*.gif)|*.gif";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                url = openFileDialog.FileName;
+                pbImagen.ImageLocation = url;
+                pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void btnBorrarImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardarImg_Click(object sender, EventArgs e)
+        {
+            int resultado = SubirArchivo();
+
+            if (resultado == 1)
+                MessageBox.Show("Archivo subido correctamente");
+            else
+                MessageBox.Show("Ha ocurrido un problema al subir el archivo");
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
             //conversion de imagenes a bytes
             MemoryStream ms = new MemoryStream();
-            pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
+            pbImagen.Image.Save(ms, ImageFormat.Jpeg);
             byte[] data = ms.ToArray();
 
             if (Validar())
@@ -138,7 +146,7 @@ namespace SimiSoft
                         stock = Convert.ToInt32(txtStock.Text),
                         stockMin = Convert.ToInt32(txtStockMin.Text),
                         stockMax = Convert.ToInt32(txtStockMax.Text),
-                        foto = Convert.ToInt32(pictureEdit1.Image)
+                        foto = Convert.ToInt32(pbImagen.Image)
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -164,7 +172,6 @@ namespace SimiSoft
                     producto.stock = Convert.ToInt32(txtStock.Text);
                     producto.stockMin = Convert.ToInt32(txtStockMin.Text);
                     producto.stockMax = Convert.ToInt32(txtStockMax.Text);
-                    producto.foto = Convert.ToInt32(pictureEdit1.Image);
 
                     if (producto.Update() > 0)
                     {
@@ -241,5 +248,7 @@ namespace SimiSoft
             }
             return !ban;
         }
+
+        
     }
 }

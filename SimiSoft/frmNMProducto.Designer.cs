@@ -57,9 +57,10 @@ namespace SimiSoft
             this.txtStockMin = new DevExpress.XtraEditors.TextEdit();
             this.txtStockMax = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBorrarImg = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAbrirImg = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGuardarImg = new DevExpress.XtraEditors.SimpleButton();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnidadM.Properties)).BeginInit();
@@ -73,7 +74,7 @@ namespace SimiSoft
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoBarra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMax.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -291,31 +292,40 @@ namespace SimiSoft
             this.labelControl7.TabIndex = 26;
             this.labelControl7.Text = "Stock Maximo:";
             // 
-            // pictureEdit1
+            // btnBorrarImg
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(384, 38);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(174, 121);
-            this.pictureEdit1.TabIndex = 27;
+            this.btnBorrarImg.Location = new System.Drawing.Point(483, 165);
+            this.btnBorrarImg.Name = "btnBorrarImg";
+            this.btnBorrarImg.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrarImg.TabIndex = 29;
+            this.btnBorrarImg.Text = "Borrar";
+            this.btnBorrarImg.Click += new System.EventHandler(this.btnBorrarImg_Click);
             // 
-            // simpleButton1
+            // btnAbrirImg
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(384, 163);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Text = "Abrir";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnAbrirImg.Location = new System.Drawing.Point(384, 165);
+            this.btnAbrirImg.Name = "btnAbrirImg";
+            this.btnAbrirImg.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrirImg.TabIndex = 30;
+            this.btnAbrirImg.Text = "Abrir";
+            this.btnAbrirImg.Click += new System.EventHandler(this.btnAbrirImg_Click);
             // 
-            // simpleButton2
+            // btnGuardarImg
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(483, 162);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 29;
-            this.simpleButton2.Text = "Borrar";
+            this.btnGuardarImg.Location = new System.Drawing.Point(433, 201);
+            this.btnGuardarImg.Name = "btnGuardarImg";
+            this.btnGuardarImg.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarImg.TabIndex = 31;
+            this.btnGuardarImg.Text = "Guardar";
+            this.btnGuardarImg.Click += new System.EventHandler(this.btnGuardarImg_Click);
+            // 
+            // pbImagen
+            // 
+            this.pbImagen.Location = new System.Drawing.Point(384, 38);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(174, 121);
+            this.pbImagen.TabIndex = 32;
+            this.pbImagen.TabStop = false;
             // 
             // frmNMProducto
             // 
@@ -324,9 +334,10 @@ namespace SimiSoft
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(570, 236);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.pictureEdit1);
+            this.Controls.Add(this.pbImagen);
+            this.Controls.Add(this.btnGuardarImg);
+            this.Controls.Add(this.btnAbrirImg);
+            this.Controls.Add(this.btnBorrarImg);
             this.Controls.Add(this.txtStockMax);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.txtCodigoBarra);
@@ -375,7 +386,7 @@ namespace SimiSoft
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoBarra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMax.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,8 +422,9 @@ namespace SimiSoft
         private DevExpress.XtraEditors.TextEdit txtStockMin;
         private DevExpress.XtraEditors.TextEdit txtStockMax;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnBorrarImg;
+        private DevExpress.XtraEditors.SimpleButton btnAbrirImg;
+        private DevExpress.XtraEditors.SimpleButton btnGuardarImg;
+        private System.Windows.Forms.PictureBox pbImagen;
     }
 }
