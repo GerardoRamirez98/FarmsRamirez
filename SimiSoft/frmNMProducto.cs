@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;// para la clase imagen
 using System.Security.Policy;
-using System.Net;
+using System.Net; // para usar servidor ftp xampp
 
 namespace SimiSoft
 {
@@ -62,6 +62,7 @@ namespace SimiSoft
             this.Close();
         }
 
+        //variable url para almacenar la direccion de la imagen
         string url = "";
 
         private int SubirArchivo()
@@ -122,12 +123,6 @@ namespace SimiSoft
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            //conversion de imagenes a bytes
-            MemoryStream ms = new MemoryStream();
-            pbImagen.Image.Save(ms, ImageFormat.Jpeg);
-            byte[] data = ms.ToArray();
-
             if (Validar())
             {
                 if (producto == null)
