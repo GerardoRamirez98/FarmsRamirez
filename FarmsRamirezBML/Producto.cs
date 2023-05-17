@@ -23,6 +23,7 @@ namespace FarmsRamirezBML
         public bool status { get; set; }
         public int proveedorID { get; set; }
         public int categoriaID { get; set; }
+        public byte foto { get; set; }
 
         public Producto()
         {
