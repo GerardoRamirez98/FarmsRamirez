@@ -260,3 +260,5 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.csproj.CoreC
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.csproj.CopyComplete
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.exe
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.pdb
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Data.SqlClient.dll
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Data.SqlClient.xml

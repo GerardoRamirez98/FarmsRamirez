@@ -31,3 +31,5 @@ C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezBML\obj\Debug\FarmsRamirezBM
 C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezBML\obj\Debug\FarmsRamirezBML.csproj.CopyComplete
 C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezBML\obj\Debug\FarmsRamirezBML.dll
 C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezBML\obj\Debug\FarmsRamirezBML.pdb
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezBML\bin\Debug\System.Data.SqlClient.dll
+C:\Users\USER\source\repos\FarmsRamirez\FarmsRamirezBML\bin\Debug\System.Data.SqlClient.xml
