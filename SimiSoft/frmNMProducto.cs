@@ -13,7 +13,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;// para la clase imagen
-
+using System.Security.Policy;
+using System.Net;
 
 namespace SimiSoft
 {
@@ -72,6 +73,42 @@ namespace SimiSoft
             {
                 pictureEdit1.Image = Image.FromFile(ofd.FileName);
                 
+            }
+
+            int resultado = SubirArchivo();
+
+            if (resultado == 1)
+                MessageBox.Show("Archivo subido correctamente");
+            else
+                MessageBox.Show("Ha ocurrido un problema al subir el archivo");
+
+        }
+
+        string url = "";
+
+        private int SubirArchivo()
+        {
+            try
+            {
+                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.100.17/");
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential("TECNIPRINT", "12345");
+                request.UsePassive = true;
+                request.UseBinary = true;
+                request.KeepAlive = true;
+                FileStream stream = File.OpenRead(url);
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                stream.Close();
+                Stream reqStream = request.GetRequestStream();
+                reqStream.Write(buffer, 0, buffer.Length);
+                reqStream.Flush();
+                reqStream.Close();
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
 
