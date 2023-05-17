@@ -1,10 +1,6 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
@@ -24,7 +20,7 @@ namespace FarmsRamirezBML
         public int stock { get; set; }
         public int stockMin { get; set; }
         public int stockMax { get; set; }
-        public byte foto { get; set; }
+        public int foto { get; set; }
         public bool status { get; set; }
         public int proveedorID { get; set; }
         public int categoriaID { get; set; }
@@ -38,7 +34,7 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("codigo", codigo);
             parametros.Add("codigoBarra", codigoBarra);
-            parametros.Add("nombre",nombre);
+            parametros.Add("nombre", nombre);
             parametros.Add("@descripcion", descripcion);
             parametros.Add("@marca", marca);
             parametros.Add("@unidadMedida", unidadMedida);
@@ -49,7 +45,7 @@ namespace FarmsRamirezBML
             parametros.Add("@stockMin", stockMin);
             parametros.Add("@stockMax", stockMax);
             parametros.Add("@foto", foto);
-            return dataAccess.Execute("stp_productos_add", parametros);
+            return dataAccess.Execute("stp_producto_agregar", parametros);
         }
 
         public int Delete()
@@ -89,5 +85,6 @@ namespace FarmsRamirezBML
             parametros.Add("@foto", foto);
             return dataAccess.Execute("stp_productos_update", parametros);
         }
+
     }
 }

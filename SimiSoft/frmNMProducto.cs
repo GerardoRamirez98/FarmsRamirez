@@ -1,14 +1,19 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Utils.CommonDialogs;
+using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;// para los archivos en memoria
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;// para la clase imagen
+
 
 namespace SimiSoft
 {
@@ -42,6 +47,7 @@ namespace SimiSoft
             txtStock.Text = producto.stock.ToString();
             txtStockMin.Text = producto.stockMin.ToString();
             txtStockMax.Text = producto.stockMax.ToString();
+
             
         }
 
@@ -55,20 +61,47 @@ namespace SimiSoft
             this.Close();
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Imagenes |*.jpg; *.png";
+            ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofd.Title = "Seleccionar imagen";
+
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureEdit1.Image = Image.FromFile(ofd.FileName);
+                
+            }
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            //conversion de imagenes a bytes
+            MemoryStream ms = new MemoryStream();
+            pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] data = ms.ToArray();
+
             if (Validar())
             {
                 if (producto == null)
                 {
                     if (new Producto
                     {
-                        descripcion = txtDescripcion.Text,
-                        unidadMedida = txtUnidadM.Text,
                         codigo = txtCodigo.Text,
+                        codigoBarra = txtCodigoBarra.Text,
+                        nombre = txtNombre.Text,
+                        descripcion = txtDescripcion.Text,
+                        marca = txtMarca.Text,
+                        unidadMedida = txtUnidadM.Text,
+                        precioCompra = Convert.ToDecimal(txtPrecioC.Text),
+                        margenGanancia = Convert.ToInt32(txtMargenG.Text),
                         precioVenta = Convert.ToDecimal(txtPrecioV.Text),
                         stock = Convert.ToInt32(txtStock.Text),
-                        marca = txtMarca.Text
+                        stockMin = Convert.ToInt32(txtStockMin.Text),
+                        stockMax = Convert.ToInt32(txtStockMax.Text),
+                        foto = Convert.ToInt32(pictureEdit1.Image)
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -82,13 +115,20 @@ namespace SimiSoft
                 }
                 else
                 {
-                    producto.descripcion = txtDescripcion.Text;
-                    producto.unidadMedida = txtUnidadM.Text;
                     producto.codigo = txtCodigo.Text;
+                    producto.codigoBarra = txtCodigoBarra.Text;
+                    producto.nombre = txtNombre.Text;
+                    producto.descripcion = txtDescripcion.Text;
+                    producto.marca = txtMarca.Text;
+                    producto.unidadMedida = txtUnidadM.Text;
                     producto.precioCompra = Convert.ToDecimal(txtPrecioC.Text);
+                    producto.margenGanancia = Convert.ToInt32(txtMargenG.Text);
                     producto.precioVenta = Convert.ToDecimal(txtPrecioV.Text);
                     producto.stock = Convert.ToInt32(txtStock.Text);
-                    producto.marca = txtMarca.Text;
+                    producto.stockMin = Convert.ToInt32(txtStockMin.Text);
+                    producto.stockMax = Convert.ToInt32(txtStockMax.Text);
+                    producto.foto = Convert.ToInt32(pictureEdit1.Image);
+
                     if (producto.Update() > 0)
                     {
                         XtraMessageBox.Show("Producto modificado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,6 +145,12 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
+            if(string.IsNullOrEmpty(txtNombre.Text)) 
+            {
+                txtNombre.ErrorText = "";
+                txtNombre.Focus();
+                ban = true;
+            }
             if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
                 txtDescripcion.ErrorText = "Ingrese la descripcion";
@@ -157,18 +203,6 @@ namespace SimiSoft
                 }
             }
             return !ban;
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
-            dlg.Title = "Seleccione una imagen";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                string picLoc1 = dlg.FileName.ToString();
-                pictureBox1.ImageLocation = picLoc1;
-            }
         }
     }
 }
