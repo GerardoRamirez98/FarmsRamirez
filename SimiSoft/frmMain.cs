@@ -44,6 +44,25 @@ namespace SimiSoft
 
         }
 
+        private void btnProveedores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmProveedores))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Productos...");
+
+            new frmProveedores() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
         private void btnSalir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (XtraMessageBox.Show("¿Estás seguro de cerrar sesión?", "Warning",
@@ -62,5 +81,7 @@ namespace SimiSoft
                     return;
                 }
         }
+
+        
     }
 }

@@ -70,12 +70,13 @@ namespace SimiSoft
             this.btnNuevoProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnModificarProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminarProducto = new DevExpress.XtraBars.BarButtonItem();
-            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.bar8 = new DevExpress.XtraBars.Bar();
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl6 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
+            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
+            this.bar8 = new DevExpress.XtraBars.Bar();
+            this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProductos)).BeginInit();
@@ -110,7 +111,7 @@ namespace SimiSoft
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 548);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1236, 0);
             // 
@@ -120,7 +121,7 @@ namespace SimiSoft
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 528);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 548);
             // 
             // barDockControlRight
             // 
@@ -128,7 +129,7 @@ namespace SimiSoft
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1236, 20);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 528);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 548);
             // 
             // barSubItem1
             // 
@@ -174,7 +175,7 @@ namespace SimiSoft
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 548);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 568);
             this.barDockControl2.Manager = this.barManager2;
             this.barDockControl2.Size = new System.Drawing.Size(1236, 0);
             // 
@@ -184,7 +185,7 @@ namespace SimiSoft
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl3.Location = new System.Drawing.Point(0, 20);
             this.barDockControl3.Manager = this.barManager2;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 528);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 548);
             // 
             // barDockControl4
             // 
@@ -192,7 +193,7 @@ namespace SimiSoft
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl4.Location = new System.Drawing.Point(1236, 20);
             this.barDockControl4.Manager = this.barManager2;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 528);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 548);
             // 
             // bar6
             // 
@@ -223,7 +224,7 @@ namespace SimiSoft
             this.gcProductos.MainView = this.gvProductos;
             this.gcProductos.MenuManager = this.barManager1;
             this.gcProductos.Name = "gcProductos";
-            this.gcProductos.Size = new System.Drawing.Size(1236, 528);
+            this.gcProductos.Size = new System.Drawing.Size(1236, 548);
             this.gcProductos.TabIndex = 8;
             this.gcProductos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProductos});
@@ -448,8 +449,7 @@ namespace SimiSoft
             // barManager3
             // 
             this.barManager3.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1,
-            this.bar8});
+            this.bar1});
             this.barManager3.DockControls.Add(this.barDockControl5);
             this.barManager3.DockControls.Add(this.barDockControl6);
             this.barManager3.DockControls.Add(this.barDockControl7);
@@ -460,9 +460,9 @@ namespace SimiSoft
             this.btnNuevoProducto,
             this.btnModificarProducto,
             this.btnEliminarProducto,
-            this.skinBarSubItem1});
-            this.barManager3.MaxItemId = 5;
-            this.barManager3.StatusBar = this.bar8;
+            this.skinBarSubItem1,
+            this.skinBarSubItem2});
+            this.barManager3.MaxItemId = 11;
             // 
             // bar1
             // 
@@ -475,7 +475,7 @@ namespace SimiSoft
             new DevExpress.XtraBars.LinkPersistInfo(this.btnNuevoProducto),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnModificarProducto),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminarProducto),
-            new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem2)});
             this.bar1.Text = "Herramientas";
             // 
             // btnActualizarProducto
@@ -506,6 +506,38 @@ namespace SimiSoft
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarProducto_ItemClick);
             // 
+            // barDockControl5
+            // 
+            this.barDockControl5.CausesValidation = false;
+            this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl5.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl5.Manager = this.barManager3;
+            this.barDockControl5.Size = new System.Drawing.Size(1236, 20);
+            // 
+            // barDockControl6
+            // 
+            this.barDockControl6.CausesValidation = false;
+            this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControl6.Location = new System.Drawing.Point(0, 568);
+            this.barDockControl6.Manager = this.barManager3;
+            this.barDockControl6.Size = new System.Drawing.Size(1236, 0);
+            // 
+            // barDockControl7
+            // 
+            this.barDockControl7.CausesValidation = false;
+            this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControl7.Location = new System.Drawing.Point(0, 20);
+            this.barDockControl7.Manager = this.barManager3;
+            this.barDockControl7.Size = new System.Drawing.Size(0, 548);
+            // 
+            // barDockControl8
+            // 
+            this.barDockControl8.CausesValidation = false;
+            this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControl8.Location = new System.Drawing.Point(1236, 20);
+            this.barDockControl8.Manager = this.barManager3;
+            this.barDockControl8.Size = new System.Drawing.Size(0, 548);
+            // 
             // skinBarSubItem1
             // 
             this.skinBarSubItem1.Caption = "Apariencia";
@@ -524,37 +556,11 @@ namespace SimiSoft
             this.bar8.OptionsBar.UseWholeRow = true;
             this.bar8.Text = "Barra de estado";
             // 
-            // barDockControl5
+            // skinBarSubItem2
             // 
-            this.barDockControl5.CausesValidation = false;
-            this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl5.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl5.Manager = this.barManager3;
-            this.barDockControl5.Size = new System.Drawing.Size(1236, 20);
-            // 
-            // barDockControl6
-            // 
-            this.barDockControl6.CausesValidation = false;
-            this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 548);
-            this.barDockControl6.Manager = this.barManager3;
-            this.barDockControl6.Size = new System.Drawing.Size(1236, 20);
-            // 
-            // barDockControl7
-            // 
-            this.barDockControl7.CausesValidation = false;
-            this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl7.Location = new System.Drawing.Point(0, 20);
-            this.barDockControl7.Manager = this.barManager3;
-            this.barDockControl7.Size = new System.Drawing.Size(0, 528);
-            // 
-            // barDockControl8
-            // 
-            this.barDockControl8.CausesValidation = false;
-            this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(1236, 20);
-            this.barDockControl8.Manager = this.barManager3;
-            this.barDockControl8.Size = new System.Drawing.Size(0, 528);
+            this.skinBarSubItem2.Caption = "Apariencia";
+            this.skinBarSubItem2.Id = 10;
+            this.skinBarSubItem2.Name = "skinBarSubItem2";
             // 
             // frmProductos
             // 
@@ -626,7 +632,6 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarButtonItem btnNuevoProducto;
         private DevExpress.XtraBars.BarButtonItem btnModificarProducto;
         private DevExpress.XtraBars.BarButtonItem btnEliminarProducto;
-        private DevExpress.XtraBars.Bar bar8;
         private DevExpress.XtraBars.BarDockControl barDockControl5;
         private DevExpress.XtraBars.BarDockControl barDockControl6;
         private DevExpress.XtraBars.BarDockControl barDockControl8;
@@ -637,5 +642,7 @@ namespace SimiSoft
         private DevExpress.XtraGrid.Columns.GridColumn colPrecioVenta;
         private DevExpress.XtraGrid.Columns.GridColumn colStockMin;
         private DevExpress.XtraGrid.Columns.GridColumn colStockMax;
+        private DevExpress.XtraBars.Bar bar8;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem2;
     }
 }
