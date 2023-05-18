@@ -43,6 +43,7 @@
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcProveedores = new DevExpress.XtraGrid.GridControl();
             this.gvProveedores = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colProveedorID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombreEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCodigoPostal = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,18 +52,16 @@
             this.colMunicipio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colColonia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCalle = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNInterior = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNExterior = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCelular = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTelefonoFijo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelFijo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCorreo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPaginaWeb = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombreRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCorreoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCelularRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelFijoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).BeginInit();
@@ -197,17 +196,16 @@
             this.colMunicipio,
             this.colColonia,
             this.colCalle,
-            this.colNumeroInterior,
-            this.colNumeroExterior,
+            this.colNInterior,
+            this.colNExterior,
             this.colCelular,
-            this.colTelefonoFijo,
+            this.colTelFijo,
             this.colCorreo,
             this.colPaginaWeb,
             this.colNombreRepresentante,
             this.colCorreoRepresentante,
             this.colCelularRepresentante,
-            this.colTelFijoRepresentante,
-            this.colStatus});
+            this.colTelFijoRepresentante});
             this.gvProveedores.GridControl = this.gcProveedores;
             this.gvProveedores.Name = "gvProveedores";
             this.gvProveedores.OptionsBehavior.Editable = false;
@@ -216,9 +214,13 @@
             this.gvProveedores.OptionsView.ShowAutoFilterRow = true;
             this.gvProveedores.OptionsView.ShowGroupPanel = false;
             // 
+            // proveedorBindingSource
+            // 
+            this.proveedorBindingSource.DataSource = typeof(FarmsRamirezBML.Proveedor);
+            // 
             // colProveedorID
             // 
-            this.colProveedorID.Caption = "ProveedorID";
+            this.colProveedorID.Caption = "proveedorID";
             this.colProveedorID.FieldName = "proveedorID";
             this.colProveedorID.Name = "colProveedorID";
             this.colProveedorID.Visible = true;
@@ -226,7 +228,7 @@
             // 
             // colNombreEmpresa
             // 
-            this.colNombreEmpresa.Caption = "NombreEmpresa";
+            this.colNombreEmpresa.Caption = "nombreEmpresa";
             this.colNombreEmpresa.FieldName = "nombreEmpresa";
             this.colNombreEmpresa.Name = "colNombreEmpresa";
             this.colNombreEmpresa.Visible = true;
@@ -234,7 +236,7 @@
             // 
             // colCodigoPostal
             // 
-            this.colCodigoPostal.Caption = "CodigoPostal";
+            this.colCodigoPostal.Caption = "codigoPostal";
             this.colCodigoPostal.FieldName = "codigoPostal";
             this.colCodigoPostal.Name = "colCodigoPostal";
             this.colCodigoPostal.Visible = true;
@@ -242,7 +244,7 @@
             // 
             // colEstado
             // 
-            this.colEstado.Caption = "Estado";
+            this.colEstado.Caption = "estado";
             this.colEstado.FieldName = "estado";
             this.colEstado.Name = "colEstado";
             this.colEstado.Visible = true;
@@ -250,7 +252,7 @@
             // 
             // colCiudad
             // 
-            this.colCiudad.Caption = "Ciudad";
+            this.colCiudad.Caption = "ciudad";
             this.colCiudad.FieldName = "ciudad";
             this.colCiudad.Name = "colCiudad";
             this.colCiudad.Visible = true;
@@ -258,7 +260,7 @@
             // 
             // colMunicipio
             // 
-            this.colMunicipio.Caption = "Municipio";
+            this.colMunicipio.Caption = "municipio";
             this.colMunicipio.FieldName = "municipio";
             this.colMunicipio.Name = "colMunicipio";
             this.colMunicipio.Visible = true;
@@ -266,7 +268,7 @@
             // 
             // colColonia
             // 
-            this.colColonia.Caption = "Colonia";
+            this.colColonia.Caption = "colonia";
             this.colColonia.FieldName = "colonia";
             this.colColonia.Name = "colColonia";
             this.colColonia.Visible = true;
@@ -274,47 +276,47 @@
             // 
             // colCalle
             // 
-            this.colCalle.Caption = "Calle";
+            this.colCalle.Caption = "calle";
             this.colCalle.FieldName = "calle";
             this.colCalle.Name = "colCalle";
             this.colCalle.Visible = true;
             this.colCalle.VisibleIndex = 7;
             // 
-            // colNumeroInterior
+            // colNInterior
             // 
-            this.colNumeroInterior.Caption = "NumeroInterior";
-            this.colNumeroInterior.FieldName = "nInterior";
-            this.colNumeroInterior.Name = "colNumeroInterior";
-            this.colNumeroInterior.Visible = true;
-            this.colNumeroInterior.VisibleIndex = 8;
+            this.colNInterior.Caption = "nInterior";
+            this.colNInterior.FieldName = "nInterior";
+            this.colNInterior.Name = "colNInterior";
+            this.colNInterior.Visible = true;
+            this.colNInterior.VisibleIndex = 8;
             // 
-            // colNumeroExterior
+            // colNExterior
             // 
-            this.colNumeroExterior.Caption = "NumeroExterior";
-            this.colNumeroExterior.FieldName = "nExterior";
-            this.colNumeroExterior.Name = "colNumeroExterior";
-            this.colNumeroExterior.Visible = true;
-            this.colNumeroExterior.VisibleIndex = 9;
+            this.colNExterior.Caption = "nExterior";
+            this.colNExterior.FieldName = "nExterior";
+            this.colNExterior.Name = "colNExterior";
+            this.colNExterior.Visible = true;
+            this.colNExterior.VisibleIndex = 9;
             // 
             // colCelular
             // 
-            this.colCelular.Caption = "Celular";
+            this.colCelular.Caption = "celular";
             this.colCelular.FieldName = "celular";
             this.colCelular.Name = "colCelular";
             this.colCelular.Visible = true;
             this.colCelular.VisibleIndex = 10;
             // 
-            // colTelefonoFijo
+            // colTelFijo
             // 
-            this.colTelefonoFijo.Caption = "TelefonoFijo";
-            this.colTelefonoFijo.FieldName = "telFijo";
-            this.colTelefonoFijo.Name = "colTelefonoFijo";
-            this.colTelefonoFijo.Visible = true;
-            this.colTelefonoFijo.VisibleIndex = 11;
+            this.colTelFijo.Caption = "telFijo";
+            this.colTelFijo.FieldName = "telFijo";
+            this.colTelFijo.Name = "colTelFijo";
+            this.colTelFijo.Visible = true;
+            this.colTelFijo.VisibleIndex = 11;
             // 
             // colCorreo
             // 
-            this.colCorreo.Caption = "Correo";
+            this.colCorreo.Caption = "correo";
             this.colCorreo.FieldName = "correo";
             this.colCorreo.Name = "colCorreo";
             this.colCorreo.Visible = true;
@@ -322,7 +324,7 @@
             // 
             // colPaginaWeb
             // 
-            this.colPaginaWeb.Caption = "PaginaWeb";
+            this.colPaginaWeb.Caption = "paginaWeb";
             this.colPaginaWeb.FieldName = "paginaWeb";
             this.colPaginaWeb.Name = "colPaginaWeb";
             this.colPaginaWeb.Visible = true;
@@ -330,7 +332,7 @@
             // 
             // colNombreRepresentante
             // 
-            this.colNombreRepresentante.Caption = "NombreRepresentante";
+            this.colNombreRepresentante.Caption = "nombreRepresentante";
             this.colNombreRepresentante.FieldName = "nombreRepresentante";
             this.colNombreRepresentante.Name = "colNombreRepresentante";
             this.colNombreRepresentante.Visible = true;
@@ -338,7 +340,7 @@
             // 
             // colCorreoRepresentante
             // 
-            this.colCorreoRepresentante.Caption = "CorreoRepresentante";
+            this.colCorreoRepresentante.Caption = "correoRepresentante";
             this.colCorreoRepresentante.FieldName = "correoRepresentante";
             this.colCorreoRepresentante.Name = "colCorreoRepresentante";
             this.colCorreoRepresentante.Visible = true;
@@ -346,7 +348,7 @@
             // 
             // colCelularRepresentante
             // 
-            this.colCelularRepresentante.Caption = "CelularRepresentante";
+            this.colCelularRepresentante.Caption = "celularRepresentante";
             this.colCelularRepresentante.FieldName = "celularRepresentante";
             this.colCelularRepresentante.Name = "colCelularRepresentante";
             this.colCelularRepresentante.Visible = true;
@@ -354,21 +356,11 @@
             // 
             // colTelFijoRepresentante
             // 
-            this.colTelFijoRepresentante.Caption = "TelFijoRepresentante";
+            this.colTelFijoRepresentante.Caption = "telFijoRepresentante";
             this.colTelFijoRepresentante.FieldName = "telFijoRepresentante";
             this.colTelFijoRepresentante.Name = "colTelFijoRepresentante";
             this.colTelFijoRepresentante.Visible = true;
             this.colTelFijoRepresentante.VisibleIndex = 17;
-            // 
-            // colStatus
-            // 
-            this.colStatus.Caption = "Status";
-            this.colStatus.FieldName = "status";
-            this.colStatus.Name = "colStatus";
-            // 
-            // proveedorBindingSource
-            // 
-            this.proveedorBindingSource.DataSource = typeof(FarmsRamirezBML.Proveedor);
             // 
             // frmProveedores
             // 
@@ -408,6 +400,7 @@
         private DevExpress.XtraGrid.GridControl gcProveedores;
         private DevExpress.XtraGrid.Views.Grid.GridView gvProveedores;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem2;
+        private System.Windows.Forms.BindingSource proveedorBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colProveedorID;
         private DevExpress.XtraGrid.Columns.GridColumn colNombreEmpresa;
         private DevExpress.XtraGrid.Columns.GridColumn colCodigoPostal;
@@ -416,17 +409,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMunicipio;
         private DevExpress.XtraGrid.Columns.GridColumn colColonia;
         private DevExpress.XtraGrid.Columns.GridColumn colCalle;
-        private DevExpress.XtraGrid.Columns.GridColumn colNumeroInterior;
-        private DevExpress.XtraGrid.Columns.GridColumn colNumeroExterior;
+        private DevExpress.XtraGrid.Columns.GridColumn colNInterior;
+        private DevExpress.XtraGrid.Columns.GridColumn colNExterior;
         private DevExpress.XtraGrid.Columns.GridColumn colCelular;
-        private DevExpress.XtraGrid.Columns.GridColumn colTelefonoFijo;
+        private DevExpress.XtraGrid.Columns.GridColumn colTelFijo;
         private DevExpress.XtraGrid.Columns.GridColumn colCorreo;
         private DevExpress.XtraGrid.Columns.GridColumn colPaginaWeb;
         private DevExpress.XtraGrid.Columns.GridColumn colNombreRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colCorreoRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colCelularRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colTelFijoRepresentante;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
-        private System.Windows.Forms.BindingSource proveedorBindingSource;
     }
 }
