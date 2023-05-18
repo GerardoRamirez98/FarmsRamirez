@@ -66,8 +66,8 @@
             this.textEdit18 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.bntGuardar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
@@ -414,29 +414,30 @@
             this.groupControl2.TabIndex = 36;
             this.groupControl2.Text = "Datos Representante";
             // 
-            // simpleButton1
+            // btnCancelar
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(127, 376);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 37;
-            this.simpleButton1.Text = "simpleButton1";
+            this.btnCancelar.Location = new System.Drawing.Point(127, 376);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // simpleButton2
+            // bntGuardar
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(208, 376);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 38;
-            this.simpleButton2.Text = "simpleButton2";
+            this.bntGuardar.Location = new System.Drawing.Point(208, 376);
+            this.bntGuardar.Name = "bntGuardar";
+            this.bntGuardar.Size = new System.Drawing.Size(75, 23);
+            this.bntGuardar.TabIndex = 38;
+            this.bntGuardar.Text = "Guardar";
             // 
             // frmNMProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 408);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.bntGuardar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "frmNMProveedor";
@@ -510,7 +511,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit18;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnCancelar;
+        private DevExpress.XtraEditors.SimpleButton bntGuardar;
     }
 }

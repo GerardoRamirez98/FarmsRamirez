@@ -32,22 +32,36 @@ namespace SimiSoft
 
         private void btnActualizarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            
         }
 
         private void btnNuevoProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new frmNMProveedor
+            {
+                Text = "Nuevo Proveedor"
+            }.ShowDialog();
+            productoBindingSource.DataSource = new Proveedor().GetAll();
         }
 
         private void btnModificarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("productoID"))
+            {
+                Text = "Modificar Producto (" + (int)gvProveedores.GetFocusedRowCellValue("productoID") + ")"
+            }.ShowDialog();
+            productoBindingSource.DataSource = new Producto().GetAll();
+            gvProveedores.BestFitColumns();
         }
 
         private void btnEliminarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new Proveedor
+            {
+                proveedorID = (int)gvProveedores.GetFocusedRowCellValue("proveedorID")
+            }.Delete();
+            productoBindingSource.DataSource = new Proveedor().GetAll();
+            gvProveedores.BestFitColumns();
         }
 
         
