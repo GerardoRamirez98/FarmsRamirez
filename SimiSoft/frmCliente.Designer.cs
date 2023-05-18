@@ -343,7 +343,7 @@
             this.Controls.Add(this.barDockControl6);
             this.Controls.Add(this.barDockControl5);
             this.Name = "frmCliente";
-            this.Text = "frmClientes";
+            this.Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

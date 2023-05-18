@@ -49,6 +49,8 @@
             this.colCodigoPostal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCiudad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMunicipio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colColonia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCalle = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,8 +63,6 @@
             this.colCelularRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelFijoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMunicipio = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colColonia = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).BeginInit();
@@ -268,6 +268,22 @@
             this.colCiudad.Visible = true;
             this.colCiudad.VisibleIndex = 4;
             // 
+            // colMunicipio
+            // 
+            this.colMunicipio.Caption = "Municipio";
+            this.colMunicipio.FieldName = "municipio";
+            this.colMunicipio.Name = "colMunicipio";
+            this.colMunicipio.Visible = true;
+            this.colMunicipio.VisibleIndex = 5;
+            // 
+            // colColonia
+            // 
+            this.colColonia.Caption = "Colonia";
+            this.colColonia.FieldName = "colonia";
+            this.colColonia.Name = "colColonia";
+            this.colColonia.Visible = true;
+            this.colColonia.VisibleIndex = 6;
+            // 
             // colCalle
             // 
             this.colCalle.Caption = "Calle";
@@ -362,22 +378,6 @@
             this.colStatus.FieldName = "status";
             this.colStatus.Name = "colStatus";
             // 
-            // colMunicipio
-            // 
-            this.colMunicipio.Caption = "Municipio";
-            this.colMunicipio.FieldName = "municipio";
-            this.colMunicipio.Name = "colMunicipio";
-            this.colMunicipio.Visible = true;
-            this.colMunicipio.VisibleIndex = 5;
-            // 
-            // colColonia
-            // 
-            this.colColonia.Caption = "Colonia";
-            this.colColonia.FieldName = "colonia";
-            this.colColonia.Name = "colColonia";
-            this.colColonia.Visible = true;
-            this.colColonia.VisibleIndex = 6;
-            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +389,7 @@
             this.Controls.Add(this.barDockControl6);
             this.Controls.Add(this.barDockControl5);
             this.Name = "frmProveedores";
-            this.Text = "frmProveedores";
+            this.Text = "Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).EndInit();
