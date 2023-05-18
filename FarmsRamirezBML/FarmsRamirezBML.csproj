@@ -65,14 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Cliente.datasource" />
-    <None Include="Properties\DataSources\FormaPago.datasource" />
-    <None Include="Properties\DataSources\Misc.datasource" />
-    <None Include="Properties\DataSources\Producto.datasource" />
-    <None Include="Properties\DataSources\Proveedor.datasource" />
-    <None Include="Properties\DataSources\Usuario.datasource" />
-    <None Include="Properties\DataSources\Venta.datasource" />
-    <None Include="Properties\DataSources\VentaDetalle.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
