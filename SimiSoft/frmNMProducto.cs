@@ -49,8 +49,6 @@ namespace SimiSoft
             txtStock.Text = producto.stock.ToString();
             txtStockMin.Text = producto.stockMin.ToString();
             txtStockMax.Text = producto.stockMax.ToString();
-
-            
         }
 
         private void frmNMProducto_Load(object sender, EventArgs e)
