@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using FarmsRamirezBML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,17 @@ namespace SimiSoft
         public frmProveedores()
         {
             InitializeComponent();
+        }
+
+        private void gcProveedores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmProveedores_Load(object sender, EventArgs e)
+        {
+            productoBindingSource.DataSource = new Proveedor().GetAll();
+            gvProveedores.BestFitColumns();
         }
 
         private void btnActualizarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -37,5 +49,7 @@ namespace SimiSoft
         {
 
         }
+
+        
     }
 }
