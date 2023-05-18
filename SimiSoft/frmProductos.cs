@@ -62,7 +62,7 @@ namespace SimiSoft
 
         private void btnActualizarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            
         }
     }
 }

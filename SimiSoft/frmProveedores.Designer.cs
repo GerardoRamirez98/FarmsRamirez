@@ -36,7 +36,6 @@
             this.btnModificarProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminarProducto = new DevExpress.XtraBars.BarButtonItem();
             this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.bar8 = new DevExpress.XtraBars.Bar();
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl6 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
@@ -71,8 +70,7 @@
             // barManager3
             // 
             this.barManager3.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1,
-            this.bar8});
+            this.bar1});
             this.barManager3.DockControls.Add(this.barDockControl5);
             this.barManager3.DockControls.Add(this.barDockControl6);
             this.barManager3.DockControls.Add(this.barDockControl7);
@@ -86,7 +84,6 @@
             this.skinBarSubItem1,
             this.skinBarSubItem2});
             this.barManager3.MaxItemId = 6;
-            this.barManager3.StatusBar = this.bar8;
             // 
             // bar1
             // 
@@ -136,18 +133,6 @@
             this.skinBarSubItem2.Id = 5;
             this.skinBarSubItem2.Name = "skinBarSubItem2";
             // 
-            // bar8
-            // 
-            this.bar8.BarName = "Barra de estado";
-            this.bar8.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar8.DockCol = 0;
-            this.bar8.DockRow = 0;
-            this.bar8.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar8.OptionsBar.AllowQuickCustomization = false;
-            this.bar8.OptionsBar.DrawDragBorder = false;
-            this.bar8.OptionsBar.UseWholeRow = true;
-            this.bar8.Text = "Barra de estado";
-            // 
             // barDockControl5
             // 
             this.barDockControl5.CausesValidation = false;
@@ -160,9 +145,9 @@
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 548);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 568);
             this.barDockControl6.Manager = this.barManager3;
-            this.barDockControl6.Size = new System.Drawing.Size(1236, 20);
+            this.barDockControl6.Size = new System.Drawing.Size(1236, 0);
             // 
             // barDockControl7
             // 
@@ -170,7 +155,7 @@
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl7.Location = new System.Drawing.Point(0, 20);
             this.barDockControl7.Manager = this.barManager3;
-            this.barDockControl7.Size = new System.Drawing.Size(0, 528);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 548);
             // 
             // barDockControl8
             // 
@@ -178,7 +163,7 @@
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl8.Location = new System.Drawing.Point(1236, 20);
             this.barDockControl8.Manager = this.barManager3;
-            this.barDockControl8.Size = new System.Drawing.Size(0, 528);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 548);
             // 
             // skinBarSubItem1
             // 
@@ -193,7 +178,7 @@
             this.gcProveedores.MainView = this.gvProveedores;
             this.gcProveedores.MenuManager = this.barManager3;
             this.gcProveedores.Name = "gcProveedores";
-            this.gcProveedores.Size = new System.Drawing.Size(1236, 528);
+            this.gcProveedores.Size = new System.Drawing.Size(1236, 548);
             this.gcProveedores.TabIndex = 8;
             this.gcProveedores.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProveedores});
@@ -406,7 +391,6 @@
         private DevExpress.XtraBars.BarButtonItem btnNuevoProducto;
         private DevExpress.XtraBars.BarButtonItem btnModificarProducto;
         private DevExpress.XtraBars.BarButtonItem btnEliminarProducto;
-        private DevExpress.XtraBars.Bar bar8;
         private DevExpress.XtraBars.BarDockControl barDockControl5;
         private DevExpress.XtraBars.BarDockControl barDockControl6;
         private DevExpress.XtraBars.BarDockControl barDockControl7;
