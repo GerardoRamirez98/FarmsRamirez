@@ -43,7 +43,6 @@
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcProveedores = new DevExpress.XtraGrid.GridControl();
             this.gvProveedores = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colProveedorID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombreEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCodigoPostal = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,6 +61,7 @@
             this.colCorreoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCelularRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelFijoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).BeginInit();
@@ -214,10 +214,6 @@
             this.gvProveedores.OptionsView.ShowAutoFilterRow = true;
             this.gvProveedores.OptionsView.ShowGroupPanel = false;
             // 
-            // proveedorBindingSource
-            // 
-            this.proveedorBindingSource.DataSource = typeof(FarmsRamirezBML.Proveedor);
-            // 
             // colProveedorID
             // 
             this.colProveedorID.Caption = "proveedorID";
@@ -361,6 +357,10 @@
             this.colTelFijoRepresentante.Name = "colTelFijoRepresentante";
             this.colTelFijoRepresentante.Visible = true;
             this.colTelFijoRepresentante.VisibleIndex = 17;
+            // 
+            // proveedorBindingSource
+            // 
+            this.proveedorBindingSource.DataSource = typeof(FarmsRamirezBML.Proveedor);
             // 
             // frmProveedores
             // 
