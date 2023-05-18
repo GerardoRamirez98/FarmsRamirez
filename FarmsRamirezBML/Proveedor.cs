@@ -12,12 +12,7 @@ namespace FarmsRamirezBML
     {
         private DataAccess dataAccess = DataAccess.Instance();
         public int proveedorID { get; set; }
-        public string nombres { get; set; }
-        public string apellidoP { get; set; }
-        public string apellidoM { get; set; }
-        public string celular { get; set; }
-        public string telFijo { get; set; }
-        public string correo { get; set; }
+        public string nombreEmpresa { get; set; }
         public string codigoPostal { get; set; }
         public string estado { get; set; }
         public string ciudad { get; set; }
@@ -26,6 +21,14 @@ namespace FarmsRamirezBML
         public string calle { get; set; }
         public string nInterior { get; set; }
         public string nExterior { get; set; }
+        public string celular { get; set; }
+        public string telFijo { get; set; }
+        public string correo { get; set; }
+        public string paginaWeb { get; set; }
+        public string nombreRepresentante { get; set; }
+        public string correoRepresentante { get; set; }
+        public string celularRepresentante { get; set; }
+        public string telFijoRepresentante { get; set; }      
         public bool status { get; set; }
 
         public Proveedor()
@@ -35,20 +38,23 @@ namespace FarmsRamirezBML
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@nombre", nombres);
-            parametros.Add("@apellidoP", apellidoP);
-            parametros.Add("@apellidoM", apellidoM);
-            parametros.Add("@celular", celular);
-            parametros.Add("@telFijo", telFijo);
-            parametros.Add("@correo", correo);
+            parametros.Add("@nombreEmpresa", nombreEmpresa);
             parametros.Add("@codigoPostal", codigoPostal);
             parametros.Add("@estado", estado);
             parametros.Add("@ciudad", ciudad);
-            parametros.Add("@municipio",municipio);
-            parametros.Add("@colonia",colonia);
-            parametros.Add("@calle",calle);
-            parametros.Add("@nInterior",nInterior);
-            parametros.Add("@nExterior",nExterior);
+            parametros.Add("@municipio", municipio);
+            parametros.Add("@colonia", colonia);
+            parametros.Add("@calle", calle);
+            parametros.Add("@nInterior", nInterior);
+            parametros.Add("@nExterior", nExterior);
+            parametros.Add("@celular", celular);
+            parametros.Add("@telFijo", telFijo);
+            parametros.Add("@correo", correo);
+            parametros.Add("@paginaWeb", paginaWeb);
+            parametros.Add("@nombreRepresentante", nombreRepresentante);
+            parametros.Add("@correoRepresentante", correoRepresentante);
+            parametros.Add("@celularRepresentante", celularRepresentante);
+            parametros.Add("@telFijoRepresentante", telFijoRepresentante);
             return dataAccess.Execute("stp_proveedores_add");
         }
 
@@ -74,13 +80,7 @@ namespace FarmsRamirezBML
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@proveedorID", proveedorID);
-            parametros.Add("@nombre", nombres);
-            parametros.Add("@apellidoP", apellidoP);
-            parametros.Add("@apellidoM", apellidoM);
-            parametros.Add("@celular", celular);
-            parametros.Add("@telFijo", telFijo);
-            parametros.Add("@correo", correo);
+            parametros.Add("@nombreEmpresa", nombreEmpresa);
             parametros.Add("@codigoPostal", codigoPostal);
             parametros.Add("@estado", estado);
             parametros.Add("@ciudad", ciudad);
@@ -89,6 +89,14 @@ namespace FarmsRamirezBML
             parametros.Add("@calle", calle);
             parametros.Add("@nInterior", nInterior);
             parametros.Add("@nExterior", nExterior);
+            parametros.Add("@celular", celular);
+            parametros.Add("@telFijo", telFijo);
+            parametros.Add("@correo", correo);
+            parametros.Add("@paginaWeb", paginaWeb);
+            parametros.Add("@nombreRepresentante", nombreRepresentante);
+            parametros.Add("@correoRepresentante", correoRepresentante);
+            parametros.Add("@celularRepresentante", celularRepresentante);
+            parametros.Add("@telFijoRepresentante", telFijoRepresentante);
             return dataAccess.Execute("stp_proveedores_update");
         }
     }
