@@ -22,5 +22,10 @@ namespace SimiSoft
         {
             this.Close();
         }
+
+        private void bntGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

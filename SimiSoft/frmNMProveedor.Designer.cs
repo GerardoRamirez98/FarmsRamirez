@@ -430,6 +430,7 @@
             this.bntGuardar.Size = new System.Drawing.Size(75, 23);
             this.bntGuardar.TabIndex = 38;
             this.bntGuardar.Text = "Guardar";
+            this.bntGuardar.Click += new System.EventHandler(this.bntGuardar_Click);
             // 
             // frmNMProveedor
             // 
