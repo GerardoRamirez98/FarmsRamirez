@@ -26,7 +26,7 @@ namespace SimiSoft
 
         private void frmProveedores_Load(object sender, EventArgs e)
         {
-            productoBindingSource.DataSource = new Proveedor().GetAll();
+            proveedorBindingSource.DataSource = new Proveedor().GetAll();
             gvProveedores.BestFitColumns();
         }
 
@@ -41,7 +41,7 @@ namespace SimiSoft
             {
                 Text = "Nuevo Proveedor"
             }.ShowDialog();
-            productoBindingSource.DataSource = new Proveedor().GetAll();
+            proveedorBindingSource.DataSource = new Proveedor().GetAll();
         }
 
         private void btnModificarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -50,7 +50,7 @@ namespace SimiSoft
             {
                 Text = "Modificar Producto (" + (int)gvProveedores.GetFocusedRowCellValue("productoID") + ")"
             }.ShowDialog();
-            productoBindingSource.DataSource = new Producto().GetAll();
+            proveedorBindingSource.DataSource = new Producto().GetAll();
             gvProveedores.BestFitColumns();
         }
 
@@ -60,7 +60,7 @@ namespace SimiSoft
             {
                 proveedorID = (int)gvProveedores.GetFocusedRowCellValue("proveedorID")
             }.Delete();
-            productoBindingSource.DataSource = new Proveedor().GetAll();
+            proveedorBindingSource.DataSource = new Proveedor().GetAll();
             gvProveedores.BestFitColumns();
         }
 

@@ -62,11 +62,11 @@
             this.colCelularRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelFijoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -366,9 +366,9 @@
             this.colStatus.FieldName = "status";
             this.colStatus.Name = "colStatus";
             // 
-            // productoBindingSource
+            // proveedorBindingSource
             // 
-            this.productoBindingSource.DataSource = typeof(FarmsRamirezBML.Producto);
+            this.proveedorBindingSource.DataSource = typeof(FarmsRamirezBML.Proveedor);
             // 
             // frmProveedores
             // 
@@ -386,7 +386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,6 +427,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCelularRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colTelFijoRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
-        private System.Windows.Forms.BindingSource productoBindingSource;
+        private System.Windows.Forms.BindingSource proveedorBindingSource;
     }
 }

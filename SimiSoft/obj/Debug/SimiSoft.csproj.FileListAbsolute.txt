@@ -264,3 +264,4 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Data.SqlClient
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Data.SqlClient.xml
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmProveedores.resources
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmCliente.resources
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmNMProveedor.resources

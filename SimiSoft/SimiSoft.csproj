@@ -64,6 +64,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bd_tecniprint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_tecniprint.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,7 +145,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="bd_tecniprint.xsc">
+      <DependentUpon>bd_tecniprint.xsd</DependentUpon>
+    </None>
+    <None Include="bd_tecniprint.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_tecniprint.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_tecniprint.xss">
+      <DependentUpon>bd_tecniprint.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\FarmsRamirezBML.Cliente.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Producto.datasource" />
+    <None Include="Properties\DataSources\FarmsRamirezBML.Proveedor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,6 +174,9 @@
       <Project>{93b95687-aa7d-47ee-a7ed-2cb3832b131c}</Project>
       <Name>FarmsRamirezBML</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -26,7 +26,6 @@ namespace FarmsRamirezBML
         public string calle { get; set; }
         public string nInterior { get; set; }
         public string nExterior { get; set; }
-        public bool status { get; set; }
 
         public Cliente()
         {

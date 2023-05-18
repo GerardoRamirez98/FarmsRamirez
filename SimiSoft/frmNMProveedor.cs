@@ -30,24 +30,23 @@ namespace SimiSoft
                 proveedorID = proveedorID
             }.GetById();
             txtID.Text = proveedor.proveedorID.ToString();
-            txtNombreEmpresa.Text = proveedor.nombreEmpresa.ToString();
+            txtNombreEmpresa.Text = proveedor.nombreEmpresa;
             txtCodigoPostal.Text = proveedor.codigoPostal.ToString();
-            txtEstado.Text = proveedor.estado.ToString();
-            txtCiudad.Text = proveedor.ciudad.ToString();
-            txtMunicipio.Text = proveedor.municipio.ToString();
-            txtColonia.Text = proveedor.colonia.ToString();
-            txtCalle.Text = proveedor.calle.ToString();
+            txtEstado.Text = proveedor.estado;
+            txtCiudad.Text = proveedor.ciudad;
+            txtMunicipio.Text = proveedor.municipio;
+            txtColonia.Text = proveedor.colonia;
+            txtCalle.Text = proveedor.calle;
             txtNInterior.Text = proveedor.nInterior.ToString();
             txtNExterior.Text = proveedor.nExterior.ToString();
-            txtCelular.Text = proveedor.celular.ToString();
-            txtTelefonoFijo.Text = proveedor.telFijo.ToString();
-            txtCorreo.Text = proveedor.correo.ToString();
-            txtPaginaWeb.Text = proveedor.paginaWeb.ToString();
-            txtNombreRepresentante.Text = proveedor.nombreRepresentante.ToString();
-            txtCorreoRepresentante.Text = proveedor.correoRepresentante.ToString();
-            txtCelularRepresentante.Text = proveedor.celularRepresentante.ToString();
-            txtTelefonoFijo.Text = proveedor.telFijoRepresentante.ToString();
-            txtCelularRepresentante.Text = proveedor.celularRepresentante.ToString();
+            txtCelular.Text = proveedor.celular;
+            txtTelefonoFijo.Text = proveedor.telFijo;
+            txtCorreo.Text = proveedor.correo;
+            txtPaginaWeb.Text = proveedor.paginaWeb;
+            txtNombreRepresentante.Text = proveedor.nombreRepresentante;
+            txtCorreoRepresentante.Text = proveedor.correoRepresentante;
+            txtCelularRepresentante.Text = proveedor.celularRepresentante;
+            txtTelefonoFijoRepresentante.Text = proveedor.telFijoRepresentante;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -64,14 +63,14 @@ namespace SimiSoft
                     if (new Proveedor
                     {
                         nombreEmpresa = txtNombreEmpresa.Text,
-                        codigoPostal = txtCodigoPostal.Text,
+                        codigoPostal = Convert.ToInt32(txtCodigoPostal.Text),
                         estado = txtEstado.Text,
                         ciudad = txtCiudad.Text,
                         municipio = txtMunicipio.Text,
                         colonia = txtColonia.Text,
                         calle = txtCalle.Text,
-                        nInterior = txtNInterior.Text,
-                        nExterior = txtNExterior.Text,
+                        nInterior = Convert.ToInt32(txtNInterior.Text),
+                        nExterior = Convert.ToInt32(txtNExterior.Text),
                         celular = txtCelular.Text,
                         telFijo = txtTelefonoFijo.Text,
                         correo = txtCorreo.Text,
@@ -94,14 +93,14 @@ namespace SimiSoft
                 else
                 {
                     proveedor.nombreEmpresa = txtNombreEmpresa.Text;
-                    proveedor.codigoPostal = txtCodigoPostal.Text;
+                    proveedor.codigoPostal = Convert.ToInt32(txtCodigoPostal.Text);
                     proveedor.estado = txtEstado.Text;
                     proveedor.ciudad = txtCiudad.Text;
                     proveedor.municipio = txtMunicipio.Text;
                     proveedor.colonia = txtColonia.Text;
                     proveedor.calle = txtCalle.Text;
-                    proveedor.nInterior = txtNInterior.Text;
-                    proveedor.nExterior = txtNExterior.Text;
+                    proveedor.nInterior = Convert.ToInt32(txtNInterior.Text);
+                    proveedor.nExterior = Convert.ToInt32(txtNExterior.Text);
                     proveedor.celular = txtCelular.Text;
                     proveedor.telFijo = txtTelefonoFijo.Text;
                     proveedor.correo = txtCorreo.Text;

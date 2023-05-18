@@ -1,10 +1,6 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
@@ -13,14 +9,14 @@ namespace FarmsRamirezBML
         private DataAccess dataAccess = DataAccess.Instance();
         public int proveedorID { get; set; }
         public string nombreEmpresa { get; set; }
-        public string codigoPostal { get; set; }
+        public int codigoPostal { get; set; }
         public string estado { get; set; }
         public string ciudad { get; set; }
         public string municipio { get; set; }
         public string colonia { get; set; }
         public string calle { get; set; }
-        public string nInterior { get; set; }
-        public string nExterior { get; set; }
+        public int nInterior { get; set; }
+        public int nExterior { get; set; }
         public string celular { get; set; }
         public string telFijo { get; set; }
         public string correo { get; set; }
@@ -28,11 +24,10 @@ namespace FarmsRamirezBML
         public string nombreRepresentante { get; set; }
         public string correoRepresentante { get; set; }
         public string celularRepresentante { get; set; }
-        public string telFijoRepresentante { get; set; }      
-        public bool status { get; set; }
+        public string telFijoRepresentante { get; set; }
 
         public Proveedor()
-        { 
+        {
         }
 
         public int Add()
