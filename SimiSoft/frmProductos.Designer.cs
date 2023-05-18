@@ -70,13 +70,13 @@ namespace SimiSoft
             this.btnNuevoProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnModificarProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminarProducto = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl6 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.bar8 = new DevExpress.XtraBars.Bar();
-            this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProductos)).BeginInit();
@@ -506,6 +506,12 @@ namespace SimiSoft
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarProducto_ItemClick);
             // 
+            // skinBarSubItem2
+            // 
+            this.skinBarSubItem2.Caption = "Apariencia";
+            this.skinBarSubItem2.Id = 10;
+            this.skinBarSubItem2.Name = "skinBarSubItem2";
+            // 
             // barDockControl5
             // 
             this.barDockControl5.CausesValidation = false;
@@ -555,12 +561,6 @@ namespace SimiSoft
             this.bar8.OptionsBar.DrawDragBorder = false;
             this.bar8.OptionsBar.UseWholeRow = true;
             this.bar8.Text = "Barra de estado";
-            // 
-            // skinBarSubItem2
-            // 
-            this.skinBarSubItem2.Caption = "Apariencia";
-            this.skinBarSubItem2.Id = 10;
-            this.skinBarSubItem2.Name = "skinBarSubItem2";
             // 
             // frmProductos
             // 

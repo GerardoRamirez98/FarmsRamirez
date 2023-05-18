@@ -35,6 +35,7 @@
             this.btnNuevoProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnModificarProducto = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminarProducto = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
             this.bar8 = new DevExpress.XtraBars.Bar();
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl6 = new DevExpress.XtraBars.BarDockControl();
@@ -43,7 +44,25 @@
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcProveedores = new DevExpress.XtraGrid.GridControl();
             this.gvProveedores = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
+            this.colProveedorID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNombreEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCodigoPostal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCiudad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCalle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCelular = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelefonoFijo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCorreo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPaginaWeb = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNombreRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCorreoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCelularRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelFijoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMunicipio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colColonia = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).BeginInit();
@@ -111,6 +130,12 @@
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarProducto_ItemClick);
             // 
+            // skinBarSubItem2
+            // 
+            this.skinBarSubItem2.Caption = "Apariencia";
+            this.skinBarSubItem2.Id = 5;
+            this.skinBarSubItem2.Name = "skinBarSubItem2";
+            // 
             // bar8
             // 
             this.bar8.BarName = "Barra de estado";
@@ -175,6 +200,26 @@
             // 
             // gvProveedores
             // 
+            this.gvProveedores.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colProveedorID,
+            this.colNombreEmpresa,
+            this.colCodigoPostal,
+            this.colEstado,
+            this.colCiudad,
+            this.colMunicipio,
+            this.colColonia,
+            this.colCalle,
+            this.colNumeroInterior,
+            this.colNumeroExterior,
+            this.colCelular,
+            this.colTelefonoFijo,
+            this.colCorreo,
+            this.colPaginaWeb,
+            this.colNombreRepresentante,
+            this.colCorreoRepresentante,
+            this.colCelularRepresentante,
+            this.colTelFijoRepresentante,
+            this.colStatus});
             this.gvProveedores.GridControl = this.gcProveedores;
             this.gvProveedores.Name = "gvProveedores";
             this.gvProveedores.OptionsBehavior.Editable = false;
@@ -183,11 +228,155 @@
             this.gvProveedores.OptionsView.ShowAutoFilterRow = true;
             this.gvProveedores.OptionsView.ShowGroupPanel = false;
             // 
-            // skinBarSubItem2
+            // colProveedorID
             // 
-            this.skinBarSubItem2.Caption = "Apariencia";
-            this.skinBarSubItem2.Id = 5;
-            this.skinBarSubItem2.Name = "skinBarSubItem2";
+            this.colProveedorID.Caption = "ProveedorID";
+            this.colProveedorID.FieldName = "proveedorID";
+            this.colProveedorID.Name = "colProveedorID";
+            this.colProveedorID.Visible = true;
+            this.colProveedorID.VisibleIndex = 0;
+            // 
+            // colNombreEmpresa
+            // 
+            this.colNombreEmpresa.Caption = "NombreEmpresa";
+            this.colNombreEmpresa.FieldName = "nombreEmpresa";
+            this.colNombreEmpresa.Name = "colNombreEmpresa";
+            this.colNombreEmpresa.Visible = true;
+            this.colNombreEmpresa.VisibleIndex = 1;
+            // 
+            // colCodigoPostal
+            // 
+            this.colCodigoPostal.Caption = "CodigoPostal";
+            this.colCodigoPostal.FieldName = "codigoPostal";
+            this.colCodigoPostal.Name = "colCodigoPostal";
+            this.colCodigoPostal.Visible = true;
+            this.colCodigoPostal.VisibleIndex = 2;
+            // 
+            // colEstado
+            // 
+            this.colEstado.Caption = "Estado";
+            this.colEstado.FieldName = "estado";
+            this.colEstado.Name = "colEstado";
+            this.colEstado.Visible = true;
+            this.colEstado.VisibleIndex = 3;
+            // 
+            // colCiudad
+            // 
+            this.colCiudad.Caption = "Ciudad";
+            this.colCiudad.FieldName = "ciudad";
+            this.colCiudad.Name = "colCiudad";
+            this.colCiudad.Visible = true;
+            this.colCiudad.VisibleIndex = 4;
+            // 
+            // colCalle
+            // 
+            this.colCalle.Caption = "Calle";
+            this.colCalle.FieldName = "calle";
+            this.colCalle.Name = "colCalle";
+            this.colCalle.Visible = true;
+            this.colCalle.VisibleIndex = 7;
+            // 
+            // colNumeroInterior
+            // 
+            this.colNumeroInterior.Caption = "NumeroInterior";
+            this.colNumeroInterior.FieldName = "nInterior";
+            this.colNumeroInterior.Name = "colNumeroInterior";
+            this.colNumeroInterior.Visible = true;
+            this.colNumeroInterior.VisibleIndex = 8;
+            // 
+            // colNumeroExterior
+            // 
+            this.colNumeroExterior.Caption = "NumeroExterior";
+            this.colNumeroExterior.FieldName = "nExterior";
+            this.colNumeroExterior.Name = "colNumeroExterior";
+            this.colNumeroExterior.Visible = true;
+            this.colNumeroExterior.VisibleIndex = 9;
+            // 
+            // colCelular
+            // 
+            this.colCelular.Caption = "Celular";
+            this.colCelular.FieldName = "celular";
+            this.colCelular.Name = "colCelular";
+            this.colCelular.Visible = true;
+            this.colCelular.VisibleIndex = 10;
+            // 
+            // colTelefonoFijo
+            // 
+            this.colTelefonoFijo.Caption = "TelefonoFijo";
+            this.colTelefonoFijo.FieldName = "telFijo";
+            this.colTelefonoFijo.Name = "colTelefonoFijo";
+            this.colTelefonoFijo.Visible = true;
+            this.colTelefonoFijo.VisibleIndex = 11;
+            // 
+            // colCorreo
+            // 
+            this.colCorreo.Caption = "Correo";
+            this.colCorreo.FieldName = "correo";
+            this.colCorreo.Name = "colCorreo";
+            this.colCorreo.Visible = true;
+            this.colCorreo.VisibleIndex = 12;
+            // 
+            // colPaginaWeb
+            // 
+            this.colPaginaWeb.Caption = "PaginaWeb";
+            this.colPaginaWeb.FieldName = "paginaWeb";
+            this.colPaginaWeb.Name = "colPaginaWeb";
+            this.colPaginaWeb.Visible = true;
+            this.colPaginaWeb.VisibleIndex = 13;
+            // 
+            // colNombreRepresentante
+            // 
+            this.colNombreRepresentante.Caption = "NombreRepresentante";
+            this.colNombreRepresentante.FieldName = "nombreRepresentante";
+            this.colNombreRepresentante.Name = "colNombreRepresentante";
+            this.colNombreRepresentante.Visible = true;
+            this.colNombreRepresentante.VisibleIndex = 14;
+            // 
+            // colCorreoRepresentante
+            // 
+            this.colCorreoRepresentante.Caption = "CorreoRepresentante";
+            this.colCorreoRepresentante.FieldName = "correoRepresentante";
+            this.colCorreoRepresentante.Name = "colCorreoRepresentante";
+            this.colCorreoRepresentante.Visible = true;
+            this.colCorreoRepresentante.VisibleIndex = 15;
+            // 
+            // colCelularRepresentante
+            // 
+            this.colCelularRepresentante.Caption = "CelularRepresentante";
+            this.colCelularRepresentante.FieldName = "celularRepresentante";
+            this.colCelularRepresentante.Name = "colCelularRepresentante";
+            this.colCelularRepresentante.Visible = true;
+            this.colCelularRepresentante.VisibleIndex = 16;
+            // 
+            // colTelFijoRepresentante
+            // 
+            this.colTelFijoRepresentante.Caption = "TelFijoRepresentante";
+            this.colTelFijoRepresentante.FieldName = "telFijoRepresentante";
+            this.colTelFijoRepresentante.Name = "colTelFijoRepresentante";
+            this.colTelFijoRepresentante.Visible = true;
+            this.colTelFijoRepresentante.VisibleIndex = 17;
+            // 
+            // colStatus
+            // 
+            this.colStatus.Caption = "Status";
+            this.colStatus.FieldName = "status";
+            this.colStatus.Name = "colStatus";
+            // 
+            // colMunicipio
+            // 
+            this.colMunicipio.Caption = "Municipio";
+            this.colMunicipio.FieldName = "municipio";
+            this.colMunicipio.Name = "colMunicipio";
+            this.colMunicipio.Visible = true;
+            this.colMunicipio.VisibleIndex = 5;
+            // 
+            // colColonia
+            // 
+            this.colColonia.Caption = "Colonia";
+            this.colColonia.FieldName = "colonia";
+            this.colColonia.Name = "colColonia";
+            this.colColonia.Visible = true;
+            this.colColonia.VisibleIndex = 6;
             // 
             // frmProveedores
             // 
@@ -226,5 +415,24 @@
         private DevExpress.XtraGrid.GridControl gcProveedores;
         private DevExpress.XtraGrid.Views.Grid.GridView gvProveedores;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn colProveedorID;
+        private DevExpress.XtraGrid.Columns.GridColumn colNombreEmpresa;
+        private DevExpress.XtraGrid.Columns.GridColumn colCodigoPostal;
+        private DevExpress.XtraGrid.Columns.GridColumn colEstado;
+        private DevExpress.XtraGrid.Columns.GridColumn colCiudad;
+        private DevExpress.XtraGrid.Columns.GridColumn colMunicipio;
+        private DevExpress.XtraGrid.Columns.GridColumn colColonia;
+        private DevExpress.XtraGrid.Columns.GridColumn colCalle;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumeroInterior;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumeroExterior;
+        private DevExpress.XtraGrid.Columns.GridColumn colCelular;
+        private DevExpress.XtraGrid.Columns.GridColumn colTelefonoFijo;
+        private DevExpress.XtraGrid.Columns.GridColumn colCorreo;
+        private DevExpress.XtraGrid.Columns.GridColumn colPaginaWeb;
+        private DevExpress.XtraGrid.Columns.GridColumn colNombreRepresentante;
+        private DevExpress.XtraGrid.Columns.GridColumn colCorreoRepresentante;
+        private DevExpress.XtraGrid.Columns.GridColumn colCelularRepresentante;
+        private DevExpress.XtraGrid.Columns.GridColumn colTelFijoRepresentante;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
     }
 }
