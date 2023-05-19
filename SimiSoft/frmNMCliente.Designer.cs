@@ -42,41 +42,44 @@
             this.lblCalle = new DevExpress.XtraEditors.LabelControl();
             this.lblNInterior = new DevExpress.XtraEditors.LabelControl();
             this.lblNExterior = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNombres = new DevExpress.XtraEditors.TextEdit();
+            this.txtApellidoP = new DevExpress.XtraEditors.TextEdit();
+            this.txtApellidoM = new DevExpress.XtraEditors.TextEdit();
+            this.txtCelular = new DevExpress.XtraEditors.TextEdit();
+            this.txtTelFijo = new DevExpress.XtraEditors.TextEdit();
+            this.txtCorreo = new DevExpress.XtraEditors.TextEdit();
+            this.txtCodigoPostal = new DevExpress.XtraEditors.TextEdit();
+            this.txtEstado = new DevExpress.XtraEditors.TextEdit();
+            this.txtCiudad = new DevExpress.XtraEditors.TextEdit();
+            this.txtMunicipio = new DevExpress.XtraEditors.TextEdit();
+            this.txtColonia = new DevExpress.XtraEditors.TextEdit();
+            this.txtCalle = new DevExpress.XtraEditors.TextEdit();
+            this.txtNInterior = new DevExpress.XtraEditors.TextEdit();
+            this.txtNExterior = new DevExpress.XtraEditors.TextEdit();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
+            this.txtID = new DevExpress.XtraEditors.TextEdit();
+            this.lblID = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellidoP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellidoM.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelFijo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoPostal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCiudad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMunicipio.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColonia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCalle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNInterior.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNExterior.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombres
             // 
-            this.lblNombres.Location = new System.Drawing.Point(18, 12);
+            this.lblNombres.Location = new System.Drawing.Point(12, 38);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(46, 13);
             this.lblNombres.TabIndex = 0;
@@ -84,7 +87,7 @@
             // 
             // lblApellidoP
             // 
-            this.lblApellidoP.Location = new System.Drawing.Point(18, 38);
+            this.lblApellidoP.Location = new System.Drawing.Point(12, 64);
             this.lblApellidoP.Name = "lblApellidoP";
             this.lblApellidoP.Size = new System.Drawing.Size(82, 13);
             this.lblApellidoP.TabIndex = 1;
@@ -92,7 +95,7 @@
             // 
             // lblApellidoM
             // 
-            this.lblApellidoM.Location = new System.Drawing.Point(18, 64);
+            this.lblApellidoM.Location = new System.Drawing.Point(12, 90);
             this.lblApellidoM.Name = "lblApellidoM";
             this.lblApellidoM.Size = new System.Drawing.Size(84, 13);
             this.lblApellidoM.TabIndex = 2;
@@ -100,7 +103,7 @@
             // 
             // lblCelular
             // 
-            this.lblCelular.Location = new System.Drawing.Point(18, 90);
+            this.lblCelular.Location = new System.Drawing.Point(12, 116);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(37, 13);
             this.lblCelular.TabIndex = 3;
@@ -108,7 +111,7 @@
             // 
             // lblTelFijo
             // 
-            this.lblTelFijo.Location = new System.Drawing.Point(18, 120);
+            this.lblTelFijo.Location = new System.Drawing.Point(12, 146);
             this.lblTelFijo.Name = "lblTelFijo";
             this.lblTelFijo.Size = new System.Drawing.Size(66, 13);
             this.lblTelFijo.TabIndex = 4;
@@ -116,7 +119,7 @@
             // 
             // lblCorreo
             // 
-            this.lblCorreo.Location = new System.Drawing.Point(18, 146);
+            this.lblCorreo.Location = new System.Drawing.Point(12, 172);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(37, 13);
             this.lblCorreo.TabIndex = 5;
@@ -124,7 +127,7 @@
             // 
             // lblCodigoPostal
             // 
-            this.lblCodigoPostal.Location = new System.Drawing.Point(18, 168);
+            this.lblCodigoPostal.Location = new System.Drawing.Point(12, 194);
             this.lblCodigoPostal.Name = "lblCodigoPostal";
             this.lblCodigoPostal.Size = new System.Drawing.Size(66, 13);
             this.lblCodigoPostal.TabIndex = 6;
@@ -186,103 +189,103 @@
             this.lblNExterior.TabIndex = 13;
             this.lblNExterior.Text = "Número Exterior:";
             // 
-            // textEdit1
+            // txtNombres
             // 
-            this.textEdit1.Location = new System.Drawing.Point(125, 9);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
-            this.textEdit1.TabIndex = 14;
+            this.txtNombres.Location = new System.Drawing.Point(119, 35);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(100, 20);
+            this.txtNombres.TabIndex = 14;
             // 
-            // textEdit2
+            // txtApellidoP
             // 
-            this.textEdit2.Location = new System.Drawing.Point(125, 35);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(100, 20);
-            this.textEdit2.TabIndex = 15;
+            this.txtApellidoP.Location = new System.Drawing.Point(119, 61);
+            this.txtApellidoP.Name = "txtApellidoP";
+            this.txtApellidoP.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidoP.TabIndex = 15;
             // 
-            // textEdit3
+            // txtApellidoM
             // 
-            this.textEdit3.Location = new System.Drawing.Point(125, 61);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(100, 20);
-            this.textEdit3.TabIndex = 16;
+            this.txtApellidoM.Location = new System.Drawing.Point(119, 87);
+            this.txtApellidoM.Name = "txtApellidoM";
+            this.txtApellidoM.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidoM.TabIndex = 16;
             // 
-            // textEdit4
+            // txtCelular
             // 
-            this.textEdit4.Location = new System.Drawing.Point(125, 87);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(100, 20);
-            this.textEdit4.TabIndex = 17;
+            this.txtCelular.Location = new System.Drawing.Point(119, 113);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(100, 20);
+            this.txtCelular.TabIndex = 17;
             // 
-            // textEdit5
+            // txtTelFijo
             // 
-            this.textEdit5.Location = new System.Drawing.Point(125, 113);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(100, 20);
-            this.textEdit5.TabIndex = 18;
+            this.txtTelFijo.Location = new System.Drawing.Point(119, 139);
+            this.txtTelFijo.Name = "txtTelFijo";
+            this.txtTelFijo.Size = new System.Drawing.Size(100, 20);
+            this.txtTelFijo.TabIndex = 18;
             // 
-            // textEdit6
+            // txtCorreo
             // 
-            this.textEdit6.Location = new System.Drawing.Point(125, 139);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(100, 20);
-            this.textEdit6.TabIndex = 19;
+            this.txtCorreo.Location = new System.Drawing.Point(119, 165);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtCorreo.TabIndex = 19;
             // 
-            // textEdit7
+            // txtCodigoPostal
             // 
-            this.textEdit7.Location = new System.Drawing.Point(125, 165);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(100, 20);
-            this.textEdit7.TabIndex = 20;
+            this.txtCodigoPostal.Location = new System.Drawing.Point(119, 191);
+            this.txtCodigoPostal.Name = "txtCodigoPostal";
+            this.txtCodigoPostal.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoPostal.TabIndex = 20;
             // 
-            // textEdit8
+            // txtEstado
             // 
-            this.textEdit8.Location = new System.Drawing.Point(348, 9);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(100, 20);
-            this.textEdit8.TabIndex = 21;
+            this.txtEstado.Location = new System.Drawing.Point(348, 9);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtEstado.TabIndex = 21;
             // 
-            // textEdit9
+            // txtCiudad
             // 
-            this.textEdit9.Location = new System.Drawing.Point(348, 35);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(100, 20);
-            this.textEdit9.TabIndex = 22;
+            this.txtCiudad.Location = new System.Drawing.Point(348, 35);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(100, 20);
+            this.txtCiudad.TabIndex = 22;
             // 
-            // textEdit10
+            // txtMunicipio
             // 
-            this.textEdit10.Location = new System.Drawing.Point(348, 61);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(100, 20);
-            this.textEdit10.TabIndex = 23;
+            this.txtMunicipio.Location = new System.Drawing.Point(348, 61);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(100, 20);
+            this.txtMunicipio.TabIndex = 23;
             // 
-            // textEdit11
+            // txtColonia
             // 
-            this.textEdit11.Location = new System.Drawing.Point(348, 87);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(100, 20);
-            this.textEdit11.TabIndex = 24;
+            this.txtColonia.Location = new System.Drawing.Point(348, 87);
+            this.txtColonia.Name = "txtColonia";
+            this.txtColonia.Size = new System.Drawing.Size(100, 20);
+            this.txtColonia.TabIndex = 24;
             // 
-            // textEdit12
+            // txtCalle
             // 
-            this.textEdit12.Location = new System.Drawing.Point(348, 113);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(100, 20);
-            this.textEdit12.TabIndex = 25;
+            this.txtCalle.Location = new System.Drawing.Point(348, 113);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(100, 20);
+            this.txtCalle.TabIndex = 25;
             // 
-            // textEdit13
+            // txtNInterior
             // 
-            this.textEdit13.Location = new System.Drawing.Point(348, 143);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(100, 20);
-            this.textEdit13.TabIndex = 26;
+            this.txtNInterior.Location = new System.Drawing.Point(348, 143);
+            this.txtNInterior.Name = "txtNInterior";
+            this.txtNInterior.Size = new System.Drawing.Size(100, 20);
+            this.txtNInterior.TabIndex = 26;
             // 
-            // textEdit14
+            // txtNExterior
             // 
-            this.textEdit14.Location = new System.Drawing.Point(348, 169);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Size = new System.Drawing.Size(100, 20);
-            this.textEdit14.TabIndex = 27;
+            this.txtNExterior.Location = new System.Drawing.Point(348, 169);
+            this.txtNExterior.Name = "txtNExterior";
+            this.txtNExterior.Size = new System.Drawing.Size(100, 20);
+            this.txtNExterior.TabIndex = 27;
             // 
             // btnCancelar
             // 
@@ -300,28 +303,46 @@
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 29;
             this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(119, 9);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 30;
+            // 
+            // lblID
+            // 
+            this.lblID.Location = new System.Drawing.Point(12, 16);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(15, 13);
+            this.lblID.TabIndex = 31;
+            this.lblID.Text = "ID:";
             // 
             // frmNMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 253);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.textEdit14);
-            this.Controls.Add(this.textEdit13);
-            this.Controls.Add(this.textEdit12);
-            this.Controls.Add(this.textEdit11);
-            this.Controls.Add(this.textEdit10);
-            this.Controls.Add(this.textEdit9);
-            this.Controls.Add(this.textEdit8);
-            this.Controls.Add(this.textEdit7);
-            this.Controls.Add(this.textEdit6);
-            this.Controls.Add(this.textEdit5);
-            this.Controls.Add(this.textEdit4);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtNExterior);
+            this.Controls.Add(this.txtNInterior);
+            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.txtColonia);
+            this.Controls.Add(this.txtMunicipio);
+            this.Controls.Add(this.txtCiudad);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtCodigoPostal);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtTelFijo);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtApellidoM);
+            this.Controls.Add(this.txtApellidoP);
+            this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.lblNExterior);
             this.Controls.Add(this.lblNInterior);
             this.Controls.Add(this.lblCalle);
@@ -338,20 +359,21 @@
             this.Controls.Add(this.lblNombres);
             this.Name = "frmNMCliente";
             this.Text = "frmNMCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellidoP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellidoM.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelFijo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoPostal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCiudad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMunicipio.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtColonia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCalle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNInterior.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNExterior.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,21 +395,23 @@
         private DevExpress.XtraEditors.LabelControl lblCalle;
         private DevExpress.XtraEditors.LabelControl lblNInterior;
         private DevExpress.XtraEditors.LabelControl lblNExterior;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
-        private DevExpress.XtraEditors.TextEdit textEdit14;
+        private DevExpress.XtraEditors.TextEdit txtNombres;
+        private DevExpress.XtraEditors.TextEdit txtApellidoP;
+        private DevExpress.XtraEditors.TextEdit txtApellidoM;
+        private DevExpress.XtraEditors.TextEdit txtCelular;
+        private DevExpress.XtraEditors.TextEdit txtTelFijo;
+        private DevExpress.XtraEditors.TextEdit txtCorreo;
+        private DevExpress.XtraEditors.TextEdit txtCodigoPostal;
+        private DevExpress.XtraEditors.TextEdit txtEstado;
+        private DevExpress.XtraEditors.TextEdit txtCiudad;
+        private DevExpress.XtraEditors.TextEdit txtMunicipio;
+        private DevExpress.XtraEditors.TextEdit txtColonia;
+        private DevExpress.XtraEditors.TextEdit txtCalle;
+        private DevExpress.XtraEditors.TextEdit txtNInterior;
+        private DevExpress.XtraEditors.TextEdit txtNExterior;
         private DevExpress.XtraEditors.SimpleButton btnCancelar;
         private DevExpress.XtraEditors.SimpleButton btnGuardar;
+        private DevExpress.XtraEditors.TextEdit txtID;
+        private DevExpress.XtraEditors.LabelControl lblID;
     }
 }

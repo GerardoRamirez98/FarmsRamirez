@@ -14,7 +14,7 @@ namespace FarmsRamirezBML
         public string celular { get; set; }
         public string telFijo { get; set; }
         public string correo { get; set; }
-        public string codigoPostal { get; set; }
+        public int codigoPostal { get; set; }
         public string estado { get; set; }
         public string ciudad { get; set; }
         public string municipio { get; set; }
