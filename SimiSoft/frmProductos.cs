@@ -30,6 +30,11 @@ namespace SimiSoft
             gvProductos.BestFitColumns();
         }
 
+        private void btnActualizarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
         private void btnNuevoProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             new frmNMProducto
@@ -60,9 +65,6 @@ namespace SimiSoft
             gvProductos.BestFitColumns();
         }
 
-        private void btnActualizarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
-        }
+        
     }
 }
