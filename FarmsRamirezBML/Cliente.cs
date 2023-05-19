@@ -1,10 +1,6 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
@@ -48,7 +44,7 @@ namespace FarmsRamirezBML
             parametros.Add("@calle", calle);
             parametros.Add("@nInterior", nInterior);
             parametros.Add("@nExterior", nExterior);
-            return dataAccess.Execute("stp_clientes_add", parametros);
+            return dataAccess.Execute("stp_cliente_agregar", parametros);
         }
 
         public int Delete()

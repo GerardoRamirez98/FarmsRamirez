@@ -50,14 +50,15 @@ namespace FarmsRamirezBML
             parametros.Add("@correoRepresentante", correoRepresentante);
             parametros.Add("@celularRepresentante", celularRepresentante);
             parametros.Add("@telFijoRepresentante", telFijoRepresentante);
-            return dataAccess.Execute("stp_proveedores_add");
+
+            return dataAccess.Execute("stp_proveedores_agregar");
         }
 
         public int Delete()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@proveedorID", proveedorID);
-            return dataAccess.Execute("stp_proveedores_delete", parametros);
+            return dataAccess.Execute("stp_proveedor_delete", parametros);
         }
 
         public List<Proveedor> GetAll()
