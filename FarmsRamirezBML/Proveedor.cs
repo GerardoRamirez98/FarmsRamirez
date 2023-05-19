@@ -25,6 +25,7 @@ namespace FarmsRamirezBML
         public string correoRepresentante { get; set; }
         public string celularRepresentante { get; set; }
         public string telFijoRepresentante { get; set; }
+        public bool status { get; set; }
 
         public Proveedor()
         {

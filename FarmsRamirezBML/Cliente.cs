@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace FarmsRamirezBML
@@ -22,6 +23,7 @@ namespace FarmsRamirezBML
         public string calle { get; set; }
         public string nInterior { get; set; }
         public string nExterior { get; set; }
+        public bool status { get; set; }
 
         public Cliente()
         {

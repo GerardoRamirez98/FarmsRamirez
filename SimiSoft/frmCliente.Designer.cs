@@ -41,8 +41,8 @@
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcCliente = new DevExpress.XtraGrid.GridControl();
+            this.gvClientes = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colClienteID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombres = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colApellidoPaterno = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,9 +59,11 @@
             this.colNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clientebindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientebindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -168,21 +170,21 @@
             this.skinBarSubItem1.Id = 4;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
-            // gridControl1
+            // gcCliente
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager3;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1236, 548);
-            this.gridControl1.TabIndex = 8;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcCliente.Location = new System.Drawing.Point(0, 20);
+            this.gcCliente.MainView = this.gvClientes;
+            this.gcCliente.MenuManager = this.barManager3;
+            this.gcCliente.Name = "gcCliente";
+            this.gcCliente.Size = new System.Drawing.Size(1236, 548);
+            this.gcCliente.TabIndex = 8;
+            this.gcCliente.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvClientes});
             // 
-            // gridView1
+            // gvClientes
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvClientes.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colClienteID,
             this.colNombres,
             this.colApellidoPaterno,
@@ -199,12 +201,12 @@
             this.colNumeroInterior,
             this.colNumeroExterior,
             this.colStatus});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
-            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gvClientes.GridControl = this.gcCliente;
+            this.gvClientes.Name = "gvClientes";
+            this.gvClientes.OptionsView.ColumnAutoWidth = false;
+            this.gvClientes.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvClientes.OptionsView.ShowAutoFilterRow = true;
+            this.gvClientes.OptionsView.ShowGroupPanel = false;
             // 
             // colClienteID
             // 
@@ -428,12 +430,16 @@
             this.colStatus.OptionsColumn.AllowSize = false;
             this.colStatus.OptionsColumn.FixedWidth = true;
             // 
+            // clientebindingSource
+            // 
+            this.clientebindingSource.DataSource = typeof(FarmsRamirezBML.Cliente);
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 568);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gcCliente);
             this.Controls.Add(this.barDockControl7);
             this.Controls.Add(this.barDockControl8);
             this.Controls.Add(this.barDockControl6);
@@ -441,9 +447,11 @@
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientebindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,8 +470,8 @@
         private DevExpress.XtraBars.BarDockControl barDockControl6;
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarDockControl barDockControl8;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcCliente;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvClientes;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private DevExpress.XtraGrid.Columns.GridColumn colClienteID;
         private DevExpress.XtraGrid.Columns.GridColumn colNombres;
@@ -481,5 +489,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNumeroInterior;
         private DevExpress.XtraGrid.Columns.GridColumn colNumeroExterior;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private System.Windows.Forms.BindingSource clientebindingSource;
     }
 }
