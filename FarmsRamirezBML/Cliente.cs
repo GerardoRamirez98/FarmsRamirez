@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace FarmsRamirezBML
@@ -32,7 +31,7 @@ namespace FarmsRamirezBML
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@nombre", nombres);
+            parametros.Add("@nombres", nombres);
             parametros.Add("@apellidoP", apellidoP);
             parametros.Add("@apellidoM", apellidoM);
             parametros.Add("@celular", celular);
@@ -46,6 +45,7 @@ namespace FarmsRamirezBML
             parametros.Add("@calle", calle);
             parametros.Add("@nInterior", nInterior);
             parametros.Add("@nExterior", nExterior);
+
             return dataAccess.Execute("stp_cliente_agregar", parametros);
         }
 

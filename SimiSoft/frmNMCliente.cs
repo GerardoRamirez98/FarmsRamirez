@@ -119,6 +119,90 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
+            //Nombres
+            txtNombres.ErrorText = "Ingrese un nombre";
+            if (!ban)
+            {
+                txtNombres.Focus();
+                ban = true;
+            }
+            //Apellido Paterno
+            txtApellidoP.ErrorText = "Ingrese un apellido paterno";
+            if (!ban)
+            {
+                txtApellidoP.Focus();
+                ban = true;
+            }
+            //Apellido Materno
+            txtApellidoM.ErrorText = "Ingrese un apellido materno";
+            if (!ban)
+            {
+                txtApellidoM.Focus();
+                ban= true;
+            }
+            //Celular
+            txtCelular.ErrorText = "Ingrese un numero de celular";
+            if (!ban)
+            {
+                txtCelular.Focus();
+                ban = true;
+            }
+            //Telefono Fijo
+            txtTelFijo.ErrorText = "Ingrese un numero de telefono fijo";
+            if (!ban)
+            {
+                txtTelFijo.Focus();
+                ban = true;
+            }
+            //Correo
+            txtCorreo.ErrorText = "Ingrese un correo";
+            if (!ban)
+            {
+                txtCorreo.Focus();
+                ban = true;
+            }
+            //CodigoPostal
+            txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
+            if (!ban)
+            {
+                txtCodigoPostal.Focus();
+                ban = true;
+            }
+            //Estado
+            txtEstado.ErrorText = "Ingrese un estado";
+            if (!ban)
+            {
+                txtEstado.Focus();
+                ban = true;
+            }
+            //Ciudad
+            txtCiudad.ErrorText = "Ingrese una ciudad";
+            if (!ban)
+            {
+                txtCiudad.Focus();
+                ban = true;
+            }
+            //Municipio
+            txtMunicipio.ErrorText = "Ingrese un municipio";
+            if (!ban)
+            {
+                txtMunicipio.Focus();
+                ban = true;
+            }
+            //Colonia
+            txtColonia.ErrorText = "Ingrese una colonia";
+            if (!ban)
+            {
+                txtColonia.Focus();
+                ban = true;
+            }
+            //Calle
+            txtCalle.ErrorText = "Ingrese una calle";
+            if (!ban)
+            {
+                txtCalle.Focus();
+                ban = true;
+            }
             return ban;
         }
     }
