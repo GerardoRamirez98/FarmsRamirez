@@ -21,8 +21,6 @@ namespace FarmsRamirezBML
         public int stockMin { get; set; }
         public int stockMax { get; set; }        
         public bool status { get; set; }
-        public int proveedorID { get; set; }
-        public int categoriaID { get; set; }
 
         public Producto()
         {
