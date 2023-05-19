@@ -42,6 +42,7 @@
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcProveedores = new DevExpress.XtraGrid.GridControl();
+            this.proveedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gvProveedores = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colProveedorID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombreEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,11 +63,10 @@
             this.colCelularRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelFijoRepresentante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -175,6 +175,7 @@
             // 
             // gcProveedores
             // 
+            this.gcProveedores.DataSource = this.proveedorBindingSource1;
             this.gcProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcProveedores.Location = new System.Drawing.Point(0, 20);
             this.gcProveedores.MainView = this.gvProveedores;
@@ -185,6 +186,10 @@
             this.gcProveedores.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvProveedores});
             this.gcProveedores.Click += new System.EventHandler(this.gcProveedores_Click);
+            // 
+            // proveedorBindingSource1
+            // 
+            this.proveedorBindingSource1.DataSource = typeof(FarmsRamirezBML.Proveedor);
             // 
             // gvProveedores
             // 
@@ -366,10 +371,6 @@
             this.colStatus.FieldName = "status";
             this.colStatus.Name = "colStatus";
             // 
-            // proveedorBindingSource
-            // 
-            this.proveedorBindingSource.DataSource = typeof(FarmsRamirezBML.Proveedor);
-            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,8 +386,8 @@
             this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProveedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,7 +409,6 @@
         private DevExpress.XtraGrid.GridControl gcProveedores;
         private DevExpress.XtraGrid.Views.Grid.GridView gvProveedores;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem2;
-        private System.Windows.Forms.BindingSource proveedorBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colProveedorID;
         private DevExpress.XtraGrid.Columns.GridColumn colNombreEmpresa;
         private DevExpress.XtraGrid.Columns.GridColumn colCodigoPostal;
@@ -428,5 +428,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCelularRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colTelFijoRepresentante;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private System.Windows.Forms.BindingSource proveedorBindingSource1;
     }
 }

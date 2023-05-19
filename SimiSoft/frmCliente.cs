@@ -21,7 +21,7 @@ namespace SimiSoft
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            clientebindingSource.DataSource = new Cliente().GetAll();
+            clienteBindingSource1.DataSource = new Cliente().GetAll();
             gvClientes.BestFitColumns();
         }
 
@@ -36,7 +36,7 @@ namespace SimiSoft
             {
                 Text = "Nuevo Cliente"
             }.ShowDialog();
-            clientebindingSource.DataSource = new Cliente().GetAll();
+            clienteBindingSource1.DataSource = new Cliente().GetAll();
             gvClientes.BestFitColumns();
         }
 
@@ -46,7 +46,7 @@ namespace SimiSoft
             {
                 Text = "Modificar Cliente (" + (int)gvClientes.GetFocusedRowCellValue("clienteID") + ")"
             }.ShowDialog();
-            clientebindingSource.DataSource = new Producto().GetAll();
+            clienteBindingSource1.DataSource = new Producto().GetAll();
             gvClientes.BestFitColumns();
         }
 
@@ -56,7 +56,7 @@ namespace SimiSoft
             {
                 clienteID = (int)gvClientes.GetFocusedRowCellValue("clienteID")
             }.Delete();
-            clientebindingSource.DataSource = new Producto().GetAll();
+            clienteBindingSource1.DataSource = new Producto().GetAll();
             gvClientes.BestFitColumns();
         }
 

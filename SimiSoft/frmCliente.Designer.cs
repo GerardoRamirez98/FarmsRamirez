@@ -42,6 +42,7 @@
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcCliente = new DevExpress.XtraGrid.GridControl();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gvClientes = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colClienteID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombres = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,11 +60,10 @@
             this.colNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clientebindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientebindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -172,6 +172,7 @@
             // 
             // gcCliente
             // 
+            this.gcCliente.DataSource = this.clienteBindingSource1;
             this.gcCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCliente.Location = new System.Drawing.Point(0, 20);
             this.gcCliente.MainView = this.gvClientes;
@@ -181,6 +182,10 @@
             this.gcCliente.TabIndex = 8;
             this.gcCliente.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvClientes});
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataSource = typeof(FarmsRamirezBML.Cliente);
             // 
             // gvClientes
             // 
@@ -430,10 +435,6 @@
             this.colStatus.OptionsColumn.AllowSize = false;
             this.colStatus.OptionsColumn.FixedWidth = true;
             // 
-            // clientebindingSource
-            // 
-            this.clientebindingSource.DataSource = typeof(FarmsRamirezBML.Cliente);
-            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,8 +451,8 @@
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientebindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,6 +490,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNumeroInterior;
         private DevExpress.XtraGrid.Columns.GridColumn colNumeroExterior;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
-        private System.Windows.Forms.BindingSource clientebindingSource;
+        private System.Windows.Forms.BindingSource clienteBindingSource1;
     }
 }
