@@ -17,6 +17,9 @@ using System.Security.Policy;
 using System.Net; // para usar servidor ftp xampp
 using DevExpress.Utils;
 
+using BarcodeLib;
+
+
 namespace SimiSoft
 {
     public partial class frmNMProducto : DevExpress.XtraEditors.XtraForm
@@ -28,6 +31,90 @@ namespace SimiSoft
             InitializeComponent();
             txtID.Enabled = false;
         }
+
+        public class TipoCodigoBarras
+        {
+            public int Valor { get; set; }
+            public string Texto { get; set; }
+        }
+
+        private void frmNMProducto_Load(object sender, EventArgs e)
+        {
+            int indice = 0;
+            foreach (var nombre in Enum.GetNames(typeof(BarcodeLib.TYPE)))
+            {
+                cboBarras.Items.Add(new TipoCodigoBarras() { Valor = indice, Texto = nombre });
+
+                indice++;
+            }
+
+            cboBarras.DisplayMember = "Texto";
+            cboBarras.ValueMember = "Valor";
+            cboBarras.SelectedIndex = 0;
+        }
+
+        private void bntGenerarCodigo_Click(object sender, EventArgs e)
+        {
+            Image imagenCodigoB;
+
+            int indice = (cboBarras.SelectedItem as TipoCodigoBarras).Valor;
+
+            BarcodeLib.TYPE tipoCodigo = (BarcodeLib.TYPE)indice;
+
+            Barcode codigo = new Barcode();
+            codigo.IncludeLabel = true;
+            codigo.LabelPosition = LabelPositions.BOTTOMCENTER;
+
+            imagenCodigoB = codigo.Encode(tipoCodigo, txtCodigo.Text, Color.Black, Color.White, 150, 50);
+
+            Bitmap imagenTitulo = convertirTextoImagen(txtNombre.Text, 150, Color.White);
+
+            int alto_imagen_nuevo = imagenCodigoB.Height + imagenTitulo.Height;
+            
+            Bitmap imagenNueva = new Bitmap(200, alto_imagen_nuevo);
+            Graphics dibujar = Graphics.FromImage(imagenNueva);
+
+            dibujar.DrawImage(imagenTitulo, new Point(0, 0));
+            dibujar.DrawImage(imagenCodigoB, new Point(0, imagenTitulo.Height));
+            
+            pbCodigoBarra.BackgroundImage = imagenNueva;
+        }
+
+        public static Bitmap convertirTextoImagen(string texto, int ancho, Color color)
+        {
+            //creamos el objeto imagen Bitmap
+            Bitmap objBitmap = new Bitmap(1, 1);
+            int Width = 0;
+            int Height = 0;
+            //formateamos la fuente (tipo de letra, tamaño)
+            System.Drawing.Font objFont = new System.Drawing.Font("Arial", 16, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+
+            //creamos un objeto Graphics a partir del Bitmap
+            Graphics objGraphics = Graphics.FromImage(objBitmap);
+
+            //establecemos el tamaño según la longitud del texto
+            Width = ancho;
+            Height = (int)objGraphics.MeasureString(texto, objFont).Height + 5;
+            objBitmap = new Bitmap(objBitmap, new Size(Width, Height));
+
+            objGraphics = Graphics.FromImage(objBitmap);
+
+            objGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            objGraphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            objGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+            objGraphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+
+            StringFormat drawFormat = new StringFormat();
+            objGraphics.Clear(color);
+
+            drawFormat.Alignment = StringAlignment.Center;
+            objGraphics.DrawString(texto, objFont, new SolidBrush(Color.Black), new RectangleF(0, (objBitmap.Height / 2) - (objBitmap.Height - 10), objBitmap.Width, objBitmap.Height), drawFormat);
+            objGraphics.Flush();
+
+
+            return objBitmap;
+        }
+
         //cuando es modificar producto
         public frmNMProducto(int productoID)
         {
@@ -38,7 +125,7 @@ namespace SimiSoft
             }.GetById();
             txtID.Text = producto.productoID.ToString();
             txtCodigo.Text = producto.codigo;
-            txtCodigoBarra.Text = producto.codigoBarra;
+            //txtCodigoBarra.Text = producto.codigoBarra;
             txtNombre.Text = producto.nombre;
             txtDescripcion.Text = producto.descripcion;
             txtMarca.Text = producto.marca;
@@ -49,11 +136,6 @@ namespace SimiSoft
             txtStock.Text = producto.stock.ToString();
             txtStockMin.Text = producto.stockMin.ToString();
             txtStockMax.Text = producto.stockMax.ToString();
-        }
-
-        private void frmNMProducto_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -129,7 +211,7 @@ namespace SimiSoft
                     if (new Producto
                     {
                         codigo = txtCodigo.Text,
-                        codigoBarra = txtCodigoBarra.Text,
+                        //codigoBarra = txtCodigoBarra.Text,
                         nombre = txtNombre.Text,
                         descripcion = txtDescripcion.Text,
                         marca = txtMarca.Text,
@@ -155,7 +237,7 @@ namespace SimiSoft
                 else
                 {
                     producto.codigo = txtCodigo.Text;
-                    producto.codigoBarra = txtCodigoBarra.Text;
+                    //producto.codigoBarra = txtCodigoBarra.Text;
                     producto.nombre = txtNombre.Text;
                     producto.descripcion = txtDescripcion.Text;
                     producto.marca = txtMarca.Text;
@@ -294,6 +376,5 @@ namespace SimiSoft
             return !ban;
         }
 
-        
     }
 }

@@ -52,14 +52,15 @@ namespace SimiSoft
             this.txtMargenG = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCodigoBarra = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtStockMin = new DevExpress.XtraEditors.TextEdit();
             this.txtStockMax = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnAbrirImg = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuardarImg = new DevExpress.XtraEditors.SimpleButton();
             this.pbImagen = new System.Windows.Forms.PictureBox();
+            this.pbCodigoBarra = new System.Windows.Forms.PictureBox();
+            this.bntGenerarCodigo = new DevExpress.XtraEditors.SimpleButton();
+            this.cboBarras = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnidadM.Properties)).BeginInit();
@@ -70,10 +71,10 @@ namespace SimiSoft
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecioC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMargenG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoBarra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCodigoBarra)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -254,21 +255,6 @@ namespace SimiSoft
             this.labelControl5.TabIndex = 22;
             this.labelControl5.Text = "Stock Minimo:";
             // 
-            // txtCodigoBarra
-            // 
-            this.txtCodigoBarra.Location = new System.Drawing.Point(278, 35);
-            this.txtCodigoBarra.Name = "txtCodigoBarra";
-            this.txtCodigoBarra.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoBarra.TabIndex = 7;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(192, 38);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(71, 13);
-            this.labelControl6.TabIndex = 24;
-            this.labelControl6.Text = "Codigo Barras:";
-            // 
             // txtStockMin
             // 
             this.txtStockMin.Location = new System.Drawing.Point(86, 165);
@@ -293,7 +279,7 @@ namespace SimiSoft
             // 
             // btnAbrirImg
             // 
-            this.btnAbrirImg.Location = new System.Drawing.Point(384, 165);
+            this.btnAbrirImg.Location = new System.Drawing.Point(384, 187);
             this.btnAbrirImg.Name = "btnAbrirImg";
             this.btnAbrirImg.Size = new System.Drawing.Size(75, 23);
             this.btnAbrirImg.TabIndex = 13;
@@ -302,7 +288,7 @@ namespace SimiSoft
             // 
             // btnGuardarImg
             // 
-            this.btnGuardarImg.Location = new System.Drawing.Point(483, 165);
+            this.btnGuardarImg.Location = new System.Drawing.Point(483, 187);
             this.btnGuardarImg.Name = "btnGuardarImg";
             this.btnGuardarImg.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarImg.TabIndex = 14;
@@ -311,11 +297,37 @@ namespace SimiSoft
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(384, 38);
+            this.pbImagen.Location = new System.Drawing.Point(384, 81);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(174, 121);
+            this.pbImagen.Size = new System.Drawing.Size(174, 95);
             this.pbImagen.TabIndex = 32;
             this.pbImagen.TabStop = false;
+            // 
+            // pbCodigoBarra
+            // 
+            this.pbCodigoBarra.Location = new System.Drawing.Point(384, 1);
+            this.pbCodigoBarra.Name = "pbCodigoBarra";
+            this.pbCodigoBarra.Size = new System.Drawing.Size(150, 74);
+            this.pbCodigoBarra.TabIndex = 33;
+            this.pbCodigoBarra.TabStop = false;
+            // 
+            // bntGenerarCodigo
+            // 
+            this.bntGenerarCodigo.Location = new System.Drawing.Point(278, 31);
+            this.bntGenerarCodigo.Name = "bntGenerarCodigo";
+            this.bntGenerarCodigo.Size = new System.Drawing.Size(100, 23);
+            this.bntGenerarCodigo.TabIndex = 36;
+            this.bntGenerarCodigo.Text = "Generar Codigo";
+            this.bntGenerarCodigo.Click += new System.EventHandler(this.bntGenerarCodigo_Click);
+            // 
+            // cboBarras
+            // 
+            this.cboBarras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboBarras.FormattingEnabled = true;
+            this.cboBarras.Location = new System.Drawing.Point(192, 33);
+            this.cboBarras.Name = "cboBarras";
+            this.cboBarras.Size = new System.Drawing.Size(80, 21);
+            this.cboBarras.TabIndex = 37;
             // 
             // frmNMProducto
             // 
@@ -323,14 +335,15 @@ namespace SimiSoft
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(570, 236);
+            this.ClientSize = new System.Drawing.Size(574, 235);
+            this.Controls.Add(this.cboBarras);
+            this.Controls.Add(this.bntGenerarCodigo);
+            this.Controls.Add(this.pbCodigoBarra);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.btnGuardarImg);
             this.Controls.Add(this.btnAbrirImg);
             this.Controls.Add(this.txtStockMax);
             this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.txtCodigoBarra);
-            this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.txtStockMin);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.txtMargenG);
@@ -372,10 +385,10 @@ namespace SimiSoft
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecioC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMargenG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoBarra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCodigoBarra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,13 +419,14 @@ namespace SimiSoft
         private DevExpress.XtraEditors.TextEdit txtMargenG;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtCodigoBarra;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtStockMin;
         private DevExpress.XtraEditors.TextEdit txtStockMax;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SimpleButton btnAbrirImg;
         private DevExpress.XtraEditors.SimpleButton btnGuardarImg;
         private System.Windows.Forms.PictureBox pbImagen;
+        private System.Windows.Forms.PictureBox pbCodigoBarra;
+        private DevExpress.XtraEditors.SimpleButton bntGenerarCodigo;
+        private System.Windows.Forms.ComboBox cboBarras;
     }
 }
