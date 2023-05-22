@@ -71,7 +71,7 @@ namespace SimiSoft
             {
                 FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.100.17/Imagen.jpg");
                 request.Method = WebRequestMethods.Ftp.UploadFile;
-                request.Credentials = new NetworkCredential("TECNIPRINT", "12345");
+                request.Credentials = new NetworkCredential("TECNIPRINT", "tecniprint");
                 request.UsePassive = true;
                 request.UseBinary = true;
                 request.KeepAlive = true;
@@ -121,6 +121,7 @@ namespace SimiSoft
         //GUARDAR DATOS
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
             if (Validar())
             {
                 if (producto == null)
@@ -183,8 +184,8 @@ namespace SimiSoft
         //VALIDACIONES
         private bool Validar()
         {
-
             var ban = false;
+
             //codigo
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
@@ -198,7 +199,7 @@ namespace SimiSoft
             //nombre
             if (string.IsNullOrEmpty(txtNombre.Text)) 
             {
-                txtNombre.ErrorText = "";
+                txtNombre.ErrorText = "Ingrese un nombre";
                 txtNombre.Focus();
                 ban = true;
             }
@@ -272,7 +273,7 @@ namespace SimiSoft
             //stockMinimo
             if (string.IsNullOrEmpty(txtStockMin.Text))
             {
-                txtStockMin.ErrorText = "Ingrese un stock";
+                txtStockMin.ErrorText = "Ingrese un stock minimo";
                 if (!ban)
                 {
                     txtStockMin.Focus();
@@ -282,7 +283,7 @@ namespace SimiSoft
             //stockMaximo
             if (string.IsNullOrEmpty(txtStockMax.Text))
             {
-                txtStockMax.ErrorText = "Ingrese un stock";
+                txtStockMax.ErrorText = "Ingrese un stock maximo";
                 if (!ban)
                 {
                     txtStockMax.Focus();

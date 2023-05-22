@@ -29,9 +29,9 @@ namespace FarmsRamirezBML
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("codigo", codigo);
-            parametros.Add("codigoBarra", codigoBarra);
-            parametros.Add("nombre", nombre);
+            parametros.Add("@codigo", codigo);
+            parametros.Add("@codigoBarra", codigoBarra);
+            parametros.Add("@nombre", nombre);
             parametros.Add("@descripcion", descripcion);
             parametros.Add("@marca", marca);
             parametros.Add("@unidadMedida", unidadMedida);
@@ -67,10 +67,10 @@ namespace FarmsRamirezBML
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("productoID", productoID);
-            parametros.Add("codigo", codigo);
-            parametros.Add("codigoBarra", codigoBarra);
-            parametros.Add("nombre", nombre);
+            parametros.Add("@productoID", productoID);
+            parametros.Add("@codigo", codigo);
+            parametros.Add("@codigoBarra", codigoBarra);
+            parametros.Add("@nombre", nombre);
             parametros.Add("@descripcion", descripcion);
             parametros.Add("@marca", marca);
             parametros.Add("@unidadMedida", unidadMedida);

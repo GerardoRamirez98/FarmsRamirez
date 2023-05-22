@@ -81,7 +81,7 @@ namespace SimiSoft
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la insercion", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        XtraMessageBox.Show("Ocurrio un error en la insercion de nuevo cliente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Close();
                     }
                 }
@@ -109,7 +109,7 @@ namespace SimiSoft
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificacion", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        XtraMessageBox.Show("Ocurrio un error en la modificacion ciente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Close();
                     }
                 }
@@ -120,90 +120,129 @@ namespace SimiSoft
         {
             var ban = false;
             //Nombres
-            txtNombres.ErrorText = "Ingrese un nombre";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtNombres.Text))
             {
-                txtNombres.Focus();
-                ban = true;
+                txtNombres.ErrorText = "Ingrese un nombre";
+                if (!ban)
+                {
+                    txtNombres.Focus();
+                    ban = true;
+                }
             }
+            
             //Apellido Paterno
-            txtApellidoP.ErrorText = "Ingrese un apellido paterno";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtApellidoP.Text))
             {
-                txtApellidoP.Focus();
-                ban = true;
+                txtApellidoP.ErrorText = "Ingrese un apellido paterno";
+                if (!ban)
+                {
+                    txtApellidoP.Focus();
+                    ban = true;
+                }
             }
             //Apellido Materno
-            txtApellidoM.ErrorText = "Ingrese un apellido materno";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtApellidoM.Text))
             {
-                txtApellidoM.Focus();
-                ban= true;
+                txtApellidoM.ErrorText = "Ingrese un apellido materno";
+                if (!ban)
+                {
+                    txtApellidoM.Focus();
+                    ban = true;
+                }
             }
             //Celular
-            txtCelular.ErrorText = "Ingrese un numero de celular";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtCelular.Text))
             {
-                txtCelular.Focus();
-                ban = true;
+                txtCelular.ErrorText = "Ingrese un numero de celular";
+                if (!ban)
+                {
+                    txtCelular.Focus();
+                    ban = true;
+                }
             }
             //Telefono Fijo
-            txtTelFijo.ErrorText = "Ingrese un numero de telefono fijo";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtTelFijo.Text))
             {
-                txtTelFijo.Focus();
-                ban = true;
+                txtTelFijo.ErrorText = "Ingrese un numero de telefono fijo";
+                if (!ban)
+                {
+                    txtTelFijo.Focus();
+                    ban = true;
+                }
             }
             //Correo
-            txtCorreo.ErrorText = "Ingrese un correo";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtCorreo.Text))
             {
-                txtCorreo.Focus();
-                ban = true;
+                txtCorreo.ErrorText = "Ingrese un correo";
+                if (!ban)
+                {
+                    txtCorreo.Focus();
+                    ban = true;
+                }
             }
             //CodigoPostal
-            txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtCodigoPostal.Text))
             {
-                txtCodigoPostal.Focus();
-                ban = true;
+                txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
+                if (!ban)
+                {
+                    txtCodigoPostal.Focus();
+                    ban = true;
+                }
             }
             //Estado
-            txtEstado.ErrorText = "Ingrese un estado";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtEstado.Text))
             {
-                txtEstado.Focus();
-                ban = true;
+                txtEstado.ErrorText = "Ingrese un estado";
+                if (!ban)
+                {
+                    txtEstado.Focus();
+                    ban = true;
+                }
             }
             //Ciudad
-            txtCiudad.ErrorText = "Ingrese una ciudad";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtCiudad.Text))
             {
-                txtCiudad.Focus();
-                ban = true;
+                txtCiudad.ErrorText = "Ingrese una ciudad";
+                if (!ban)
+                {
+                    txtCiudad.Focus();
+                    ban = true;
+                }
             }
             //Municipio
-            txtMunicipio.ErrorText = "Ingrese un municipio";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtMunicipio.Text))
             {
-                txtMunicipio.Focus();
-                ban = true;
+                txtMunicipio.ErrorText = "Ingrese un municipio";
+                if (!ban)
+                {
+                    txtMunicipio.Focus();
+                    ban = true;
+                }
             }
             //Colonia
-            txtColonia.ErrorText = "Ingrese una colonia";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtColonia.Text))
             {
-                txtColonia.Focus();
-                ban = true;
+                txtColonia.ErrorText = "Ingrese una colonia";
+                if (!ban)
+                {
+                    txtColonia.Focus();
+                    ban = true;
+                }
             }
+            
             //Calle
-            txtCalle.ErrorText = "Ingrese una calle";
-            if (!ban)
+            if (string.IsNullOrEmpty(txtCalle.Text))
             {
-                txtCalle.Focus();
-                ban = true;
+                txtCalle.ErrorText = "Ingrese una calle";
+                if (!ban)
+                {
+                    txtCalle.Focus();
+                    ban = true;
+                }
             }
-            return ban;
+            
+            return !ban;
         }
     }
 }

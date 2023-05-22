@@ -44,6 +44,11 @@ namespace SimiSoft
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.tabMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnCategorias = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -64,9 +69,14 @@ namespace SimiSoft
             this.mnCatalogo,
             this.btnClientes,
             this.btnProveedores,
-            this.btnProductos});
+            this.btnProductos,
+            this.btnCategorias,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem1,
+            this.barButtonItem4});
             this.bManager.MainMenu = this.bar2;
-            this.bManager.MaxItemId = 6;
+            this.bManager.MaxItemId = 11;
             this.bManager.StatusBar = this.bar3;
             // 
             // bar2
@@ -104,9 +114,13 @@ namespace SimiSoft
             this.mnCatalogo.Caption = "Catalogo";
             this.mnCatalogo.Id = 2;
             this.mnCatalogo.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClientes),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProveedores),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnProductos)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnProductos),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCategorias)});
             this.mnCatalogo.Name = "mnCatalogo";
             // 
             // btnClientes
@@ -178,6 +192,36 @@ namespace SimiSoft
             // 
             this.tabMdiManager.MdiParent = this;
             // 
+            // btnCategorias
+            // 
+            this.btnCategorias.Caption = "Categorias";
+            this.btnCategorias.Id = 6;
+            this.btnCategorias.Name = "btnCategorias";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Productos";
+            this.barButtonItem2.Id = 7;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Rol";
+            this.barButtonItem3.Id = 8;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Asignar Permisos Rol";
+            this.barButtonItem1.Id = 9;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Usuarios";
+            this.barButtonItem4.Id = 10;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +260,11 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarButtonItem btnProveedores;
         private DevExpress.XtraBars.BarButtonItem btnProductos;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabMdiManager;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnCategorias;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
 
