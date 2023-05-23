@@ -292,3 +292,4 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmRoles.res
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmAsignarPermisosRol.resources
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmCategorias.resources
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmUsuarios.resources
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmNMRoles.resources

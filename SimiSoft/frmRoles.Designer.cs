@@ -91,6 +91,7 @@
             this.btnNuevoRol.Caption = "Nuevo";
             this.btnNuevoRol.Id = 1;
             this.btnNuevoRol.Name = "btnNuevoRol";
+            this.btnNuevoRol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoRol_ItemClick);
             // 
             // btnModificarRol
             // 

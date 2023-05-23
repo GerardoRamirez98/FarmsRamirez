@@ -17,5 +17,14 @@ namespace SimiSoft
         {
             InitializeComponent();
         }
+
+        private void btnNuevoRol_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmNMRoles
+            {
+                Text = "Nuevo Rol"
+            }.ShowDialog();
+
+        }
     }
 }
