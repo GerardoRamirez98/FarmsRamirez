@@ -42,8 +42,8 @@
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcUsuarios = new DevExpress.XtraGrid.GridControl();
-            this.gvUsuarios = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gvUsuarios = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colidUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colusername = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,8 +52,8 @@
             this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -169,6 +169,10 @@
             this.gcUsuarios.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvUsuarios});
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(FarmsRamirezBML.Usuario);
+            // 
             // gvUsuarios
             // 
             this.gvUsuarios.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -180,15 +184,22 @@
             this.colactivo});
             this.gvUsuarios.GridControl = this.gcUsuarios;
             this.gvUsuarios.Name = "gvUsuarios";
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(FarmsRamirezBML.Usuario);
+            this.gvUsuarios.OptionsBehavior.Editable = false;
+            this.gvUsuarios.OptionsView.ColumnAutoWidth = false;
+            this.gvUsuarios.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvUsuarios.OptionsView.ShowAutoFilterRow = true;
+            this.gvUsuarios.OptionsView.ShowGroupPanel = false;
             // 
             // colidUsuario
             // 
             this.colidUsuario.FieldName = "idUsuario";
             this.colidUsuario.Name = "colidUsuario";
+            this.colidUsuario.OptionsColumn.AllowEdit = false;
+            this.colidUsuario.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colidUsuario.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colidUsuario.OptionsColumn.AllowMove = false;
+            this.colidUsuario.OptionsColumn.AllowSize = false;
+            this.colidUsuario.OptionsColumn.FixedWidth = true;
             this.colidUsuario.Visible = true;
             this.colidUsuario.VisibleIndex = 0;
             // 
@@ -196,6 +207,12 @@
             // 
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colnombre.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colnombre.OptionsColumn.AllowMove = false;
+            this.colnombre.OptionsColumn.AllowSize = false;
+            this.colnombre.OptionsColumn.FixedWidth = true;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             // 
@@ -203,6 +220,12 @@
             // 
             this.colusername.FieldName = "username";
             this.colusername.Name = "colusername";
+            this.colusername.OptionsColumn.AllowEdit = false;
+            this.colusername.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colusername.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colusername.OptionsColumn.AllowMove = false;
+            this.colusername.OptionsColumn.AllowSize = false;
+            this.colusername.OptionsColumn.FixedWidth = true;
             this.colusername.Visible = true;
             this.colusername.VisibleIndex = 2;
             // 
@@ -210,6 +233,12 @@
             // 
             this.colpassword.FieldName = "password";
             this.colpassword.Name = "colpassword";
+            this.colpassword.OptionsColumn.AllowEdit = false;
+            this.colpassword.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colpassword.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colpassword.OptionsColumn.AllowMove = false;
+            this.colpassword.OptionsColumn.AllowSize = false;
+            this.colpassword.OptionsColumn.FixedWidth = true;
             this.colpassword.Visible = true;
             this.colpassword.VisibleIndex = 3;
             // 
@@ -217,15 +246,11 @@
             // 
             this.colidTipoUsuario.FieldName = "idTipoUsuario";
             this.colidTipoUsuario.Name = "colidTipoUsuario";
-            this.colidTipoUsuario.Visible = true;
-            this.colidTipoUsuario.VisibleIndex = 4;
             // 
             // colactivo
             // 
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
-            this.colactivo.Visible = true;
-            this.colactivo.VisibleIndex = 5;
             // 
             // frmUsuarios
             // 
@@ -241,8 +266,8 @@
             this.Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
