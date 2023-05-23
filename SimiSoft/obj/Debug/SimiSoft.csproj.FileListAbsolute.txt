@@ -288,3 +288,4 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Text.Json.xml
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.ValueTuple.xml
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Drawing.Common.xml
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmRoles.resources

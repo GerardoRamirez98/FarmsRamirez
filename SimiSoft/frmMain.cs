@@ -56,7 +56,7 @@ namespace SimiSoft
                     return;
                 }
 
-            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Productos...");
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Proveedores...");
 
             new frmProveedores() { MdiParent = this }.Show();
 
@@ -75,9 +75,85 @@ namespace SimiSoft
                     return;
                 }
 
-            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Productos...");
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Clientes...");
 
             new frmCliente() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void btnRoles_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmRoles))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Roles...");
+
+            new frmRoles() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void btnAsignarPermisosRol_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmAsignarPermisosRol))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Roles...");
+
+            new frmAsignarPermisosRol() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void btnUsuarios_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmUsuarios))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Roles...");
+
+            new frmUsuarios() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void btnCategorias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmCategorias))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Roles...");
+
+            new frmCategorias() { MdiParent = this }.Show();
 
             SplashScreenManager.CloseDefaultWaitForm();
         }
@@ -101,5 +177,6 @@ namespace SimiSoft
                 }
         }
 
+        
     }
 }
