@@ -2,13 +2,10 @@
 using FarmsRamirezDAL;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
-    internal class Roles
+    public class Roles
     {
         private DataAccess dataAccess = DataAccess.Instance();
         public int rolID { get; set; }
