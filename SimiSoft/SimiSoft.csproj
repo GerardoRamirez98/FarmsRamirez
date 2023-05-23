@@ -119,6 +119,12 @@
     <Compile Include="frmAsignarPermisosRol.Designer.cs">
       <DependentUpon>frmAsignarPermisosRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     </Compile>
     <Compile Include="frmRoles.Designer.cs">
       <DependentUpon>frmRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
