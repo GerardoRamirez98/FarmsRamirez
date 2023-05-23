@@ -104,12 +104,14 @@
             this.btnModificarRol.Caption = "Modificar";
             this.btnModificarRol.Id = 2;
             this.btnModificarRol.Name = "btnModificarRol";
+            this.btnModificarRol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificarRol_ItemClick);
             // 
             // btnEliminarRol
             // 
             this.btnEliminarRol.Caption = "Eliminar";
             this.btnEliminarRol.Id = 3;
             this.btnEliminarRol.Name = "btnEliminarRol";
+            this.btnEliminarRol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarRol_ItemClick);
             // 
             // skinBarSubItem2
             // 
@@ -236,6 +238,7 @@
             this.Controls.Add(this.barDockControl5);
             this.Name = "frmRoles";
             this.Text = "Roles";
+            this.Load += new System.EventHandler(this.frmRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
