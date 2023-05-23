@@ -42,9 +42,15 @@
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcRoles = new DevExpress.XtraGrid.GridControl();
+            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvRoles = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colrolID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colstatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +157,7 @@
             // 
             // gcRoles
             // 
+            this.gcRoles.DataSource = this.rolesBindingSource;
             this.gcRoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcRoles.Location = new System.Drawing.Point(0, 20);
             this.gcRoles.MainView = this.gvRoles;
@@ -161,10 +168,61 @@
             this.gcRoles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRoles});
             // 
+            // rolesBindingSource
+            // 
+            this.rolesBindingSource.DataSource = typeof(FarmsRamirezBML.Roles);
+            // 
             // gvRoles
             // 
+            this.gvRoles.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colrolID,
+            this.coldescripcion,
+            this.colstatus,
+            this.colfechaRegistro});
             this.gvRoles.GridControl = this.gcRoles;
             this.gvRoles.Name = "gvRoles";
+            this.gvRoles.OptionsBehavior.Editable = false;
+            this.gvRoles.OptionsView.ColumnAutoWidth = false;
+            this.gvRoles.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvRoles.OptionsView.ShowAutoFilterRow = true;
+            this.gvRoles.OptionsView.ShowGroupPanel = false;
+            // 
+            // colrolID
+            // 
+            this.colrolID.Caption = "RolID";
+            this.colrolID.FieldName = "rolID";
+            this.colrolID.Name = "colrolID";
+            this.colrolID.OptionsColumn.AllowEdit = false;
+            this.colrolID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colrolID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colrolID.OptionsColumn.AllowMove = false;
+            this.colrolID.OptionsColumn.AllowSize = false;
+            this.colrolID.OptionsColumn.FixedWidth = true;
+            this.colrolID.Visible = true;
+            this.colrolID.VisibleIndex = 0;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.coldescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.coldescripcion.OptionsColumn.AllowMove = false;
+            this.coldescripcion.OptionsColumn.AllowSize = false;
+            this.coldescripcion.OptionsColumn.FixedWidth = true;
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 1;
+            // 
+            // colstatus
+            // 
+            this.colstatus.FieldName = "status";
+            this.colstatus.Name = "colstatus";
+            // 
+            // colfechaRegistro
+            // 
+            this.colfechaRegistro.FieldName = "fechaRegistro";
+            this.colfechaRegistro.Name = "colfechaRegistro";
             // 
             // frmRoles
             // 
@@ -180,6 +238,7 @@
             this.Text = "Roles";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,5 +261,10 @@
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private DevExpress.XtraGrid.GridControl gcRoles;
         private DevExpress.XtraGrid.Views.Grid.GridView gvRoles;
+        private System.Windows.Forms.BindingSource rolesBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colrolID;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colstatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colfechaRegistro;
     }
 }

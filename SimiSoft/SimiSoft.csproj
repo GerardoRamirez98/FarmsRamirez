@@ -247,6 +247,9 @@
     <None Include="Properties\DataSources\FarmsRamirezBML.Cliente.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Producto.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Proveedor.datasource" />
+    <None Include="Properties\DataSources\FarmsRamirezBML.Roles.datasource" />
+    <None Include="Properties\DataSources\FarmsRamirezBML.Usuario.datasource" />
+    <None Include="Properties\DataSources\FarmsRamirezBML.Venta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
