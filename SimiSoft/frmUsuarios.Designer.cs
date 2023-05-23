@@ -41,11 +41,19 @@
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcUsuarios = new DevExpress.XtraGrid.GridControl();
+            this.gvUsuarios = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colidUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colusername = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colidTipoUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -116,15 +124,15 @@
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl5.Location = new System.Drawing.Point(0, 0);
             this.barDockControl5.Manager = this.barManager3;
-            this.barDockControl5.Size = new System.Drawing.Size(855, 20);
+            this.barDockControl5.Size = new System.Drawing.Size(1198, 20);
             // 
             // barDockControl6
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 648);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 568);
             this.barDockControl6.Manager = this.barManager3;
-            this.barDockControl6.Size = new System.Drawing.Size(855, 0);
+            this.barDockControl6.Size = new System.Drawing.Size(1198, 0);
             // 
             // barDockControl7
             // 
@@ -132,15 +140,15 @@
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl7.Location = new System.Drawing.Point(0, 20);
             this.barDockControl7.Manager = this.barManager3;
-            this.barDockControl7.Size = new System.Drawing.Size(0, 628);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 548);
             // 
             // barDockControl8
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(855, 20);
+            this.barDockControl8.Location = new System.Drawing.Point(1198, 20);
             this.barDockControl8.Manager = this.barManager3;
-            this.barDockControl8.Size = new System.Drawing.Size(0, 628);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 548);
             // 
             // skinBarSubItem1
             // 
@@ -148,29 +156,83 @@
             this.skinBarSubItem1.Id = 4;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
-            // gridControl1
+            // gcUsuarios
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager3;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(855, 628);
-            this.gridControl1.TabIndex = 5;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcUsuarios.DataSource = this.usuarioBindingSource;
+            this.gcUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcUsuarios.Location = new System.Drawing.Point(0, 20);
+            this.gcUsuarios.MainView = this.gvUsuarios;
+            this.gcUsuarios.MenuManager = this.barManager3;
+            this.gcUsuarios.Name = "gcUsuarios";
+            this.gcUsuarios.Size = new System.Drawing.Size(1198, 548);
+            this.gcUsuarios.TabIndex = 5;
+            this.gcUsuarios.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvUsuarios});
             // 
-            // gridView1
+            // gvUsuarios
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gvUsuarios.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colidUsuario,
+            this.colnombre,
+            this.colusername,
+            this.colpassword,
+            this.colidTipoUsuario,
+            this.colactivo});
+            this.gvUsuarios.GridControl = this.gcUsuarios;
+            this.gvUsuarios.Name = "gvUsuarios";
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(FarmsRamirezBML.Usuario);
+            // 
+            // colidUsuario
+            // 
+            this.colidUsuario.FieldName = "idUsuario";
+            this.colidUsuario.Name = "colidUsuario";
+            this.colidUsuario.Visible = true;
+            this.colidUsuario.VisibleIndex = 0;
+            // 
+            // colnombre
+            // 
+            this.colnombre.FieldName = "nombre";
+            this.colnombre.Name = "colnombre";
+            this.colnombre.Visible = true;
+            this.colnombre.VisibleIndex = 1;
+            // 
+            // colusername
+            // 
+            this.colusername.FieldName = "username";
+            this.colusername.Name = "colusername";
+            this.colusername.Visible = true;
+            this.colusername.VisibleIndex = 2;
+            // 
+            // colpassword
+            // 
+            this.colpassword.FieldName = "password";
+            this.colpassword.Name = "colpassword";
+            this.colpassword.Visible = true;
+            this.colpassword.VisibleIndex = 3;
+            // 
+            // colidTipoUsuario
+            // 
+            this.colidTipoUsuario.FieldName = "idTipoUsuario";
+            this.colidTipoUsuario.Name = "colidTipoUsuario";
+            this.colidTipoUsuario.Visible = true;
+            this.colidTipoUsuario.VisibleIndex = 4;
+            // 
+            // colactivo
+            // 
+            this.colactivo.FieldName = "activo";
+            this.colactivo.Name = "colactivo";
+            this.colactivo.Visible = true;
+            this.colactivo.VisibleIndex = 5;
             // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 648);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(1198, 568);
+            this.Controls.Add(this.gcUsuarios);
             this.Controls.Add(this.barDockControl7);
             this.Controls.Add(this.barDockControl8);
             this.Controls.Add(this.barDockControl6);
@@ -178,8 +240,9 @@
             this.Name = "frmUsuarios";
             this.Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +262,14 @@
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarDockControl barDockControl8;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcUsuarios;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvUsuarios;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colidUsuario;
+        private DevExpress.XtraGrid.Columns.GridColumn colnombre;
+        private DevExpress.XtraGrid.Columns.GridColumn colusername;
+        private DevExpress.XtraGrid.Columns.GridColumn colpassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colidTipoUsuario;
+        private DevExpress.XtraGrid.Columns.GridColumn colactivo;
     }
 }
