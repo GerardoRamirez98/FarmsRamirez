@@ -289,3 +289,6 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Threading.Task
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.ValueTuple.xml
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Drawing.Common.xml
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmRoles.resources
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmAsignarPermisosRol.resources
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmCategorias.resources
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\SimiSoft.frmUsuarios.resources

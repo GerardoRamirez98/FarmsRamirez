@@ -41,7 +41,11 @@
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
+            this.gcRoles = new DevExpress.XtraGrid.GridControl();
+            this.gvRoles = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -144,18 +148,38 @@
             this.skinBarSubItem1.Id = 4;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
+            // gcRoles
+            // 
+            this.gcRoles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcRoles.Location = new System.Drawing.Point(0, 20);
+            this.gcRoles.MainView = this.gvRoles;
+            this.gcRoles.MenuManager = this.barManager3;
+            this.gcRoles.Name = "gcRoles";
+            this.gcRoles.Size = new System.Drawing.Size(1236, 548);
+            this.gcRoles.TabIndex = 4;
+            this.gcRoles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvRoles});
+            // 
+            // gvRoles
+            // 
+            this.gvRoles.GridControl = this.gcRoles;
+            this.gvRoles.Name = "gvRoles";
+            // 
             // frmRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 568);
+            this.Controls.Add(this.gcRoles);
             this.Controls.Add(this.barDockControl7);
             this.Controls.Add(this.barDockControl8);
             this.Controls.Add(this.barDockControl6);
             this.Controls.Add(this.barDockControl5);
             this.Name = "frmRoles";
-            this.Text = "frmRoles";
+            this.Text = "Roles";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +199,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarDockControl barDockControl8;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
+        private DevExpress.XtraGrid.GridControl gcRoles;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvRoles;
     }
 }
