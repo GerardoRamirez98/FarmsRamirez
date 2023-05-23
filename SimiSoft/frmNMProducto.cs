@@ -153,7 +153,7 @@ namespace SimiSoft
             {
                 FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.100.17/Imagen.jpg");
                 request.Method = WebRequestMethods.Ftp.UploadFile;
-                request.Credentials = new NetworkCredential("TECNIPRINT", "tecniprint");
+                request.Credentials = new NetworkCredential("SISTEMA", "sistema");
                 request.UsePassive = true;
                 request.UseBinary = true;
                 request.KeepAlive = true;
