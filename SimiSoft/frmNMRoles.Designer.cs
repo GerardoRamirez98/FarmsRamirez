@@ -102,6 +102,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Name = "frmNMRoles";
             this.Text = "frmNMRoles";
+            this.Load += new System.EventHandler(this.frmNMRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             this.ResumeLayout(false);

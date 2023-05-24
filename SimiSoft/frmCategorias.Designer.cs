@@ -41,11 +41,17 @@
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcCategorias = new DevExpress.XtraGrid.GridControl();
+            this.gvCategorias = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colcategoriaID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colstatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -148,29 +154,68 @@
             this.skinBarSubItem1.Id = 4;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
-            // gridControl1
+            // gcCategorias
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager3;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1113, 594);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcCategorias.DataSource = this.categoriasBindingSource;
+            this.gcCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcCategorias.Location = new System.Drawing.Point(0, 20);
+            this.gcCategorias.MainView = this.gvCategorias;
+            this.gcCategorias.MenuManager = this.barManager3;
+            this.gcCategorias.Name = "gcCategorias";
+            this.gcCategorias.Size = new System.Drawing.Size(1113, 594);
+            this.gcCategorias.TabIndex = 4;
+            this.gcCategorias.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCategorias});
             // 
-            // gridView1
+            // gvCategorias
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gvCategorias.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colcategoriaID,
+            this.coldescripcion,
+            this.colstatus,
+            this.colfechaRegistro});
+            this.gvCategorias.GridControl = this.gcCategorias;
+            this.gvCategorias.Name = "gvCategorias";
+            this.gvCategorias.OptionsBehavior.Editable = false;
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataSource = typeof(FarmsRamirezBML.Categorias);
+            // 
+            // colcategoriaID
+            // 
+            this.colcategoriaID.FieldName = "categoriaID";
+            this.colcategoriaID.Name = "colcategoriaID";
+            this.colcategoriaID.Visible = true;
+            this.colcategoriaID.VisibleIndex = 0;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 1;
+            // 
+            // colstatus
+            // 
+            this.colstatus.FieldName = "status";
+            this.colstatus.Name = "colstatus";
+            this.colstatus.Visible = true;
+            this.colstatus.VisibleIndex = 2;
+            // 
+            // colfechaRegistro
+            // 
+            this.colfechaRegistro.FieldName = "fechaRegistro";
+            this.colfechaRegistro.Name = "colfechaRegistro";
+            this.colfechaRegistro.Visible = true;
+            this.colfechaRegistro.VisibleIndex = 3;
             // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 614);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gcCategorias);
             this.Controls.Add(this.barDockControl7);
             this.Controls.Add(this.barDockControl8);
             this.Controls.Add(this.barDockControl6);
@@ -178,8 +223,9 @@
             this.Name = "frmCategorias";
             this.Text = "Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +245,12 @@
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarDockControl barDockControl8;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcCategorias;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCategorias;
+        private System.Windows.Forms.BindingSource categoriasBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colcategoriaID;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colstatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colfechaRegistro;
     }
 }

@@ -90,5 +90,10 @@ namespace SimiSoft
             }
             return !ban;
         }
+
+        private void frmNMRoles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
