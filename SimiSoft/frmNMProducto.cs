@@ -50,7 +50,7 @@ namespace SimiSoft
 
             cboBarras.DisplayMember = "Texto";
             cboBarras.ValueMember = "Valor";
-            cboBarras.SelectedIndex = 0;
+            cboBarras.SelectedIndex = 31;
         }
 
         private void bntGenerarCodigo_Click(object sender, EventArgs e)

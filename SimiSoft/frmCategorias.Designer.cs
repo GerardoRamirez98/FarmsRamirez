@@ -181,6 +181,10 @@
             this.gvCategorias.GridControl = this.gcCategorias;
             this.gvCategorias.Name = "gvCategorias";
             this.gvCategorias.OptionsBehavior.Editable = false;
+            this.gvCategorias.OptionsView.ColumnAutoWidth = false;
+            this.gvCategorias.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvCategorias.OptionsView.ShowAutoFilterRow = true;
+            this.gvCategorias.OptionsView.ShowGroupPanel = false;
             // 
             // colCategoriaID
             // 
@@ -221,8 +225,6 @@
             this.colstatus.OptionsColumn.AllowMove = false;
             this.colstatus.OptionsColumn.AllowSize = false;
             this.colstatus.OptionsColumn.FixedWidth = true;
-            this.colstatus.Visible = true;
-            this.colstatus.VisibleIndex = 2;
             // 
             // colFechaRegistro
             // 
@@ -235,8 +237,6 @@
             this.colFechaRegistro.OptionsColumn.AllowMove = false;
             this.colFechaRegistro.OptionsColumn.AllowSize = false;
             this.colFechaRegistro.OptionsColumn.FixedWidth = true;
-            this.colFechaRegistro.Visible = true;
-            this.colFechaRegistro.VisibleIndex = 3;
             // 
             // frmCategorias
             // 
