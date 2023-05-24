@@ -22,33 +22,33 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@descripcion", descripcion);
 
-            return dataAccess.Execute("stp_rol_agregar, parametros");
+            return dataAccess.Execute("stp_roles_agregar, parametros");
         }
 
         public int Delete()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@rolID", rolID);
-            return dataAccess.Execute("stp_rol_delete", parametros);
+            return dataAccess.Execute("stp_roles_delete", parametros);
         }
 
         public List<Roles> GetAll()
         {
-            return dataAccess.Query<Roles>("stp_rol_getall");
+            return dataAccess.Query<Roles>("stp_roles_getall");
         }
 
         public Roles GetById()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@rolID", rolID);
-            return dataAccess.QuerySingle<Roles>("stp_rol_getbyid", parametros);
+            return dataAccess.QuerySingle<Roles>("stp_roles_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@descripcion", descripcion);
-            return dataAccess.Execute("stp_rol_update");
+            return dataAccess.Execute("stp_roles_update");
         }
     }
 }
