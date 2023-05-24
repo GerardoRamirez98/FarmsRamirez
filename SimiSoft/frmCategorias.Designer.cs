@@ -42,16 +42,16 @@
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcCategorias = new DevExpress.XtraGrid.GridControl();
-            this.gvCategorias = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colcategoriaID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvCategorias = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colCategoriaID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colstatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colfechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -167,48 +167,76 @@
             this.gcCategorias.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCategorias});
             // 
-            // gvCategorias
-            // 
-            this.gvCategorias.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colcategoriaID,
-            this.coldescripcion,
-            this.colstatus,
-            this.colfechaRegistro});
-            this.gvCategorias.GridControl = this.gcCategorias;
-            this.gvCategorias.Name = "gvCategorias";
-            this.gvCategorias.OptionsBehavior.Editable = false;
-            // 
             // categoriasBindingSource
             // 
             this.categoriasBindingSource.DataSource = typeof(FarmsRamirezBML.Categorias);
             // 
-            // colcategoriaID
+            // gvCategorias
             // 
-            this.colcategoriaID.FieldName = "categoriaID";
-            this.colcategoriaID.Name = "colcategoriaID";
-            this.colcategoriaID.Visible = true;
-            this.colcategoriaID.VisibleIndex = 0;
+            this.gvCategorias.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCategoriaID,
+            this.colDescripcion,
+            this.colstatus,
+            this.colFechaRegistro});
+            this.gvCategorias.GridControl = this.gcCategorias;
+            this.gvCategorias.Name = "gvCategorias";
+            this.gvCategorias.OptionsBehavior.Editable = false;
             // 
-            // coldescripcion
+            // colCategoriaID
             // 
-            this.coldescripcion.FieldName = "descripcion";
-            this.coldescripcion.Name = "coldescripcion";
-            this.coldescripcion.Visible = true;
-            this.coldescripcion.VisibleIndex = 1;
+            this.colCategoriaID.Caption = "CategoriaID";
+            this.colCategoriaID.FieldName = "categoriaID";
+            this.colCategoriaID.Name = "colCategoriaID";
+            this.colCategoriaID.OptionsColumn.AllowEdit = false;
+            this.colCategoriaID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colCategoriaID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colCategoriaID.OptionsColumn.AllowMove = false;
+            this.colCategoriaID.OptionsColumn.AllowSize = false;
+            this.colCategoriaID.OptionsColumn.FixedWidth = true;
+            this.colCategoriaID.Visible = true;
+            this.colCategoriaID.VisibleIndex = 0;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.Caption = "Descripcion";
+            this.colDescripcion.FieldName = "descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.OptionsColumn.AllowEdit = false;
+            this.colDescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colDescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colDescripcion.OptionsColumn.AllowMove = false;
+            this.colDescripcion.OptionsColumn.AllowSize = false;
+            this.colDescripcion.OptionsColumn.FixedWidth = true;
+            this.colDescripcion.Visible = true;
+            this.colDescripcion.VisibleIndex = 1;
             // 
             // colstatus
             // 
+            this.colstatus.Caption = "status";
             this.colstatus.FieldName = "status";
             this.colstatus.Name = "colstatus";
+            this.colstatus.OptionsColumn.AllowEdit = false;
+            this.colstatus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colstatus.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colstatus.OptionsColumn.AllowMove = false;
+            this.colstatus.OptionsColumn.AllowSize = false;
+            this.colstatus.OptionsColumn.FixedWidth = true;
             this.colstatus.Visible = true;
             this.colstatus.VisibleIndex = 2;
             // 
-            // colfechaRegistro
+            // colFechaRegistro
             // 
-            this.colfechaRegistro.FieldName = "fechaRegistro";
-            this.colfechaRegistro.Name = "colfechaRegistro";
-            this.colfechaRegistro.Visible = true;
-            this.colfechaRegistro.VisibleIndex = 3;
+            this.colFechaRegistro.Caption = "FechaRegistro";
+            this.colFechaRegistro.FieldName = "fechaRegistro";
+            this.colFechaRegistro.Name = "colFechaRegistro";
+            this.colFechaRegistro.OptionsColumn.AllowEdit = false;
+            this.colFechaRegistro.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colFechaRegistro.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colFechaRegistro.OptionsColumn.AllowMove = false;
+            this.colFechaRegistro.OptionsColumn.AllowSize = false;
+            this.colFechaRegistro.OptionsColumn.FixedWidth = true;
+            this.colFechaRegistro.Visible = true;
+            this.colFechaRegistro.VisibleIndex = 3;
             // 
             // frmCategorias
             // 
@@ -224,8 +252,8 @@
             this.Text = "Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,9 +276,9 @@
         private DevExpress.XtraGrid.GridControl gcCategorias;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCategorias;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colcategoriaID;
-        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colCategoriaID;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
         private DevExpress.XtraGrid.Columns.GridColumn colstatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colfechaRegistro;
+        private DevExpress.XtraGrid.Columns.GridColumn colFechaRegistro;
     }
 }
