@@ -65,7 +65,28 @@ namespace SimiSoft
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void CargarDatos(int rolID)
+        {
+            dgvPermisos.Rows.Clear();
+            List<Permisos> permisos = Permisos.GetAll(rolID);
+            if (permisos.Count > 0)
+            {
+                foreach (frmAsignarPermisosRol r in permisos)
+                {
+                    int rowID = dgvPermisos.Rows.Add();
+                    DataGridViewRow row = dgvPermisos.Rows[rowID];
+                    row.Cells["permisosID"].Value = r.permisosID;
+                    row.Cells["Menu"].Value = r.Menu;
+                    row.Cells["Sub Menu"].Value = r.SubMenu;
+                    row.Cells["Activar"].Value = r.status;
+                    row.Cells["Status"].Value = r.status;
+                }
+                dgvPermisos.Columns["permisosID"].Visible = false;
+                dgvPermisos.Columns["status"].Visible = false;
+            }
         }
 
         
