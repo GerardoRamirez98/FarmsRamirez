@@ -246,6 +246,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Categorias.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Cliente.datasource" />
+    <None Include="Properties\DataSources\FarmsRamirezBML.Permisos.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Producto.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Proveedor.datasource" />
     <None Include="Properties\DataSources\FarmsRamirezBML.Roles.datasource" />

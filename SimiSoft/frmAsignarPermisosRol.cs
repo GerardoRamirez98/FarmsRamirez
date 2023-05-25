@@ -53,19 +53,25 @@ namespace SimiSoft
             checkColumn.FillWeight = 30;
             dgvPermisos.Columns.Add(checkColumn);
 
-            dgvPermisos.Columns.Add("IdPermisos", "IdPermisos");
+            dgvPermisos.Columns.Add("permisosID", "permisosID");
             dgvPermisos.Columns.Add("Menu", "Menu");
             dgvPermisos.Columns.Add("Sub Menu", "Sub Menu");
             dgvPermisos.Columns.Add("Activo", "Activo");
 
             dgvPermisos.Columns["Menu"].FillWeight = 60;
-            dgvPermisos.Columns["IdPermisos"].Visible = false;
+            dgvPermisos.Columns["permisosID"].Visible = false;
             dgvPermisos.Columns["Activo"].Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+            if (int.Parse(((ComboBoxItem)cbRoles.SelectedItem).Value.ToString()) == 0)
+            {
+                MessageBox.Show("Debe seleccionar un rol", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            CargarDatos(int.Parse(((ComboBoxItem)cbRoles.SelectedItem).Value.ToString()));
         }
 
         private void CargarDatos(int rolID)
@@ -74,7 +80,7 @@ namespace SimiSoft
             List<Permisos> permisos = Permisos.GetAll(rolID);
             if (permisos.Count > 0)
             {
-                foreach (frmAsignarPermisosRol r in permisos)
+                foreach (Permisos r in permisos)
                 {
                     int rowID = dgvPermisos.Rows.Add();
                     DataGridViewRow row = dgvPermisos.Rows[rowID];
@@ -82,10 +88,10 @@ namespace SimiSoft
                     row.Cells["Menu"].Value = r.Menu;
                     row.Cells["Sub Menu"].Value = r.SubMenu;
                     row.Cells["Activar"].Value = r.status;
-                    row.Cells["Status"].Value = r.status;
+                    row.Cells["Activo"].Value = r.status;
                 }
                 dgvPermisos.Columns["permisosID"].Visible = false;
-                dgvPermisos.Columns["status"].Visible = false;
+                dgvPermisos.Columns["Activo"].Visible = false;
             }
         }
 
