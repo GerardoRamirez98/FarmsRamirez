@@ -11,6 +11,7 @@ namespace FarmsRamirezBML
     public class Permisos
     {
         private static DataAccess dataAccess = DataAccess.Instance();
+        public int rolID {  get; set; }
         public int permisosID {  get; set; }
         public string Menu { get; set; }
         public string SubMenu { get; set; }
