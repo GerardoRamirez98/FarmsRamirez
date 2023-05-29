@@ -12,7 +12,7 @@ namespace FarmsRamirezDAL
         #region Singleton
         private static volatile DataAccess instance = null;
         private static readonly object padlock = new object();
-        public static string conString = "Server=USER6663-PC;Database=bd_tecniprint;User id = sa; Password=tecniprint";
+        public static string conString = "Server=RMZSERV;Database=bd_tecniprint;User id = sa; Password=tecniprint";
 
         private DataAccess() { }
         public static DataAccess Instance()

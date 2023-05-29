@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
+using System;
 using System.Collections.Generic;
 
 namespace FarmsRamirezBML
@@ -7,20 +8,21 @@ namespace FarmsRamirezBML
     public class Producto
     {
         private DataAccess dataAccess = DataAccess.Instance();
-        public int productoID { get; set; }
-        public string codigo { get; set; }
-        public string codigoBarra { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public string marca { get; set; }
-        public string unidadMedida { get; set; }
-        public decimal precioCompra { get; set; }
-        public int margenGanancia { get; set; }
-        public decimal precioVenta { get; set; }
-        public int stock { get; set; }
-        public int stockMin { get; set; }
-        public int stockMax { get; set; }        
-        public bool status { get; set; }
+        public int IdProducto { get; set; }
+        public string Codigo { get; set; }
+        public string CodigoBarra { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public string Marca { get; set; }
+        public string UnidadMedida { get; set; }
+        public decimal PrecioCompra { get; set; }
+        public int MargenGanancia { get; set; }
+        public decimal PrecioVenta { get; set; }
+        public int Stock { get; set; }
+        public int StockMin { get; set; }
+        public int StockMax { get; set; }
+        public bool Activo { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         public Producto()
         {
@@ -29,18 +31,18 @@ namespace FarmsRamirezBML
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@codigo", codigo);
-            parametros.Add("@codigoBarra", codigoBarra);
-            parametros.Add("@nombre", nombre);
-            parametros.Add("@descripcion", descripcion);
-            parametros.Add("@marca", marca);
-            parametros.Add("@unidadMedida", unidadMedida);
-            parametros.Add("@precioCompra", precioCompra);
-            parametros.Add("@margenGanancia", margenGanancia);
-            parametros.Add("@precioVenta", precioVenta);
-            parametros.Add("@stock", stock);
-            parametros.Add("@stockMin", stockMin);
-            parametros.Add("@stockMax", stockMax);
+            parametros.Add("@Codigo", Codigo);
+            parametros.Add("@CodigoBarra", CodigoBarra);
+            parametros.Add("@Nombre", Nombre);
+            parametros.Add("@Descripcion", Descripcion);
+            parametros.Add("@Marca", Marca);
+            parametros.Add("@UnidadMedida", UnidadMedida);
+            parametros.Add("@PrecioCompra", PrecioCompra);
+            parametros.Add("@MargenGanancia", MargenGanancia);
+            parametros.Add("@PrecioVenta", PrecioVenta);
+            parametros.Add("@Stock", Stock);
+            parametros.Add("@StockMin", StockMin);
+            parametros.Add("@StockMax", StockMax);
             
             return dataAccess.Execute("stp_productos_agregar", parametros);
         }
@@ -48,7 +50,7 @@ namespace FarmsRamirezBML
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@productoID", productoID);
+            parametros.Add("@IdProducto", IdProducto);
             return dataAccess.Execute("stp_producto_delete", parametros);
         }
 
@@ -60,26 +62,26 @@ namespace FarmsRamirezBML
         public Producto GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@productoID", productoID);
+            parametros.Add("@IdProducto", IdProducto);
             return dataAccess.QuerySingle<Producto>("stp_producto_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@productoID", productoID);
-            parametros.Add("@codigo", codigo);
-            parametros.Add("@codigoBarra", codigoBarra);
-            parametros.Add("@nombre", nombre);
-            parametros.Add("@descripcion", descripcion);
-            parametros.Add("@marca", marca);
-            parametros.Add("@unidadMedida", unidadMedida);
-            parametros.Add("@precioCompra", precioCompra);
-            parametros.Add("@margenGanancia", margenGanancia);
-            parametros.Add("@precioVenta", precioVenta);
-            parametros.Add("@stock", stock);
-            parametros.Add("@stockMin", stockMin);
-            parametros.Add("@stockMax", stockMax);
+            parametros.Add("@IdProducto", IdProducto);
+            parametros.Add("@Codigo", Codigo);
+            parametros.Add("@CodigoBarra", CodigoBarra);
+            parametros.Add("@Nombre", Nombre);
+            parametros.Add("@Descripcion", Descripcion);
+            parametros.Add("@Marca", Marca);
+            parametros.Add("@UnidadMedida", UnidadMedida);
+            parametros.Add("@PrecioCompra", PrecioCompra);
+            parametros.Add("@MargenGanancia", MargenGanancia);
+            parametros.Add("@PrecioVenta", PrecioVenta);
+            parametros.Add("@Stock", Stock);
+            parametros.Add("@StockMin", StockMin);
+            parametros.Add("@StockMax", StockMax);
             return dataAccess.Execute("stp_producto_update", parametros);
         }
 

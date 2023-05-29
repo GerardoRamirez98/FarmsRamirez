@@ -2,20 +2,18 @@
 using FarmsRamirezDAL;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
     public class Permisos
     {
         private static DataAccess dataAccess = DataAccess.Instance();
-        public int rolID {  get; set; }
-        public int permisosID {  get; set; }
+        public int IdTipoUsuario { get; set; }
+        public int IdPermisos { get; set; }
         public string Menu { get; set; }
         public string SubMenu { get; set; }
-        public bool status { get; set; }
+        public bool Activo { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         public Permisos()
         {
@@ -33,21 +31,21 @@ namespace FarmsRamirezBML
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@permisosID", permisosID);
+            parametros.Add("@IdPermisos", IdPermisos);
             return dataAccess.Execute("stp_permisos_delete", parametros);
         }
-        public static List<Permisos> GetAll(int rolID)
+        public static List<Permisos> GetAll(int IdTipoUsuario)
         //public List<Permisos> GetAll(int rolID)
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@rolID", rolID);
+            parametros.Add("@IdRol", IdTipoUsuario);
             return dataAccess.Query<Permisos>("stp_permisos_getall");
         }
 
         public Permisos GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@permisosID", permisosID);
+            parametros.Add("@IdPermisos", IdPermisos);
             return dataAccess.QuerySingle<Permisos>("stp_permisos_getbyid", parametros);
         }
 
@@ -55,7 +53,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@Menu", Menu);
-            parametros.Add("@SubMenu",SubMenu);
+            parametros.Add("@SubMenu", SubMenu);
             return dataAccess.Execute("stp_permisos_update");
         }
     }
