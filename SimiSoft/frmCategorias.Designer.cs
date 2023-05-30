@@ -44,10 +44,10 @@
             this.gcCategorias = new DevExpress.XtraGrid.GridControl();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvCategorias = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colCategoriaID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colstatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColIdCategoria = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
@@ -174,10 +174,10 @@
             // gvCategorias
             // 
             this.gvCategorias.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colCategoriaID,
-            this.colDescripcion,
-            this.colstatus,
-            this.colFechaRegistro});
+            this.ColIdCategoria,
+            this.ColDescripcion,
+            this.ColActivo,
+            this.ColFechaRegistro});
             this.gvCategorias.GridControl = this.gcCategorias;
             this.gvCategorias.Name = "gvCategorias";
             this.gvCategorias.OptionsBehavior.Editable = false;
@@ -186,57 +186,57 @@
             this.gvCategorias.OptionsView.ShowAutoFilterRow = true;
             this.gvCategorias.OptionsView.ShowGroupPanel = false;
             // 
-            // colCategoriaID
+            // ColIdCategoria
             // 
-            this.colCategoriaID.Caption = "CategoriaID";
-            this.colCategoriaID.FieldName = "categoriaID";
-            this.colCategoriaID.Name = "colCategoriaID";
-            this.colCategoriaID.OptionsColumn.AllowEdit = false;
-            this.colCategoriaID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colCategoriaID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colCategoriaID.OptionsColumn.AllowMove = false;
-            this.colCategoriaID.OptionsColumn.AllowSize = false;
-            this.colCategoriaID.OptionsColumn.FixedWidth = true;
-            this.colCategoriaID.Visible = true;
-            this.colCategoriaID.VisibleIndex = 0;
+            this.ColIdCategoria.Caption = "IdCategoria";
+            this.ColIdCategoria.FieldName = "IdCategoria";
+            this.ColIdCategoria.Name = "ColIdCategoria";
+            this.ColIdCategoria.OptionsColumn.AllowEdit = false;
+            this.ColIdCategoria.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdCategoria.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdCategoria.OptionsColumn.AllowMove = false;
+            this.ColIdCategoria.OptionsColumn.AllowSize = false;
+            this.ColIdCategoria.OptionsColumn.FixedWidth = true;
+            this.ColIdCategoria.Visible = true;
+            this.ColIdCategoria.VisibleIndex = 0;
             // 
-            // colDescripcion
+            // ColDescripcion
             // 
-            this.colDescripcion.Caption = "Descripcion";
-            this.colDescripcion.FieldName = "descripcion";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.OptionsColumn.AllowEdit = false;
-            this.colDescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colDescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colDescripcion.OptionsColumn.AllowMove = false;
-            this.colDescripcion.OptionsColumn.AllowSize = false;
-            this.colDescripcion.OptionsColumn.FixedWidth = true;
-            this.colDescripcion.Visible = true;
-            this.colDescripcion.VisibleIndex = 1;
+            this.ColDescripcion.Caption = "Descripcion";
+            this.ColDescripcion.FieldName = "Descripcion";
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.OptionsColumn.AllowEdit = false;
+            this.ColDescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColDescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColDescripcion.OptionsColumn.AllowMove = false;
+            this.ColDescripcion.OptionsColumn.AllowSize = false;
+            this.ColDescripcion.OptionsColumn.FixedWidth = true;
+            this.ColDescripcion.Visible = true;
+            this.ColDescripcion.VisibleIndex = 1;
             // 
-            // colstatus
+            // ColActivo
             // 
-            this.colstatus.Caption = "status";
-            this.colstatus.FieldName = "status";
-            this.colstatus.Name = "colstatus";
-            this.colstatus.OptionsColumn.AllowEdit = false;
-            this.colstatus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colstatus.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colstatus.OptionsColumn.AllowMove = false;
-            this.colstatus.OptionsColumn.AllowSize = false;
-            this.colstatus.OptionsColumn.FixedWidth = true;
+            this.ColActivo.Caption = "Activo";
+            this.ColActivo.FieldName = "Activo";
+            this.ColActivo.Name = "ColActivo";
+            this.ColActivo.OptionsColumn.AllowEdit = false;
+            this.ColActivo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColActivo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColActivo.OptionsColumn.AllowMove = false;
+            this.ColActivo.OptionsColumn.AllowSize = false;
+            this.ColActivo.OptionsColumn.FixedWidth = true;
             // 
-            // colFechaRegistro
+            // ColFechaRegistro
             // 
-            this.colFechaRegistro.Caption = "FechaRegistro";
-            this.colFechaRegistro.FieldName = "fechaRegistro";
-            this.colFechaRegistro.Name = "colFechaRegistro";
-            this.colFechaRegistro.OptionsColumn.AllowEdit = false;
-            this.colFechaRegistro.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colFechaRegistro.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colFechaRegistro.OptionsColumn.AllowMove = false;
-            this.colFechaRegistro.OptionsColumn.AllowSize = false;
-            this.colFechaRegistro.OptionsColumn.FixedWidth = true;
+            this.ColFechaRegistro.Caption = "FechaRegistro";
+            this.ColFechaRegistro.FieldName = "FechaRegistro";
+            this.ColFechaRegistro.Name = "ColFechaRegistro";
+            this.ColFechaRegistro.OptionsColumn.AllowEdit = false;
+            this.ColFechaRegistro.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColFechaRegistro.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColFechaRegistro.OptionsColumn.AllowMove = false;
+            this.ColFechaRegistro.OptionsColumn.AllowSize = false;
+            this.ColFechaRegistro.OptionsColumn.FixedWidth = true;
             // 
             // frmCategorias
             // 
@@ -250,6 +250,7 @@
             this.Controls.Add(this.barDockControl5);
             this.Name = "frmCategorias";
             this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
@@ -276,9 +277,9 @@
         private DevExpress.XtraGrid.GridControl gcCategorias;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCategorias;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colCategoriaID;
-        private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
-        private DevExpress.XtraGrid.Columns.GridColumn colstatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colFechaRegistro;
+        private DevExpress.XtraGrid.Columns.GridColumn ColIdCategoria;
+        private DevExpress.XtraGrid.Columns.GridColumn ColDescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn ColActivo;
+        private DevExpress.XtraGrid.Columns.GridColumn ColFechaRegistro;
     }
 }
