@@ -44,12 +44,13 @@
             this.gcUsuarios = new DevExpress.XtraGrid.GridControl();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvUsuarios = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colidUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colusername = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colidTipoUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colactivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColIdUsuarios = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColNombres = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColApellidos = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColUsername = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColIdTipoUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
@@ -176,12 +177,13 @@
             // gvUsuarios
             // 
             this.gvUsuarios.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colidUsuario,
-            this.colnombre,
-            this.colusername,
-            this.colpassword,
-            this.colidTipoUsuario,
-            this.colactivo});
+            this.ColIdUsuarios,
+            this.ColNombres,
+            this.ColApellidos,
+            this.ColUsername,
+            this.ColPassword,
+            this.ColIdTipoUsuario,
+            this.ColActivo});
             this.gvUsuarios.GridControl = this.gcUsuarios;
             this.gvUsuarios.Name = "gvUsuarios";
             this.gvUsuarios.OptionsBehavior.Editable = false;
@@ -190,67 +192,81 @@
             this.gvUsuarios.OptionsView.ShowAutoFilterRow = true;
             this.gvUsuarios.OptionsView.ShowGroupPanel = false;
             // 
-            // colidUsuario
+            // ColIdUsuarios
             // 
-            this.colidUsuario.FieldName = "idUsuario";
-            this.colidUsuario.Name = "colidUsuario";
-            this.colidUsuario.OptionsColumn.AllowEdit = false;
-            this.colidUsuario.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colidUsuario.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colidUsuario.OptionsColumn.AllowMove = false;
-            this.colidUsuario.OptionsColumn.AllowSize = false;
-            this.colidUsuario.OptionsColumn.FixedWidth = true;
-            this.colidUsuario.Visible = true;
-            this.colidUsuario.VisibleIndex = 0;
+            this.ColIdUsuarios.Caption = "IdUsuarios";
+            this.ColIdUsuarios.FieldName = "IdUsuarios";
+            this.ColIdUsuarios.Name = "ColIdUsuarios";
+            this.ColIdUsuarios.OptionsColumn.AllowEdit = false;
+            this.ColIdUsuarios.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdUsuarios.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdUsuarios.OptionsColumn.AllowMove = false;
+            this.ColIdUsuarios.OptionsColumn.AllowSize = false;
+            this.ColIdUsuarios.OptionsColumn.FixedWidth = true;
+            this.ColIdUsuarios.Visible = true;
+            this.ColIdUsuarios.VisibleIndex = 0;
             // 
-            // colnombre
+            // ColNombres
             // 
-            this.colnombre.FieldName = "nombre";
-            this.colnombre.Name = "colnombre";
-            this.colnombre.OptionsColumn.AllowEdit = false;
-            this.colnombre.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colnombre.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colnombre.OptionsColumn.AllowMove = false;
-            this.colnombre.OptionsColumn.AllowSize = false;
-            this.colnombre.OptionsColumn.FixedWidth = true;
-            this.colnombre.Visible = true;
-            this.colnombre.VisibleIndex = 1;
+            this.ColNombres.Caption = "Nombres";
+            this.ColNombres.FieldName = "Nombres";
+            this.ColNombres.Name = "ColNombres";
+            this.ColNombres.OptionsColumn.AllowEdit = false;
+            this.ColNombres.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNombres.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNombres.OptionsColumn.AllowMove = false;
+            this.ColNombres.OptionsColumn.AllowSize = false;
+            this.ColNombres.OptionsColumn.FixedWidth = true;
+            this.ColNombres.Visible = true;
+            this.ColNombres.VisibleIndex = 1;
             // 
-            // colusername
+            // ColApellidos
             // 
-            this.colusername.FieldName = "username";
-            this.colusername.Name = "colusername";
-            this.colusername.OptionsColumn.AllowEdit = false;
-            this.colusername.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colusername.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colusername.OptionsColumn.AllowMove = false;
-            this.colusername.OptionsColumn.AllowSize = false;
-            this.colusername.OptionsColumn.FixedWidth = true;
-            this.colusername.Visible = true;
-            this.colusername.VisibleIndex = 2;
+            this.ColApellidos.Caption = "Apellidos";
+            this.ColApellidos.FieldName = "Apellidos";
+            this.ColApellidos.Name = "ColApellidos";
+            this.ColApellidos.Visible = true;
+            this.ColApellidos.VisibleIndex = 2;
             // 
-            // colpassword
+            // ColUsername
             // 
-            this.colpassword.FieldName = "password";
-            this.colpassword.Name = "colpassword";
-            this.colpassword.OptionsColumn.AllowEdit = false;
-            this.colpassword.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colpassword.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colpassword.OptionsColumn.AllowMove = false;
-            this.colpassword.OptionsColumn.AllowSize = false;
-            this.colpassword.OptionsColumn.FixedWidth = true;
-            this.colpassword.Visible = true;
-            this.colpassword.VisibleIndex = 3;
+            this.ColUsername.Caption = "Username";
+            this.ColUsername.FieldName = "Username";
+            this.ColUsername.Name = "ColUsername";
+            this.ColUsername.OptionsColumn.AllowEdit = false;
+            this.ColUsername.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColUsername.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColUsername.OptionsColumn.AllowMove = false;
+            this.ColUsername.OptionsColumn.AllowSize = false;
+            this.ColUsername.OptionsColumn.FixedWidth = true;
+            this.ColUsername.Visible = true;
+            this.ColUsername.VisibleIndex = 3;
             // 
-            // colidTipoUsuario
+            // ColPassword
             // 
-            this.colidTipoUsuario.FieldName = "idTipoUsuario";
-            this.colidTipoUsuario.Name = "colidTipoUsuario";
+            this.ColPassword.Caption = "Password";
+            this.ColPassword.FieldName = "Password";
+            this.ColPassword.Name = "ColPassword";
+            this.ColPassword.OptionsColumn.AllowEdit = false;
+            this.ColPassword.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColPassword.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColPassword.OptionsColumn.AllowMove = false;
+            this.ColPassword.OptionsColumn.AllowSize = false;
+            this.ColPassword.OptionsColumn.FixedWidth = true;
+            this.ColPassword.Visible = true;
+            this.ColPassword.VisibleIndex = 4;
             // 
-            // colactivo
+            // ColIdTipoUsuario
             // 
-            this.colactivo.FieldName = "activo";
-            this.colactivo.Name = "colactivo";
+            this.ColIdTipoUsuario.Caption = "IdTipoUsuario";
+            this.ColIdTipoUsuario.FieldName = "IdTipoUsuario";
+            this.ColIdTipoUsuario.Name = "ColIdTipoUsuario";
+            // 
+            // ColActivo
+            // 
+            this.ColActivo.Caption = "Activo";
+            this.ColActivo.FieldName = "Activo";
+            this.ColActivo.Name = "ColActivo";
             // 
             // frmUsuarios
             // 
@@ -264,6 +280,7 @@
             this.Controls.Add(this.barDockControl5);
             this.Name = "frmUsuarios";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
@@ -290,11 +307,12 @@
         private DevExpress.XtraGrid.GridControl gcUsuarios;
         private DevExpress.XtraGrid.Views.Grid.GridView gvUsuarios;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colidUsuario;
-        private DevExpress.XtraGrid.Columns.GridColumn colnombre;
-        private DevExpress.XtraGrid.Columns.GridColumn colusername;
-        private DevExpress.XtraGrid.Columns.GridColumn colpassword;
-        private DevExpress.XtraGrid.Columns.GridColumn colidTipoUsuario;
-        private DevExpress.XtraGrid.Columns.GridColumn colactivo;
+        private DevExpress.XtraGrid.Columns.GridColumn ColIdUsuarios;
+        private DevExpress.XtraGrid.Columns.GridColumn ColNombres;
+        private DevExpress.XtraGrid.Columns.GridColumn ColUsername;
+        private DevExpress.XtraGrid.Columns.GridColumn ColPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn ColIdTipoUsuario;
+        private DevExpress.XtraGrid.Columns.GridColumn ColActivo;
+        private DevExpress.XtraGrid.Columns.GridColumn ColApellidos;
     }
 }

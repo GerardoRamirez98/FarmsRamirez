@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using FarmsRamirezBML;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,12 @@ namespace SimiSoft
         public frmUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            usuarioBindingSource.DataSource = new Usuario().GetAll();
+            gvUsuarios.BestFitColumns();
         }
     }
 }

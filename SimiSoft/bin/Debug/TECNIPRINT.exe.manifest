@@ -278,7 +278,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f8XalENC84GDN9D9VVs6gKUcWaFSi1iooH1QtHDTBNw=</dsig:DigestValue>
+        <dsig:DigestValue>dUaoS1Q/REEkhZCR8uh2fXyfpj2hFGrHtuLzWldt5x8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -427,14 +427,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TECNIPRINT.exe" size="366592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TECNIPRINT.exe" size="368064">
       <assemblyIdentity name="TECNIPRINT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TH7cqT0E/z3MlYRjrFfYG8/LC/rUQGhbmOEiY40Gspg=</dsig:DigestValue>
+        <dsig:DigestValue>wyn1g7BYiYHwt5M/4IzB3CkUhMZ85pfpYkSFJsVI7Vs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -447,13 +447,13 @@
       <dsig:DigestValue>0/r1sKuYu7ez1+zHQQzj4P0VA42uZZ64D6aF5PJDN98=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TECNIPRINT.exe.config" size="2802">
+  <file name="TECNIPRINT.exe.config" size="3090">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mHq/xFm8InRdoSFWez87WvtaeZz8/1WkoHRhOYlrku8=</dsig:DigestValue>
+      <dsig:DigestValue>gxqnQUfzwp76Z5vO6b/PkBiY91qHrcnBn3JWRL04C0g=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
