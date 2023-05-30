@@ -12,7 +12,7 @@ namespace FarmsRamirezDAL
         #region Singleton
         private static volatile DataAccess instance = null;
         private static readonly object padlock = new object();
-        public static string conString = "Server=USER6663-PC\\SERVERTP;Database=TECNIPRINT;User id = sa; Password=12345";
+        public static string conString = "Server=tcp:USER6663-PC\\SERVERTP,49500; Database=TECNIPRINT; User id = sa; Password=12345";
 
         private DataAccess() { }
         public static DataAccess Instance()
