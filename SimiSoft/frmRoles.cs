@@ -1,14 +1,5 @@
-﻿using DevExpress.XtraEditors;
-using FarmsRamirezBML;
+﻿using FarmsRamirezBML;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SimiSoft
 {
@@ -37,9 +28,9 @@ namespace SimiSoft
 
         private void btnModificarRol_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMRoles((int)gvRoles.GetFocusedRowCellValue("rolID"))
+            new frmNMRoles((int)gvRoles.GetFocusedRowCellValue("IdTipoUsuario"))
             {
-                Text = "Modificar Rol (" + (int)gvRoles.GetFocusedRowCellValue("rolID") + ")"
+                Text = "Modificar Rol (" + (int)gvRoles.GetFocusedRowCellValue("IdTipoUsuario") + ")"
             }.ShowDialog();
             rolesBindingSource.DataSource = new Roles().GetAll();
             gvRoles.BestFitColumns();
@@ -49,7 +40,7 @@ namespace SimiSoft
         {
             new Roles
             {
-                rolID = (int)gvRoles.GetFocusedRowCellValue("rolID")
+                IdTipoUsuario = (int)gvRoles.GetFocusedRowCellValue("IdTipoUsuario")
             }.Delete();
             rolesBindingSource.DataSource = new Roles().GetAll();
             gvRoles.BestFitColumns();

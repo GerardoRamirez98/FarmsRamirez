@@ -30,9 +30,9 @@ namespace SimiSoft
         {
             List<Roles> roles = new Roles().GetAll();
             cbRoles.Items.Add(new ComboBoxItem() { Value = 0, Text = "Seleccione Rol" });
-            foreach (Roles row in roles.Where(x => x.status == true))
+            foreach (Roles row in roles.Where(x => x.Activo == true))
             {
-                cbRoles.Items.Add(new ComboBoxItem() { Value = row.rolID, Text = row.descripcion });
+                cbRoles.Items.Add(new ComboBoxItem() { Value = row.IdTipoUsuario, Text = row.Descripcion });
             }
             cbRoles.DisplayMember = "Text";
             cbRoles.ValueMember = "Value";
@@ -74,23 +74,23 @@ namespace SimiSoft
             CargarDatos(int.Parse(((ComboBoxItem)cbRoles.SelectedItem).Value.ToString()));
         }
 
-        private void CargarDatos(int rolID)
+        private void CargarDatos(int IdTipoUsuario)
         {
             dgvPermisos.Rows.Clear();
-            List<Permisos> permisos = Permisos.GetAll(rolID);
+            List<Permisos> permisos = Permisos.GetAll(IdTipoUsuario);
             if (permisos.Count > 0)
             {
                 foreach (Permisos r in permisos)
                 {
                     int rowID = dgvPermisos.Rows.Add();
                     DataGridViewRow row = dgvPermisos.Rows[rowID];
-                    row.Cells["permisosID"].Value = r.permisosID;
+                    row.Cells["IdPermisos"].Value = r.IdPermisos;
                     row.Cells["Menu"].Value = r.Menu;
                     row.Cells["Sub Menu"].Value = r.SubMenu;
-                    row.Cells["Activar"].Value = r.status;
-                    row.Cells["Activo"].Value = r.status;
+                    row.Cells["Activar"].Value = r.Activo;
+                    row.Cells["Activo"].Value = r.Activo;
                 }
-                dgvPermisos.Columns["permisosID"].Visible = false;
+                dgvPermisos.Columns["IdPermisos"].Visible = false;
                 dgvPermisos.Columns["Activo"].Visible = false;
             }
         }

@@ -22,28 +22,28 @@ namespace SimiSoft
         }
 
         //modificar cliente
-        public frmNMCliente(int clienteID)
+        public frmNMCliente(int IdCliente)
         {
             InitializeComponent();
             cliente = new Cliente
             {
-                clienteID = clienteID
+                IdCliente = IdCliente
             }.GetById();
-            txtID.Text = cliente.clienteID.ToString();
-            txtNombres.Text = cliente.nombres;
-            txtApellidoP.Text = cliente.apellidoP;
-            txtApellidoM.Text = cliente.apellidoM;
-            txtCelular.Text = cliente.celular;
-            txtTelFijo.Text = cliente.telFijo;
-            txtCorreo.Text = cliente.correo;
-            txtCodigoPostal.Text = cliente.codigoPostal.ToString();
-            txtEstado.Text = cliente.estado;
-            txtCiudad.Text = cliente.ciudad;
-            txtMunicipio.Text = cliente.municipio;
-            txtColonia.Text = cliente.colonia;
-            txtCalle.Text = cliente.calle;
-            txtNInterior.Text = cliente.nInterior;
-            txtNExterior.Text = cliente.nExterior;
+            txtID.Text = cliente.IdCliente.ToString();
+            txtNombres.Text = cliente.Nombres;
+            txtApellidoP.Text = cliente.ApellidoPaterno;
+            txtApellidoM.Text = cliente.ApellidoMaterno;
+            txtCelular.Text = cliente.Celular;
+            txtTelFijo.Text = cliente.TelefonoFijo;
+            txtCorreo.Text = cliente.Correo;
+            txtCodigoPostal.Text = cliente.CP.ToString();
+            txtEstado.Text = cliente.Estado;
+            txtCiudad.Text = cliente.Ciudad;
+            txtMunicipio.Text = cliente.Municipio;
+            txtColonia.Text = cliente.Colonia;
+            txtCalle.Text = cliente.Calle;
+            txtNInterior.Text = cliente.NumeroInterior;
+            txtNExterior.Text = cliente.NumeroExterior;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -59,20 +59,20 @@ namespace SimiSoft
                 {
                     if(new Cliente
                     {
-                        nombres = txtNombres.Text,
-                        apellidoP = txtApellidoP.Text,
-                        apellidoM = txtApellidoM.Text,
-                        celular = txtCelular.Text,
-                        telFijo = txtTelFijo.Text,
-                        correo = txtCorreo.Text,
-                        codigoPostal = Convert.ToInt32(txtCodigoPostal.Text),
-                        estado = txtEstado.Text,
-                        ciudad = txtCiudad.Text,
-                        municipio = txtMunicipio.Text,
-                        colonia = txtColonia.Text,
-                        calle = txtCalle.Text,
-                        nInterior = txtNInterior.Text,
-                        nExterior = txtNExterior.Text
+                        Nombres = txtNombres.Text,
+                        ApellidoPaterno = txtApellidoP.Text,
+                        ApellidoMaterno = txtApellidoM.Text,
+                        Celular = txtCelular.Text,
+                        TelefonoFijo = txtTelFijo.Text,
+                        Correo = txtCorreo.Text,
+                        CP = Convert.ToInt32(txtCodigoPostal.Text),
+                        Estado = txtEstado.Text,
+                        Ciudad = txtCiudad.Text,
+                        Municipio = txtMunicipio.Text,
+                        Colonia = txtColonia.Text,
+                        Calle = txtCalle.Text,
+                        NumeroInterior = txtNInterior.Text,
+                        NumeroExterior = txtNExterior.Text
 
                     }.Add() > 0)
                     {
@@ -87,20 +87,20 @@ namespace SimiSoft
                 }
                 else
                 {
-                    cliente.nombres = txtNombres.Text;
-                    cliente.apellidoP = txtApellidoP.Text;
-                    cliente.apellidoM = txtApellidoM.Text;
-                    cliente.celular = txtCelular.Text;
-                    cliente.telFijo = txtTelFijo.Text;
-                    cliente.correo = txtCorreo.Text;
-                    cliente.codigoPostal = Convert.ToInt32(txtCodigoPostal.Text);
-                    cliente.estado = txtEstado.Text;
-                    cliente.ciudad = txtCiudad.Text;
-                    cliente.municipio = txtMunicipio.Text;
-                    cliente.colonia = txtColonia.Text;
-                    cliente.calle = txtCalle.Text;
-                    cliente.nInterior = txtNInterior.Text;
-                    cliente.nExterior = txtNExterior.Text;
+                    cliente.Nombres = txtNombres.Text;
+                    cliente.ApellidoPaterno = txtApellidoP.Text;
+                    cliente.ApellidoMaterno = txtApellidoM.Text;
+                    cliente.Celular = txtCelular.Text;
+                    cliente.TelefonoFijo = txtTelFijo.Text;
+                    cliente.Correo = txtCorreo.Text;
+                    cliente.CP = Convert.ToInt32(txtCodigoPostal.Text);
+                    cliente.Estado = txtEstado.Text;
+                    cliente.Ciudad = txtCiudad.Text;
+                    cliente.Municipio = txtMunicipio.Text;
+                    cliente.Colonia = txtColonia.Text;
+                    cliente.Calle = txtCalle.Text;
+                    cliente.NumeroInterior = txtNInterior.Text;
+                    cliente.NumeroExterior = txtNExterior.Text;
 
                     if (cliente.Update() > 0)
                     {

@@ -21,15 +21,15 @@ namespace SimiSoft
             txtID.Enabled = false;
         }
 
-        public frmNMRoles(int rolID)
+        public frmNMRoles(int IdTipoUsuario)
         {
             InitializeComponent();
             roles = new Roles
             {
-                rolID = rolID
+                IdTipoUsuario = IdTipoUsuario
             }.GetById();
-            txtID.Text = roles.rolID.ToString();
-            txtDescripcion.Text = roles.descripcion;
+            txtID.Text = roles.IdTipoUsuario.ToString();
+            txtDescripcion.Text = roles.Descripcion;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace SimiSoft
                 {
                     if (new Roles
                     {
-                        descripcion = txtDescripcion.Text
+                        Descripcion = txtDescripcion.Text
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Rol insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -59,7 +59,7 @@ namespace SimiSoft
                 }
                 else
                 {
-                    roles.descripcion = txtDescripcion.Text;
+                    roles.Descripcion = txtDescripcion.Text;
 
                     if (roles.Update() > 0)
                     {

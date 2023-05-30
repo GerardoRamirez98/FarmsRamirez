@@ -42,9 +42,9 @@ namespace SimiSoft
 
         private void btnModificarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMCliente((int)gvClientes.GetFocusedRowCellValue("clienteID"))
+            new frmNMCliente((int)gvClientes.GetFocusedRowCellValue("IdCliente"))
             {
-                Text = "Modificar Cliente (" + (int)gvClientes.GetFocusedRowCellValue("clienteID") + ")"
+                Text = "Modificar Cliente (" + (int)gvClientes.GetFocusedRowCellValue("IdCliente") + ")"
             }.ShowDialog();
             clienteBindingSource1.DataSource = new Producto().GetAll();
             gvClientes.BestFitColumns();
@@ -54,7 +54,7 @@ namespace SimiSoft
         {
             new Cliente
             {
-                clienteID = (int)gvClientes.GetFocusedRowCellValue("clienteID")
+                IdCliente = (int)gvClientes.GetFocusedRowCellValue("IdCliente")
             }.Delete();
             clienteBindingSource1.DataSource = new Producto().GetAll();
             gvClientes.BestFitColumns();

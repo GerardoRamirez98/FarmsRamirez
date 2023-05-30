@@ -46,9 +46,9 @@ namespace SimiSoft
 
         private void btnModificarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("proveedorID"))
+            new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("IdProveedor"))
             {
-                Text = "Modificar Proveedor (" + (int)gvProveedores.GetFocusedRowCellValue("proveedorID") + ")"
+                Text = "Modificar Proveedor (" + (int)gvProveedores.GetFocusedRowCellValue("IdProveedor") + ")"
             }.ShowDialog();
             proveedorBindingSource1.DataSource = new Producto().GetAll();
             gvProveedores.BestFitColumns();
@@ -58,7 +58,7 @@ namespace SimiSoft
         {
             new Proveedor
             {
-                proveedorID = (int)gvProveedores.GetFocusedRowCellValue("proveedorID")
+                IdProveedor = (int)gvProveedores.GetFocusedRowCellValue("IdProveedor")
             }.Delete();
             proveedorBindingSource1.DataSource = new Proveedor().GetAll();
             gvProveedores.BestFitColumns();

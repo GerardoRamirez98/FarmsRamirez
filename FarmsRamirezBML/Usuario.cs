@@ -21,8 +21,8 @@ namespace FarmsRamirezBML
         public Usuario Login()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@username", Username);
-            parametros.Add("@password", Password);
+            parametros.Add("@Username", Username);
+            parametros.Add("@Password", Password);
             return dataAccess.QuerySingleOrDefault<Usuario>("stp_usuarios_login", parametros);
         }
 
@@ -34,23 +34,23 @@ namespace FarmsRamirezBML
         public Usuario GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idUsuario", idUsuario);
+            parametros.Add("@IdUsuario", idUsuario);
             return dataAccess.QuerySingle<Usuario>("stp_usuario_getbyid", parametros);
         }
 
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@idUsuario", idUsuario);
+            parametros.Add("@IdUsuario", idUsuario);
             return dataAccess.Execute("stp_usuario_delete", parametros);
         }
 
         public int Add()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@nombre", Nombre);
-            parametros.Add("@username", Username);
-            parametros.Add("@password", Password);
+            parametros.Add("@Nombre", Nombre);
+            parametros.Add("@Username", Username);
+            parametros.Add("@Password", Password);
 
             return dataAccess.Execute("stp_usuario_update");
         }
@@ -58,9 +58,9 @@ namespace FarmsRamirezBML
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@nombre", Nombre);
-            parametros.Add("@username", Username);
-            parametros.Add("@password", Password);
+            parametros.Add("@Nombre", Nombre);
+            parametros.Add("@Username", Username);
+            parametros.Add("@Password", Password);
 
             return dataAccess.Execute("stp_usuario_update");
         }

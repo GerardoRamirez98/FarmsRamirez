@@ -30,8 +30,8 @@ namespace SimiSoft
             {
                 if (new Usuario
                 {
-                    username = txtUsuario.Text,
-                    password = txtContrasena.Text
+                    Username = txtUsuario.Text,
+                    Password = txtContrasena.Text
                 }.Login() != null)
                 {
                     XtraMessageBox.Show("Acceso correcto");

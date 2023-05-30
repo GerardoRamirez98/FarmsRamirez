@@ -1,29 +1,17 @@
-﻿using DevExpress.Utils.CommonDialogs;
+﻿using BarcodeLib;
 using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;// para los archivos en memoria
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Imaging;// para la clase imagen
-using System.Security.Policy;
 using System.Net; // para usar servidor ftp xampp
-using DevExpress.Utils;
-
-using BarcodeLib;
+using System.Windows.Forms;
 
 
 namespace SimiSoft
 {
     public partial class frmNMProducto : DevExpress.XtraEditors.XtraForm
-    {        
+    {
         private Producto producto;
         //cuando es nuevo producto
         public frmNMProducto()
@@ -70,13 +58,13 @@ namespace SimiSoft
             Bitmap imagenTitulo = convertirTextoImagen(txtNombre.Text, 150, Color.White);
 
             int alto_imagen_nuevo = imagenCodigoB.Height + imagenTitulo.Height;
-            
+
             Bitmap imagenNueva = new Bitmap(200, alto_imagen_nuevo);
             Graphics dibujar = Graphics.FromImage(imagenNueva);
 
             dibujar.DrawImage(imagenTitulo, new Point(0, 0));
             dibujar.DrawImage(imagenCodigoB, new Point(0, imagenTitulo.Height));
-            
+
             pbCodigoBarra.BackgroundImage = imagenNueva;
         }
 
@@ -116,26 +104,26 @@ namespace SimiSoft
         }
 
         //cuando es modificar producto
-        public frmNMProducto(int productoID)
+        public frmNMProducto(int IdProducto)
         {
             InitializeComponent();
             producto = new Producto
             {
-                productoID = productoID
+                IdProducto = IdProducto
             }.GetById();
-            txtID.Text = producto.productoID.ToString();
-            txtCodigo.Text = producto.codigo;
+            txtID.Text = producto.IdProducto.ToString();
+            txtCodigo.Text = producto.Codigo;
             //txtCodigoBarra.Text = producto.codigoBarra;
-            txtNombre.Text = producto.nombre;
-            txtDescripcion.Text = producto.descripcion;
-            txtMarca.Text = producto.marca;
-            txtUnidadM.Text = producto.unidadMedida;
-            txtPrecioC.Text = producto.precioCompra.ToString();
-            txtMargenG.Text = producto.margenGanancia.ToString();
-            txtPrecioV.Text = producto.precioVenta.ToString();
-            txtStock.Text = producto.stock.ToString();
-            txtStockMin.Text = producto.stockMin.ToString();
-            txtStockMax.Text = producto.stockMax.ToString();
+            txtNombre.Text = producto.Nombre;
+            txtDescripcion.Text = producto.Descripcion;
+            txtMarca.Text = producto.Marca;
+            txtUnidadM.Text = producto.UnidadMedida;
+            txtPrecioC.Text = producto.PrecioCompra.ToString();
+            txtMargenG.Text = producto.MargenGanancia.ToString();
+            txtPrecioV.Text = producto.PrecioVenta.ToString();
+            txtStock.Text = producto.Stock.ToString();
+            txtStockMin.Text = producto.StockMin.ToString();
+            txtStockMax.Text = producto.StockMax.ToString();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -210,20 +198,20 @@ namespace SimiSoft
                 {
                     if (new Producto
                     {
-                        codigo = txtCodigo.Text,
+                        Codigo = txtCodigo.Text,
                         //codigoBarra = txtCodigoBarra.Text,
-                        nombre = txtNombre.Text,
-                        descripcion = txtDescripcion.Text,
-                        marca = txtMarca.Text,
-                        unidadMedida = txtUnidadM.Text,
-                        precioCompra = Convert.ToDecimal(txtPrecioC.Text),
-                        margenGanancia = Convert.ToInt32(txtMargenG.Text),
-                        precioVenta = Convert.ToDecimal(txtPrecioV.Text),
-                        stock = Convert.ToInt32(txtStock.Text),
-                        stockMin = Convert.ToInt32(txtStockMin.Text),
-                        stockMax = Convert.ToInt32(txtStockMax.Text),
+                        Nombre = txtNombre.Text,
+                        Descripcion = txtDescripcion.Text,
+                        Marca = txtMarca.Text,
+                        UnidadMedida = txtUnidadM.Text,
+                        PrecioCompra = Convert.ToDecimal(txtPrecioC.Text),
+                        MargenGanancia = Convert.ToInt32(txtMargenG.Text),
+                        PrecioVenta = Convert.ToDecimal(txtPrecioV.Text),
+                        Stock = Convert.ToInt32(txtStock.Text),
+                        StockMin = Convert.ToInt32(txtStockMin.Text),
+                        StockMax = Convert.ToInt32(txtStockMax.Text),
 
-                }.Add() > 0)
+                    }.Add() > 0)
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
@@ -236,18 +224,18 @@ namespace SimiSoft
                 }
                 else
                 {
-                    producto.codigo = txtCodigo.Text;
+                    producto.Codigo = txtCodigo.Text;
                     //producto.codigoBarra = txtCodigoBarra.Text;
-                    producto.nombre = txtNombre.Text;
-                    producto.descripcion = txtDescripcion.Text;
-                    producto.marca = txtMarca.Text;
-                    producto.unidadMedida = txtUnidadM.Text;
-                    producto.precioCompra = Convert.ToDecimal(txtPrecioC.Text);
-                    producto.margenGanancia = Convert.ToInt32(txtMargenG.Text);
-                    producto.precioVenta = Convert.ToDecimal(txtPrecioV.Text);
-                    producto.stock = Convert.ToInt32(txtStock.Text);
-                    producto.stockMin = Convert.ToInt32(txtStockMin.Text);
-                    producto.stockMax = Convert.ToInt32(txtStockMax.Text);
+                    producto.Nombre = txtNombre.Text;
+                    producto.Descripcion = txtDescripcion.Text;
+                    producto.Marca = txtMarca.Text;
+                    producto.UnidadMedida = txtUnidadM.Text;
+                    producto.PrecioCompra = Convert.ToDecimal(txtPrecioC.Text);
+                    producto.MargenGanancia = Convert.ToInt32(txtMargenG.Text);
+                    producto.PrecioVenta = Convert.ToDecimal(txtPrecioV.Text);
+                    producto.Stock = Convert.ToInt32(txtStock.Text);
+                    producto.StockMin = Convert.ToInt32(txtStockMin.Text);
+                    producto.StockMax = Convert.ToInt32(txtStockMax.Text);
 
                     if (producto.Update() > 0)
                     {
@@ -260,7 +248,7 @@ namespace SimiSoft
                         this.Close();
                     }
                 }
-            }            
+            }
         }
 
         //VALIDACIONES
@@ -279,7 +267,7 @@ namespace SimiSoft
                 }
             }
             //nombre
-            if (string.IsNullOrEmpty(txtNombre.Text)) 
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 txtNombre.ErrorText = "Ingrese un nombre";
                 txtNombre.Focus();

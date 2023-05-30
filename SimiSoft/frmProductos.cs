@@ -47,9 +47,9 @@ namespace SimiSoft
 
         private void btnModificarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMProducto((int)gvProductos.GetFocusedRowCellValue("productoID"))
+            new frmNMProducto((int)gvProductos.GetFocusedRowCellValue("IdProducto"))
             {
-                Text = "Modificar Producto (" + (int)gvProductos.GetFocusedRowCellValue("productoID") + ")"
+                Text = "Modificar Producto (" + (int)gvProductos.GetFocusedRowCellValue("IdProducto") + ")"
             }.ShowDialog();
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();
@@ -59,7 +59,7 @@ namespace SimiSoft
         {
             new Producto
             {
-                productoID = (int)gvProductos.GetFocusedRowCellValue("productoID")
+                IdProducto = (int)gvProductos.GetFocusedRowCellValue("IdProducto")
             }.Delete();
             productoBindingSource.DataSource = new Producto().GetAll();
             gvProductos.BestFitColumns();
