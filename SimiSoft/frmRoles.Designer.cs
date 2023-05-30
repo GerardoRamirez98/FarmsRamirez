@@ -44,10 +44,10 @@
             this.gcRoles = new DevExpress.XtraGrid.GridControl();
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvRoles = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colrolID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colstatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colfechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColIdTipoUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
@@ -177,10 +177,10 @@
             // gvRoles
             // 
             this.gvRoles.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colrolID,
-            this.coldescripcion,
-            this.colstatus,
-            this.colfechaRegistro});
+            this.ColIdTipoUsuario,
+            this.ColDescripcion,
+            this.ColActivo,
+            this.ColFechaRegistro});
             this.gvRoles.GridControl = this.gcRoles;
             this.gvRoles.Name = "gvRoles";
             this.gvRoles.OptionsBehavior.Editable = false;
@@ -189,42 +189,45 @@
             this.gvRoles.OptionsView.ShowAutoFilterRow = true;
             this.gvRoles.OptionsView.ShowGroupPanel = false;
             // 
-            // colrolID
+            // ColIdTipoUsuario
             // 
-            this.colrolID.Caption = "RolID";
-            this.colrolID.FieldName = "rolID";
-            this.colrolID.Name = "colrolID";
-            this.colrolID.OptionsColumn.AllowEdit = false;
-            this.colrolID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colrolID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colrolID.OptionsColumn.AllowMove = false;
-            this.colrolID.OptionsColumn.AllowSize = false;
-            this.colrolID.OptionsColumn.FixedWidth = true;
-            this.colrolID.Visible = true;
-            this.colrolID.VisibleIndex = 0;
+            this.ColIdTipoUsuario.Caption = "IdTipoUsuario";
+            this.ColIdTipoUsuario.FieldName = "IdTipoUsuario";
+            this.ColIdTipoUsuario.Name = "ColIdTipoUsuario";
+            this.ColIdTipoUsuario.OptionsColumn.AllowEdit = false;
+            this.ColIdTipoUsuario.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdTipoUsuario.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdTipoUsuario.OptionsColumn.AllowMove = false;
+            this.ColIdTipoUsuario.OptionsColumn.AllowSize = false;
+            this.ColIdTipoUsuario.OptionsColumn.FixedWidth = true;
+            this.ColIdTipoUsuario.Visible = true;
+            this.ColIdTipoUsuario.VisibleIndex = 0;
             // 
-            // coldescripcion
+            // ColDescripcion
             // 
-            this.coldescripcion.FieldName = "descripcion";
-            this.coldescripcion.Name = "coldescripcion";
-            this.coldescripcion.OptionsColumn.AllowEdit = false;
-            this.coldescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.coldescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.coldescripcion.OptionsColumn.AllowMove = false;
-            this.coldescripcion.OptionsColumn.AllowSize = false;
-            this.coldescripcion.OptionsColumn.FixedWidth = true;
-            this.coldescripcion.Visible = true;
-            this.coldescripcion.VisibleIndex = 1;
+            this.ColDescripcion.Caption = "Descripcion";
+            this.ColDescripcion.FieldName = "Descripcion";
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.OptionsColumn.AllowEdit = false;
+            this.ColDescripcion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColDescripcion.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColDescripcion.OptionsColumn.AllowMove = false;
+            this.ColDescripcion.OptionsColumn.AllowSize = false;
+            this.ColDescripcion.OptionsColumn.FixedWidth = true;
+            this.ColDescripcion.Visible = true;
+            this.ColDescripcion.VisibleIndex = 1;
             // 
-            // colstatus
+            // ColActivo
             // 
-            this.colstatus.FieldName = "status";
-            this.colstatus.Name = "colstatus";
+            this.ColActivo.Caption = "Activo";
+            this.ColActivo.FieldName = "Activo";
+            this.ColActivo.Name = "ColActivo";
             // 
-            // colfechaRegistro
+            // ColFechaRegistro
             // 
-            this.colfechaRegistro.FieldName = "fechaRegistro";
-            this.colfechaRegistro.Name = "colfechaRegistro";
+            this.ColFechaRegistro.Caption = "FechaRegistro";
+            this.ColFechaRegistro.FieldName = "FechaRegistro";
+            this.ColFechaRegistro.Name = "ColFechaRegistro";
             // 
             // frmRoles
             // 
@@ -265,9 +268,9 @@
         private DevExpress.XtraGrid.GridControl gcRoles;
         private DevExpress.XtraGrid.Views.Grid.GridView gvRoles;
         private System.Windows.Forms.BindingSource rolesBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colrolID;
-        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
-        private DevExpress.XtraGrid.Columns.GridColumn colstatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colfechaRegistro;
+        private DevExpress.XtraGrid.Columns.GridColumn ColIdTipoUsuario;
+        private DevExpress.XtraGrid.Columns.GridColumn ColDescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn ColActivo;
+        private DevExpress.XtraGrid.Columns.GridColumn ColFechaRegistro;
     }
 }

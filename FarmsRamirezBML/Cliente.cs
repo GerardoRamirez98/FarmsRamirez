@@ -21,8 +21,8 @@ namespace FarmsRamirezBML
         public string Municipio { get; set; }
         public string Colonia { get; set; }
         public string Calle { get; set; }
-        public string NumeroInterior { get; set; }
-        public string NumeroExterior { get; set; }
+        public int NumeroInterior { get; set; }
+        public int NumeoExterior { get; set; }
         public bool Activo { get; set; }
         public DateTime FechaRegistro { get; set; }
 
@@ -45,10 +45,10 @@ namespace FarmsRamirezBML
             parametros.Add("@municipio", Municipio);
             parametros.Add("@colonia", Colonia);
             parametros.Add("@calle", Calle);
-            parametros.Add("@nInterior", NumeroInterior);
-            parametros.Add("@nExterior", NumeroExterior);
+            parametros.Add("@NumeroInterior", NumeroInterior);
+            parametros.Add("@NumeroExterior", NumeoExterior);
 
-            return dataAccess.Execute("stp_cliente_agregar", parametros);
+            return dataAccess.Execute("stp_clientes_agregar", parametros);
         }
 
         public int Delete()
@@ -86,7 +86,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Colonia", Colonia);
             parametros.Add("@Calle", Calle);
             parametros.Add("@NumeroInterior", NumeroInterior);
-            parametros.Add("@NumeroExterior", NumeroExterior);
+            parametros.Add("@NumeroExterior", NumeoExterior);
             return dataAccess.Execute("stp_clientes_update", parametros);
         }
     }

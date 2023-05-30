@@ -44,22 +44,23 @@
             this.gcCliente = new DevExpress.XtraGrid.GridControl();
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gvClientes = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colClienteID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNombres = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colApellidoPaterno = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colApellidoMaterno = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCelular = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTelefonoFijo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCorreo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCodigoPostal = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEstado = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCiudad = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMunicipio = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colColonia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCalle = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColIdCliente = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColNombres = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColApellidoPaterno = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColApellidoMaterno = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColCelular = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColTelefonoFijo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColCorreo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColCP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColCiudad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColMunicipio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColColonia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColCalle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColNumeroInterior = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColNumeroExterior = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
@@ -190,22 +191,23 @@
             // gvClientes
             // 
             this.gvClientes.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colClienteID,
-            this.colNombres,
-            this.colApellidoPaterno,
-            this.colApellidoMaterno,
-            this.colCelular,
-            this.colTelefonoFijo,
-            this.colCorreo,
-            this.colCodigoPostal,
-            this.colEstado,
-            this.colCiudad,
-            this.colMunicipio,
-            this.colColonia,
-            this.colCalle,
-            this.colNumeroInterior,
-            this.colNumeroExterior,
-            this.colStatus});
+            this.ColIdCliente,
+            this.ColNombres,
+            this.ColApellidoPaterno,
+            this.ColApellidoMaterno,
+            this.ColCelular,
+            this.ColTelefonoFijo,
+            this.ColCorreo,
+            this.ColCP,
+            this.ColEstado,
+            this.ColCiudad,
+            this.ColMunicipio,
+            this.ColColonia,
+            this.ColCalle,
+            this.ColNumeroInterior,
+            this.ColNumeroExterior,
+            this.ColActivo,
+            this.ColFechaRegistro});
             this.gvClientes.GridControl = this.gcCliente;
             this.gvClientes.Name = "gvClientes";
             this.gvClientes.OptionsView.ColumnAutoWidth = false;
@@ -213,227 +215,235 @@
             this.gvClientes.OptionsView.ShowAutoFilterRow = true;
             this.gvClientes.OptionsView.ShowGroupPanel = false;
             // 
-            // colClienteID
+            // ColIdCliente
             // 
-            this.colClienteID.Caption = "ClienteID";
-            this.colClienteID.FieldName = "clienteID";
-            this.colClienteID.Name = "colClienteID";
-            this.colClienteID.OptionsColumn.AllowEdit = false;
-            this.colClienteID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colClienteID.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colClienteID.OptionsColumn.AllowMove = false;
-            this.colClienteID.OptionsColumn.AllowSize = false;
-            this.colClienteID.OptionsColumn.FixedWidth = true;
-            this.colClienteID.Visible = true;
-            this.colClienteID.VisibleIndex = 0;
+            this.ColIdCliente.Caption = "IdCliente";
+            this.ColIdCliente.FieldName = "IdCliente";
+            this.ColIdCliente.Name = "ColIdCliente";
+            this.ColIdCliente.OptionsColumn.AllowEdit = false;
+            this.ColIdCliente.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdCliente.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColIdCliente.OptionsColumn.AllowMove = false;
+            this.ColIdCliente.OptionsColumn.AllowSize = false;
+            this.ColIdCliente.OptionsColumn.FixedWidth = true;
+            this.ColIdCliente.Visible = true;
+            this.ColIdCliente.VisibleIndex = 0;
             // 
-            // colNombres
+            // ColNombres
             // 
-            this.colNombres.Caption = "Nombres";
-            this.colNombres.FieldName = "nombres";
-            this.colNombres.Name = "colNombres";
-            this.colNombres.OptionsColumn.AllowEdit = false;
-            this.colNombres.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colNombres.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colNombres.OptionsColumn.AllowMove = false;
-            this.colNombres.OptionsColumn.AllowSize = false;
-            this.colNombres.OptionsColumn.FixedWidth = true;
-            this.colNombres.Visible = true;
-            this.colNombres.VisibleIndex = 1;
+            this.ColNombres.Caption = "Nombres";
+            this.ColNombres.FieldName = "Nombres";
+            this.ColNombres.Name = "ColNombres";
+            this.ColNombres.OptionsColumn.AllowEdit = false;
+            this.ColNombres.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNombres.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNombres.OptionsColumn.AllowMove = false;
+            this.ColNombres.OptionsColumn.AllowSize = false;
+            this.ColNombres.OptionsColumn.FixedWidth = true;
+            this.ColNombres.Visible = true;
+            this.ColNombres.VisibleIndex = 1;
             // 
-            // colApellidoPaterno
+            // ColApellidoPaterno
             // 
-            this.colApellidoPaterno.Caption = "ApellidoPaterno";
-            this.colApellidoPaterno.FieldName = "apellidoP";
-            this.colApellidoPaterno.Name = "colApellidoPaterno";
-            this.colApellidoPaterno.OptionsColumn.AllowEdit = false;
-            this.colApellidoPaterno.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colApellidoPaterno.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colApellidoPaterno.OptionsColumn.AllowMove = false;
-            this.colApellidoPaterno.OptionsColumn.AllowSize = false;
-            this.colApellidoPaterno.OptionsColumn.FixedWidth = true;
-            this.colApellidoPaterno.Visible = true;
-            this.colApellidoPaterno.VisibleIndex = 2;
+            this.ColApellidoPaterno.Caption = "ApellidoPaterno";
+            this.ColApellidoPaterno.FieldName = "ApellidoPaterno";
+            this.ColApellidoPaterno.Name = "ColApellidoPaterno";
+            this.ColApellidoPaterno.OptionsColumn.AllowEdit = false;
+            this.ColApellidoPaterno.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColApellidoPaterno.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColApellidoPaterno.OptionsColumn.AllowMove = false;
+            this.ColApellidoPaterno.OptionsColumn.AllowSize = false;
+            this.ColApellidoPaterno.OptionsColumn.FixedWidth = true;
+            this.ColApellidoPaterno.Visible = true;
+            this.ColApellidoPaterno.VisibleIndex = 2;
             // 
-            // colApellidoMaterno
+            // ColApellidoMaterno
             // 
-            this.colApellidoMaterno.Caption = "ApellidoMaterno";
-            this.colApellidoMaterno.FieldName = "apellidoM";
-            this.colApellidoMaterno.Name = "colApellidoMaterno";
-            this.colApellidoMaterno.OptionsColumn.AllowEdit = false;
-            this.colApellidoMaterno.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colApellidoMaterno.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colApellidoMaterno.OptionsColumn.AllowMove = false;
-            this.colApellidoMaterno.OptionsColumn.AllowSize = false;
-            this.colApellidoMaterno.OptionsColumn.FixedWidth = true;
-            this.colApellidoMaterno.Visible = true;
-            this.colApellidoMaterno.VisibleIndex = 3;
+            this.ColApellidoMaterno.Caption = "ApellidoMaterno";
+            this.ColApellidoMaterno.FieldName = "ApellidoMaterno";
+            this.ColApellidoMaterno.Name = "ColApellidoMaterno";
+            this.ColApellidoMaterno.OptionsColumn.AllowEdit = false;
+            this.ColApellidoMaterno.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColApellidoMaterno.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColApellidoMaterno.OptionsColumn.AllowMove = false;
+            this.ColApellidoMaterno.OptionsColumn.AllowSize = false;
+            this.ColApellidoMaterno.OptionsColumn.FixedWidth = true;
+            this.ColApellidoMaterno.Visible = true;
+            this.ColApellidoMaterno.VisibleIndex = 3;
             // 
-            // colCelular
+            // ColCelular
             // 
-            this.colCelular.Caption = "Celular";
-            this.colCelular.FieldName = "celular";
-            this.colCelular.Name = "colCelular";
-            this.colCelular.OptionsColumn.AllowEdit = false;
-            this.colCelular.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colCelular.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colCelular.OptionsColumn.AllowMove = false;
-            this.colCelular.OptionsColumn.AllowSize = false;
-            this.colCelular.OptionsColumn.FixedWidth = true;
-            this.colCelular.Visible = true;
-            this.colCelular.VisibleIndex = 4;
+            this.ColCelular.Caption = "Celular";
+            this.ColCelular.FieldName = "Celular";
+            this.ColCelular.Name = "ColCelular";
+            this.ColCelular.OptionsColumn.AllowEdit = false;
+            this.ColCelular.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCelular.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCelular.OptionsColumn.AllowMove = false;
+            this.ColCelular.OptionsColumn.AllowSize = false;
+            this.ColCelular.OptionsColumn.FixedWidth = true;
+            this.ColCelular.Visible = true;
+            this.ColCelular.VisibleIndex = 4;
             // 
-            // colTelefonoFijo
+            // ColTelefonoFijo
             // 
-            this.colTelefonoFijo.Caption = "TelefonoFijo";
-            this.colTelefonoFijo.FieldName = "telFijo";
-            this.colTelefonoFijo.Name = "colTelefonoFijo";
-            this.colTelefonoFijo.OptionsColumn.AllowEdit = false;
-            this.colTelefonoFijo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colTelefonoFijo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colTelefonoFijo.OptionsColumn.AllowMove = false;
-            this.colTelefonoFijo.OptionsColumn.AllowSize = false;
-            this.colTelefonoFijo.OptionsColumn.FixedWidth = true;
-            this.colTelefonoFijo.Visible = true;
-            this.colTelefonoFijo.VisibleIndex = 5;
+            this.ColTelefonoFijo.Caption = "TelefonoFijo";
+            this.ColTelefonoFijo.FieldName = "TelefonoFijo";
+            this.ColTelefonoFijo.Name = "ColTelefonoFijo";
+            this.ColTelefonoFijo.OptionsColumn.AllowEdit = false;
+            this.ColTelefonoFijo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColTelefonoFijo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColTelefonoFijo.OptionsColumn.AllowMove = false;
+            this.ColTelefonoFijo.OptionsColumn.AllowSize = false;
+            this.ColTelefonoFijo.OptionsColumn.FixedWidth = true;
+            this.ColTelefonoFijo.Visible = true;
+            this.ColTelefonoFijo.VisibleIndex = 5;
             // 
-            // colCorreo
+            // ColCorreo
             // 
-            this.colCorreo.Caption = "Correo";
-            this.colCorreo.FieldName = "correo";
-            this.colCorreo.Name = "colCorreo";
-            this.colCorreo.OptionsColumn.AllowEdit = false;
-            this.colCorreo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colCorreo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colCorreo.OptionsColumn.AllowMove = false;
-            this.colCorreo.OptionsColumn.AllowSize = false;
-            this.colCorreo.OptionsColumn.FixedWidth = true;
-            this.colCorreo.Visible = true;
-            this.colCorreo.VisibleIndex = 6;
+            this.ColCorreo.Caption = "Correo";
+            this.ColCorreo.FieldName = "Correo";
+            this.ColCorreo.Name = "ColCorreo";
+            this.ColCorreo.OptionsColumn.AllowEdit = false;
+            this.ColCorreo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCorreo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCorreo.OptionsColumn.AllowMove = false;
+            this.ColCorreo.OptionsColumn.AllowSize = false;
+            this.ColCorreo.OptionsColumn.FixedWidth = true;
+            this.ColCorreo.Visible = true;
+            this.ColCorreo.VisibleIndex = 6;
             // 
-            // colCodigoPostal
+            // ColCP
             // 
-            this.colCodigoPostal.Caption = "CodigoPostal";
-            this.colCodigoPostal.FieldName = "codigoPostal";
-            this.colCodigoPostal.Name = "colCodigoPostal";
-            this.colCodigoPostal.OptionsColumn.AllowEdit = false;
-            this.colCodigoPostal.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colCodigoPostal.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colCodigoPostal.OptionsColumn.AllowMove = false;
-            this.colCodigoPostal.OptionsColumn.AllowSize = false;
-            this.colCodigoPostal.OptionsColumn.FixedWidth = true;
-            this.colCodigoPostal.Visible = true;
-            this.colCodigoPostal.VisibleIndex = 7;
+            this.ColCP.Caption = "CP";
+            this.ColCP.FieldName = "CP";
+            this.ColCP.Name = "ColCP";
+            this.ColCP.OptionsColumn.AllowEdit = false;
+            this.ColCP.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCP.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCP.OptionsColumn.AllowMove = false;
+            this.ColCP.OptionsColumn.AllowSize = false;
+            this.ColCP.OptionsColumn.FixedWidth = true;
+            this.ColCP.Visible = true;
+            this.ColCP.VisibleIndex = 7;
             // 
-            // colEstado
+            // ColEstado
             // 
-            this.colEstado.Caption = "Estado";
-            this.colEstado.FieldName = "estado";
-            this.colEstado.Name = "colEstado";
-            this.colEstado.OptionsColumn.AllowEdit = false;
-            this.colEstado.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colEstado.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colEstado.OptionsColumn.AllowMove = false;
-            this.colEstado.OptionsColumn.AllowSize = false;
-            this.colEstado.OptionsColumn.FixedWidth = true;
-            this.colEstado.Visible = true;
-            this.colEstado.VisibleIndex = 8;
+            this.ColEstado.Caption = "Estado";
+            this.ColEstado.FieldName = "Estado";
+            this.ColEstado.Name = "ColEstado";
+            this.ColEstado.OptionsColumn.AllowEdit = false;
+            this.ColEstado.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColEstado.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColEstado.OptionsColumn.AllowMove = false;
+            this.ColEstado.OptionsColumn.AllowSize = false;
+            this.ColEstado.OptionsColumn.FixedWidth = true;
+            this.ColEstado.Visible = true;
+            this.ColEstado.VisibleIndex = 8;
             // 
-            // colCiudad
+            // ColCiudad
             // 
-            this.colCiudad.Caption = "Ciudad";
-            this.colCiudad.FieldName = "ciudad";
-            this.colCiudad.Name = "colCiudad";
-            this.colCiudad.OptionsColumn.AllowEdit = false;
-            this.colCiudad.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colCiudad.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colCiudad.OptionsColumn.AllowMove = false;
-            this.colCiudad.OptionsColumn.AllowSize = false;
-            this.colCiudad.OptionsColumn.FixedWidth = true;
-            this.colCiudad.Visible = true;
-            this.colCiudad.VisibleIndex = 9;
+            this.ColCiudad.Caption = "Ciudad";
+            this.ColCiudad.FieldName = "Ciudad";
+            this.ColCiudad.Name = "ColCiudad";
+            this.ColCiudad.OptionsColumn.AllowEdit = false;
+            this.ColCiudad.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCiudad.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCiudad.OptionsColumn.AllowMove = false;
+            this.ColCiudad.OptionsColumn.AllowSize = false;
+            this.ColCiudad.OptionsColumn.FixedWidth = true;
+            this.ColCiudad.Visible = true;
+            this.ColCiudad.VisibleIndex = 9;
             // 
-            // colMunicipio
+            // ColMunicipio
             // 
-            this.colMunicipio.Caption = "Municipio";
-            this.colMunicipio.FieldName = "municipio";
-            this.colMunicipio.Name = "colMunicipio";
-            this.colMunicipio.OptionsColumn.AllowEdit = false;
-            this.colMunicipio.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colMunicipio.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colMunicipio.OptionsColumn.AllowMove = false;
-            this.colMunicipio.OptionsColumn.AllowSize = false;
-            this.colMunicipio.OptionsColumn.FixedWidth = true;
-            this.colMunicipio.Visible = true;
-            this.colMunicipio.VisibleIndex = 10;
+            this.ColMunicipio.Caption = "Municipio";
+            this.ColMunicipio.FieldName = "Municipio";
+            this.ColMunicipio.Name = "ColMunicipio";
+            this.ColMunicipio.OptionsColumn.AllowEdit = false;
+            this.ColMunicipio.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColMunicipio.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColMunicipio.OptionsColumn.AllowMove = false;
+            this.ColMunicipio.OptionsColumn.AllowSize = false;
+            this.ColMunicipio.OptionsColumn.FixedWidth = true;
+            this.ColMunicipio.Visible = true;
+            this.ColMunicipio.VisibleIndex = 10;
             // 
-            // colColonia
+            // ColColonia
             // 
-            this.colColonia.Caption = "Colonia";
-            this.colColonia.FieldName = "colonia";
-            this.colColonia.Name = "colColonia";
-            this.colColonia.OptionsColumn.AllowEdit = false;
-            this.colColonia.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colColonia.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colColonia.OptionsColumn.AllowMove = false;
-            this.colColonia.OptionsColumn.AllowSize = false;
-            this.colColonia.OptionsColumn.FixedWidth = true;
-            this.colColonia.Visible = true;
-            this.colColonia.VisibleIndex = 11;
+            this.ColColonia.Caption = "Colonia";
+            this.ColColonia.FieldName = "Colonia";
+            this.ColColonia.Name = "ColColonia";
+            this.ColColonia.OptionsColumn.AllowEdit = false;
+            this.ColColonia.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColColonia.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColColonia.OptionsColumn.AllowMove = false;
+            this.ColColonia.OptionsColumn.AllowSize = false;
+            this.ColColonia.OptionsColumn.FixedWidth = true;
+            this.ColColonia.Visible = true;
+            this.ColColonia.VisibleIndex = 11;
             // 
-            // colCalle
+            // ColCalle
             // 
-            this.colCalle.Caption = "Calle";
-            this.colCalle.FieldName = "calle";
-            this.colCalle.Name = "colCalle";
-            this.colCalle.OptionsColumn.AllowEdit = false;
-            this.colCalle.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colCalle.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colCalle.OptionsColumn.AllowMove = false;
-            this.colCalle.OptionsColumn.AllowSize = false;
-            this.colCalle.OptionsColumn.FixedWidth = true;
-            this.colCalle.Visible = true;
-            this.colCalle.VisibleIndex = 12;
+            this.ColCalle.Caption = "Calle";
+            this.ColCalle.FieldName = "Calle";
+            this.ColCalle.Name = "ColCalle";
+            this.ColCalle.OptionsColumn.AllowEdit = false;
+            this.ColCalle.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCalle.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColCalle.OptionsColumn.AllowMove = false;
+            this.ColCalle.OptionsColumn.AllowSize = false;
+            this.ColCalle.OptionsColumn.FixedWidth = true;
+            this.ColCalle.Visible = true;
+            this.ColCalle.VisibleIndex = 12;
             // 
-            // colNumeroInterior
+            // ColNumeroInterior
             // 
-            this.colNumeroInterior.Caption = "NumeroInterior";
-            this.colNumeroInterior.FieldName = "nInterior";
-            this.colNumeroInterior.Name = "colNumeroInterior";
-            this.colNumeroInterior.OptionsColumn.AllowEdit = false;
-            this.colNumeroInterior.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colNumeroInterior.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colNumeroInterior.OptionsColumn.AllowMove = false;
-            this.colNumeroInterior.OptionsColumn.AllowSize = false;
-            this.colNumeroInterior.OptionsColumn.FixedWidth = true;
-            this.colNumeroInterior.Visible = true;
-            this.colNumeroInterior.VisibleIndex = 13;
+            this.ColNumeroInterior.Caption = "NumeroInterior";
+            this.ColNumeroInterior.FieldName = "NumeroInterior";
+            this.ColNumeroInterior.Name = "ColNumeroInterior";
+            this.ColNumeroInterior.OptionsColumn.AllowEdit = false;
+            this.ColNumeroInterior.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNumeroInterior.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNumeroInterior.OptionsColumn.AllowMove = false;
+            this.ColNumeroInterior.OptionsColumn.AllowSize = false;
+            this.ColNumeroInterior.OptionsColumn.FixedWidth = true;
+            this.ColNumeroInterior.Visible = true;
+            this.ColNumeroInterior.VisibleIndex = 13;
             // 
-            // colNumeroExterior
+            // ColNumeroExterior
             // 
-            this.colNumeroExterior.Caption = "NumeroExterior";
-            this.colNumeroExterior.FieldName = "nExterior";
-            this.colNumeroExterior.Name = "colNumeroExterior";
-            this.colNumeroExterior.OptionsColumn.AllowEdit = false;
-            this.colNumeroExterior.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colNumeroExterior.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colNumeroExterior.OptionsColumn.AllowMove = false;
-            this.colNumeroExterior.OptionsColumn.AllowSize = false;
-            this.colNumeroExterior.OptionsColumn.FixedWidth = true;
-            this.colNumeroExterior.Visible = true;
-            this.colNumeroExterior.VisibleIndex = 14;
+            this.ColNumeroExterior.Caption = "NumeroExterior";
+            this.ColNumeroExterior.FieldName = "NumeoExterior";
+            this.ColNumeroExterior.Name = "ColNumeroExterior";
+            this.ColNumeroExterior.OptionsColumn.AllowEdit = false;
+            this.ColNumeroExterior.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNumeroExterior.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColNumeroExterior.OptionsColumn.AllowMove = false;
+            this.ColNumeroExterior.OptionsColumn.AllowSize = false;
+            this.ColNumeroExterior.OptionsColumn.FixedWidth = true;
+            this.ColNumeroExterior.Visible = true;
+            this.ColNumeroExterior.VisibleIndex = 14;
             // 
-            // colStatus
+            // ColActivo
             // 
-            this.colStatus.Caption = "Status";
-            this.colStatus.FieldName = "status";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.OptionsColumn.AllowEdit = false;
-            this.colStatus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.colStatus.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-            this.colStatus.OptionsColumn.AllowMove = false;
-            this.colStatus.OptionsColumn.AllowSize = false;
-            this.colStatus.OptionsColumn.FixedWidth = true;
+            this.ColActivo.Caption = "Activo";
+            this.ColActivo.FieldName = "Activo";
+            this.ColActivo.Name = "ColActivo";
+            this.ColActivo.OptionsColumn.AllowEdit = false;
+            this.ColActivo.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColActivo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColActivo.OptionsColumn.AllowMove = false;
+            this.ColActivo.OptionsColumn.AllowSize = false;
+            this.ColActivo.OptionsColumn.FixedWidth = true;
+            // 
+            // ColFechaRegistro
+            // 
+            this.ColFechaRegistro.Caption = "FechaRegistro";
+            this.ColFechaRegistro.FieldName = "FechaRegistro";
+            this.ColFechaRegistro.Name = "ColFechaRegistro";
+            this.ColFechaRegistro.Visible = true;
+            this.ColFechaRegistro.VisibleIndex = 15;
             // 
             // frmCliente
             // 
@@ -474,22 +484,23 @@
         private DevExpress.XtraGrid.GridControl gcCliente;
         private DevExpress.XtraGrid.Views.Grid.GridView gvClientes;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn colClienteID;
-        private DevExpress.XtraGrid.Columns.GridColumn colNombres;
-        private DevExpress.XtraGrid.Columns.GridColumn colApellidoPaterno;
-        private DevExpress.XtraGrid.Columns.GridColumn colApellidoMaterno;
-        private DevExpress.XtraGrid.Columns.GridColumn colCelular;
-        private DevExpress.XtraGrid.Columns.GridColumn colTelefonoFijo;
-        private DevExpress.XtraGrid.Columns.GridColumn colCorreo;
-        private DevExpress.XtraGrid.Columns.GridColumn colCodigoPostal;
-        private DevExpress.XtraGrid.Columns.GridColumn colEstado;
-        private DevExpress.XtraGrid.Columns.GridColumn colCiudad;
-        private DevExpress.XtraGrid.Columns.GridColumn colMunicipio;
-        private DevExpress.XtraGrid.Columns.GridColumn colColonia;
-        private DevExpress.XtraGrid.Columns.GridColumn colCalle;
-        private DevExpress.XtraGrid.Columns.GridColumn colNumeroInterior;
-        private DevExpress.XtraGrid.Columns.GridColumn colNumeroExterior;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn ColIdCliente;
+        private DevExpress.XtraGrid.Columns.GridColumn ColNombres;
+        private DevExpress.XtraGrid.Columns.GridColumn ColApellidoPaterno;
+        private DevExpress.XtraGrid.Columns.GridColumn ColApellidoMaterno;
+        private DevExpress.XtraGrid.Columns.GridColumn ColCelular;
+        private DevExpress.XtraGrid.Columns.GridColumn ColTelefonoFijo;
+        private DevExpress.XtraGrid.Columns.GridColumn ColCorreo;
+        private DevExpress.XtraGrid.Columns.GridColumn ColCP;
+        private DevExpress.XtraGrid.Columns.GridColumn ColEstado;
+        private DevExpress.XtraGrid.Columns.GridColumn ColCiudad;
+        private DevExpress.XtraGrid.Columns.GridColumn ColMunicipio;
+        private DevExpress.XtraGrid.Columns.GridColumn ColColonia;
+        private DevExpress.XtraGrid.Columns.GridColumn ColCalle;
+        private DevExpress.XtraGrid.Columns.GridColumn ColNumeroInterior;
+        private DevExpress.XtraGrid.Columns.GridColumn ColNumeroExterior;
+        private DevExpress.XtraGrid.Columns.GridColumn ColActivo;
         private System.Windows.Forms.BindingSource clienteBindingSource1;
+        private DevExpress.XtraGrid.Columns.GridColumn ColFechaRegistro;
     }
 }

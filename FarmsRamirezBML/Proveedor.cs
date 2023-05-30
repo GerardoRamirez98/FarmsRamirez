@@ -22,7 +22,6 @@ namespace FarmsRamirezBML
         public string TelefonoFijo { get; set; }
         public string Correo { get; set; }
         public string PaginaWeb { get; set; }
-        public int idRepresentante { get; set; }
         public bool Activo { get; set; }
         public DateTime FechaRegistro { get; set; }
 
@@ -54,7 +53,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@IdProveedor", IdProveedor);
-            return dataAccess.Execute("stp_proveedor_delete", parametros);
+            return dataAccess.Execute("stp_proveedores_delete", parametros);
         }
 
         public List<Proveedor> GetAll()

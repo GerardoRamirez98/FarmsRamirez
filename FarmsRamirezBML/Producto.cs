@@ -10,7 +10,7 @@ namespace FarmsRamirezBML
         private DataAccess dataAccess = DataAccess.Instance();
         public int IdProducto { get; set; }
         public string Codigo { get; set; }
-        public string CodigoBarra { get; set; }
+        public string CodigoBarras { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Marca { get; set; }
@@ -32,7 +32,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@Codigo", Codigo);
-            parametros.Add("@CodigoBarra", CodigoBarra);
+            parametros.Add("@CodigoBarras", CodigoBarras);
             parametros.Add("@Nombre", Nombre);
             parametros.Add("@Descripcion", Descripcion);
             parametros.Add("@Marca", Marca);
@@ -51,7 +51,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@IdProducto", IdProducto);
-            return dataAccess.Execute("stp_producto_delete", parametros);
+            return dataAccess.Execute("stp_productos_delete", parametros);
         }
 
         public List<Producto> GetAll()
@@ -63,7 +63,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@IdProducto", IdProducto);
-            return dataAccess.QuerySingle<Producto>("stp_producto_getbyid", parametros);
+            return dataAccess.QuerySingle<Producto>("stp_productos_getbyid", parametros);
         }
 
         public int Update()
@@ -71,7 +71,7 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@IdProducto", IdProducto);
             parametros.Add("@Codigo", Codigo);
-            parametros.Add("@CodigoBarra", CodigoBarra);
+            parametros.Add("@CodigoBarras", CodigoBarras);
             parametros.Add("@Nombre", Nombre);
             parametros.Add("@Descripcion", Descripcion);
             parametros.Add("@Marca", Marca);
@@ -82,7 +82,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Stock", Stock);
             parametros.Add("@StockMin", StockMin);
             parametros.Add("@StockMax", StockMax);
-            return dataAccess.Execute("stp_producto_update", parametros);
+            return dataAccess.Execute("stp_productos_update", parametros);
         }
 
     }

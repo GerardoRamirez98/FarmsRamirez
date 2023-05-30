@@ -42,8 +42,8 @@ namespace SimiSoft
             txtMunicipio.Text = cliente.Municipio;
             txtColonia.Text = cliente.Colonia;
             txtCalle.Text = cliente.Calle;
-            txtNInterior.Text = cliente.NumeroInterior;
-            txtNExterior.Text = cliente.NumeroExterior;
+            txtNInterior.Text = cliente.NumeroInterior.ToString();
+            txtNExterior.Text = cliente.NumeoExterior.ToString();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -71,8 +71,8 @@ namespace SimiSoft
                         Municipio = txtMunicipio.Text,
                         Colonia = txtColonia.Text,
                         Calle = txtCalle.Text,
-                        NumeroInterior = txtNInterior.Text,
-                        NumeroExterior = txtNExterior.Text
+                        NumeroInterior = Convert.ToInt32(txtNInterior.Text),
+                        NumeoExterior = Convert.ToInt32(txtNExterior.Text)
 
                     }.Add() > 0)
                     {
@@ -99,8 +99,8 @@ namespace SimiSoft
                     cliente.Municipio = txtMunicipio.Text;
                     cliente.Colonia = txtColonia.Text;
                     cliente.Calle = txtCalle.Text;
-                    cliente.NumeroInterior = txtNInterior.Text;
-                    cliente.NumeroExterior = txtNExterior.Text;
+                    cliente.NumeroInterior = Convert.ToInt32(txtNInterior.Text);
+                    cliente.NumeoExterior = Convert.ToInt32(txtNExterior.Text);
 
                     if (cliente.Update() > 0)
                     {
