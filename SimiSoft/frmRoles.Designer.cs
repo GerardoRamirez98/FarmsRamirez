@@ -42,7 +42,6 @@
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.gcRoles = new DevExpress.XtraGrid.GridControl();
-            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvRoles = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ColIdTipoUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,7 +49,6 @@
             this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +157,6 @@
             // 
             // gcRoles
             // 
-            this.gcRoles.DataSource = this.rolesBindingSource;
             this.gcRoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcRoles.Location = new System.Drawing.Point(0, 20);
             this.gcRoles.MainView = this.gvRoles;
@@ -169,10 +166,6 @@
             this.gcRoles.TabIndex = 4;
             this.gcRoles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRoles});
-            // 
-            // rolesBindingSource
-            // 
-            this.rolesBindingSource.DataSource = typeof(FarmsRamirezBML.Roles);
             // 
             // gvRoles
             // 
@@ -244,7 +237,6 @@
             this.Load += new System.EventHandler(this.frmRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,7 +259,6 @@
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private DevExpress.XtraGrid.GridControl gcRoles;
         private DevExpress.XtraGrid.Views.Grid.GridView gvRoles;
-        private System.Windows.Forms.BindingSource rolesBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn ColIdTipoUsuario;
         private DevExpress.XtraGrid.Columns.GridColumn ColDescripcion;
         private DevExpress.XtraGrid.Columns.GridColumn ColActivo;

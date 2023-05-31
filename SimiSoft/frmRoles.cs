@@ -12,7 +12,7 @@ namespace SimiSoft
 
         private void frmRoles_Load(object sender, EventArgs e)
         {
-            rolesBindingSource.DataSource = new Roles().GetAll();
+            //rolesBindingSource.DataSource = new TipoUsuario().GetAll();
             gvRoles.BestFitColumns();
         }
 
@@ -22,7 +22,7 @@ namespace SimiSoft
             {
                 Text = "Nuevo Rol"
             }.ShowDialog();
-            rolesBindingSource.DataSource = new Roles().GetAll();
+            //rolesBindingSource.DataSource = new TipoUsuario().GetAll();
             gvRoles.BestFitColumns();
         }
 
@@ -32,17 +32,17 @@ namespace SimiSoft
             {
                 Text = "Modificar Rol (" + (int)gvRoles.GetFocusedRowCellValue("IdTipoUsuario") + ")"
             }.ShowDialog();
-            rolesBindingSource.DataSource = new Roles().GetAll();
+            //rolesBindingSource.DataSource = new TipoUsuario().GetAll();
             gvRoles.BestFitColumns();
         }
 
         private void btnEliminarRol_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new Roles
-            {
-                IdTipoUsuario = (int)gvRoles.GetFocusedRowCellValue("IdTipoUsuario")
-            }.Delete();
-            rolesBindingSource.DataSource = new Roles().GetAll();
+            //new TipoUsuario
+            //{
+            //IdTipoUsuario = (int)gvRoles.GetFocusedRowCellValue("IdTipoUsuario")
+            //}.Delete();
+            //rolesBindingSource.DataSource = new TipoUsuario().GetAll();
             gvRoles.BestFitColumns();
         }
     }
