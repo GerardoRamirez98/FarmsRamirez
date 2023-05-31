@@ -115,75 +115,96 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
-            //nombre empresa
-            if (string.IsNullOrEmpty(txtNombreEmpresa.Text))
+            //pagina web
+            if (string.IsNullOrEmpty(txtPaginaWeb.Text))
             {
-                txtNombreEmpresa.ErrorText = "Ingrese el nombre de la empresa";
-                if (!ban)
-                {
-                    txtNombreEmpresa.Focus();
-                    ban = true;
-                }
+                txtPaginaWeb.ErrorText = "Ingresa una pagina web";
+                txtPaginaWeb.Focus();
+                ban = true;
             }
-            //codigo postal
-            if (string.IsNullOrEmpty(txtCodigoPostal.Text))
+            //correo
+            if (string.IsNullOrEmpty(txtCorreo.Text))
             {
-                txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
-                if (!ban)
-                {
-                    txtCodigoPostal.Focus();
-                    ban = true;
-                }
+                txtCorreo.ErrorText = "Ingresa el correo";
+                txtCorreo.Focus();
+                ban = true;
             }
-            //estado
-            if (string.IsNullOrEmpty(txtEstado.Text))
+            //telefono fijo
+            if (string.IsNullOrEmpty(txtTelefonoFijo.Text))
             {
-                txtEstado.ErrorText = "Ingrese un estado";
-                if (!ban)
-                {
-                    txtEstado.Focus();
-                    ban = true;
-                }
+                txtTelefonoFijo.ErrorText = "Ingresa el numero de telefono fijo";
+                txtTelefonoFijo.Focus();
+                ban = true;
             }
-            //ciudad
-            if (string.IsNullOrEmpty(txtCiudad.Text))
+            //celular
+            if (string.IsNullOrEmpty(txtCelular.Text))
             {
-                txtCiudad.ErrorText = "Ingrese una ciudad";
-                if (!ban)
-                {
-                    txtCiudad.Focus();
-                    ban = true;
-                }
+                txtCelular.ErrorText = "Ingresa el numero de celular";
+                txtCelular.Focus();
+                ban = true;
             }
-            //municipio
-            if (string.IsNullOrEmpty(txtMunicipio.Text))
+            //numero exterior
+            if (string.IsNullOrEmpty(txtNExterior.Text))
             {
-                txtMunicipio.ErrorText = "Ingrese un municipio";
-                if (!ban)
-                {
-                    txtMunicipio.Focus();
-                    ban = true;
-                }
+                txtNExterior.ErrorText = "Ingresa el numero exterior";
+                txtNExterior.Focus();
+                ban = true;
             }
-            //colonia
-            if (string.IsNullOrEmpty(txtColonia.Text))
+            //numero interior
+            if (string.IsNullOrEmpty(txtNInterior.Text))
             {
-                txtColonia.ErrorText = "Ingrese una colonia";
-                if (!ban)
-                {
-                    txtColonia.Focus();
-                    ban = true;
-                }
+                txtNInterior.ErrorText = "Ingrege el numero interioro o indique 0";
+                txtNInterior.Focus();
+                ban = true;
             }
             //calle
             if (string.IsNullOrEmpty(txtCalle.Text))
             {
                 txtCalle.ErrorText = "Ingrese una calle";
-                if (!ban)
-                {
-                    txtCalle.Focus();
-                    ban = true;
-                }
+                txtCalle.Focus();
+                ban = true;
+            }
+            //colonia
+            if (string.IsNullOrEmpty(txtColonia.Text))
+            {
+                txtColonia.ErrorText = "Ingrese una colonia";
+                txtColonia.Focus();
+                ban = true;
+            }
+            //municipio
+            if (string.IsNullOrEmpty(txtMunicipio.Text))
+            {
+                txtMunicipio.ErrorText = "Ingrese un municipio";
+                txtMunicipio.Focus();
+                ban = true;
+            }
+            //ciudad
+            if (string.IsNullOrEmpty(txtCiudad.Text))
+            {
+                txtCiudad.ErrorText = "Ingrese una ciudad";
+                txtCiudad.Focus();
+                ban = true;
+            }
+            //estado
+            if (string.IsNullOrEmpty(txtEstado.Text))
+            {
+                txtEstado.ErrorText = "Ingrese un estado";
+                txtEstado.Focus();
+                ban = true;
+            }
+            //codigo postal
+            if (string.IsNullOrEmpty(txtCodigoPostal.Text))
+            {
+                txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
+                txtCodigoPostal.Focus();
+                ban = true;
+            }
+            //nombre empresa
+            if (string.IsNullOrEmpty(txtNombreEmpresa.Text))
+            {
+                txtNombreEmpresa.ErrorText = "Ingrese el nombre de la empresa";
+                txtNombreEmpresa.Focus();
+                ban = true;
             }
             return !ban;
         }

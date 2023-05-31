@@ -255,22 +255,60 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
-
-            //codigo
-            if (string.IsNullOrEmpty(txtCodigo.Text))
+            //stockMaximo
+            if (string.IsNullOrEmpty(txtStockMax.Text))
             {
-                txtCodigo.ErrorText = "Ingrese un codigo";
-                if (!ban)
-                {
-                    txtCodigo.Focus();
-                    ban = true;
-                }
+                txtStockMax.ErrorText = "Ingrese un stock maximo";
+                txtStockMax.Focus();
+                ban = true;
             }
-            //nombre
-            if (string.IsNullOrEmpty(txtNombre.Text))
+            //stockMinimo
+            if (string.IsNullOrEmpty(txtStockMin.Text))
             {
-                txtNombre.ErrorText = "Ingrese un nombre";
-                txtNombre.Focus();
+                txtStockMin.ErrorText = "Ingrese un stock minimo";
+                txtStockMin.Focus();
+                ban = true;
+            }
+            //stock
+            if (string.IsNullOrEmpty(txtStock.Text))
+            {
+                txtStock.ErrorText = "Ingrese un stock";
+                txtStock.Focus();
+                ban = true;
+            }
+            //precioVenta
+            if (string.IsNullOrEmpty(txtPrecioV.Text))
+            {
+                txtPrecioV.ErrorText = "Ingrese un precio";
+                txtPrecioV.Focus();
+                ban = true;
+            }
+            //margenGanancia
+            if (string.IsNullOrEmpty(txtMargenG.Text))
+            {
+                txtMargenG.ErrorText = "Ingrese un precio";
+                txtMargenG.Focus();
+                ban = true;
+            }
+            //precioCompra
+            if (string.IsNullOrEmpty(txtPrecioC.Text))
+            {
+                txtPrecioC.ErrorText = "Ingrese un precio";
+                txtPrecioC.Focus();
+                ban = true;
+            }
+            //unidadMedida
+            if (string.IsNullOrEmpty(txtUnidadM.Text))
+            {
+                txtUnidadM.ErrorText = "Ingrese una unidad de medida";
+                txtUnidadM.Focus();
+                ban = true;
+            }
+            //marca
+            if (string.IsNullOrEmpty(txtMarca.Text))
+            {
+                txtMarca.ErrorText = "Ingrese una marca";
+                txtMarca.Focus();
                 ban = true;
             }
             //descripcion
@@ -280,85 +318,19 @@ namespace SimiSoft
                 txtDescripcion.Focus();
                 ban = true;
             }
-            //marca
-            if (string.IsNullOrEmpty(txtMarca.Text))
+            //nombre
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
-                txtMarca.ErrorText = "Ingrese una marca";
-                if (!ban)
-                {
-                    txtMarca.Focus();
-                    ban = true;
-                }
+                txtNombre.ErrorText = "Ingrese un nombre";
+                txtNombre.Focus();
+                ban = true;
             }
-            //unidadMedida
-            if (string.IsNullOrEmpty(txtUnidadM.Text))
+            //codigo
+            if (string.IsNullOrEmpty(txtCodigo.Text))
             {
-                txtUnidadM.ErrorText = "Ingrese una unidad de medida";
-                if (!ban)
-                {
-                    txtUnidadM.Focus();
-                    ban = true;
-                }
-            }
-            //precioCompra
-            if (string.IsNullOrEmpty(txtPrecioC.Text))
-            {
-                txtPrecioC.ErrorText = "Ingrese un precio";
-                if (!ban)
-                {
-                    txtPrecioC.Focus();
-                    ban = true;
-                }
-            }
-            //margenGanancia
-            if (string.IsNullOrEmpty(txtMargenG.Text))
-            {
-                txtMargenG.ErrorText = "Ingrese un precio";
-                if (!ban)
-                {
-                    txtMargenG.Focus();
-                    ban = true;
-                }
-            }
-            //precioVenta
-            if (string.IsNullOrEmpty(txtPrecioV.Text))
-            {
-                txtPrecioV.ErrorText = "Ingrese un precio";
-                if (!ban)
-                {
-                    txtPrecioV.Focus();
-                    ban = true;
-                }
-            }
-            //stock
-            if (string.IsNullOrEmpty(txtStock.Text))
-            {
-                txtStock.ErrorText = "Ingrese un stock";
-                if (!ban)
-                {
-                    txtStock.Focus();
-                    ban = true;
-                }
-            }
-            //stockMinimo
-            if (string.IsNullOrEmpty(txtStockMin.Text))
-            {
-                txtStockMin.ErrorText = "Ingrese un stock minimo";
-                if (!ban)
-                {
-                    txtStockMin.Focus();
-                    ban = true;
-                }
-            }
-            //stockMaximo
-            if (string.IsNullOrEmpty(txtStockMax.Text))
-            {
-                txtStockMax.ErrorText = "Ingrese un stock maximo";
-                if (!ban)
-                {
-                    txtStockMax.Focus();
-                    ban = true;
-                }
+                txtCodigo.ErrorText = "Ingrese un codigo";
+                txtCodigo.Focus();
+                ban = true;
             }
             //valor devuelto
             return !ban;

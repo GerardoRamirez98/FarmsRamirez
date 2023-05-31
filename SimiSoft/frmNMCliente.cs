@@ -119,6 +119,20 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
+            //Numero Exterior
+            if (string.IsNullOrEmpty(txtNExterior.Text))
+            {
+                txtNExterior.ErrorText = "Ingrese el numero exterior";
+                txtNExterior.Focus();
+                ban = true;
+            }
+            //Numero Interior
+            if (string.IsNullOrEmpty(txtNInterior.Text))
+            {
+                txtNInterior.ErrorText = "Ingrese el numero interior o escriba 0";
+                txtNInterior.Focus();
+                ban = true;
+            }
             //Calle
             if (string.IsNullOrEmpty(txtCalle.Text))
             {

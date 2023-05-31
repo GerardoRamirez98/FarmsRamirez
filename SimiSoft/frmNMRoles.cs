@@ -82,11 +82,8 @@ namespace SimiSoft
             if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
                 txtDescripcion.ErrorText = "Ingrese la descripcion del rol";
-                if (!ban)
-                {
-                    txtDescripcion.Focus();
-                    ban = true;
-                }
+                txtDescripcion.Focus();
+                ban = true;
             }
             return !ban;
         }
