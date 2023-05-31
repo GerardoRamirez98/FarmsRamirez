@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace FarmsRamirezBML
 {
-    internal class TipoUsuario
+    public class TipoUsuario
     {
         private DataAccess dataAccess = DataAccess.Instance();
         public int IdTipoUsuario { get; set; }
