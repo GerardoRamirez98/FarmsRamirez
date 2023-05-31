@@ -22,7 +22,7 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@Descripcion", Descripcion);
 
-            return dataAccess.Execute("stp_tipousuario_add, parametros");
+            return dataAccess.Execute("stp_tipousuario_add", parametros);
         }
 
         public int Delete()
@@ -48,7 +48,7 @@ namespace FarmsRamirezBML
         {
             var parametros = new DynamicParameters();
             parametros.Add("@descripcion", Descripcion);
-            return dataAccess.Execute("stp_tipousuario_update");
+            return dataAccess.Execute("stp_tipousuario_update", parametros);
         }
     }
 }
