@@ -2,10 +2,13 @@
 using FarmsRamirezDAL;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
-    public class Roles
+    internal class TipoUsuario
     {
         private DataAccess dataAccess = DataAccess.Instance();
         public int IdTipoUsuario { get; set; }
@@ -13,7 +16,7 @@ namespace FarmsRamirezBML
         public bool Activo { get; set; }
         public DateTime FechaRegistro { get; set; }
 
-        public Roles()
+        public TipoUsuario()
         {
         }
 
@@ -22,33 +25,33 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@Descripcion", Descripcion);
 
-            return dataAccess.Execute("stp_roles_agregar, parametros");
+            return dataAccess.Execute("stp_tipousuario_add, parametros");
         }
 
         public int Delete()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@IdTipoUsuario", IdTipoUsuario);
-            return dataAccess.Execute("stp_roles_delete", parametros);
+            return dataAccess.Execute("stp_tipousuario_delete", parametros);
         }
 
-        public List<Roles> GetAll()
+        public List<TipoUsuario> GetAll()
         {
-            return dataAccess.Query<Roles>("stp_roles_getall");
+            return dataAccess.Query<TipoUsuario>("stp_tipousuario_getall");
         }
 
-        public Roles GetById()
+        public TipoUsuario GetById()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@IdTipoUsuario", IdTipoUsuario);
-            return dataAccess.QuerySingle<Roles>("stp_roles_getbyid", parametros);
+            return dataAccess.QuerySingle<TipoUsuario>("stp_tipousuario_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
             parametros.Add("@descripcion", Descripcion);
-            return dataAccess.Execute("stp_roles_update");
+            return dataAccess.Execute("stp_tipousuario_update");
         }
     }
 }
