@@ -36,19 +36,19 @@ namespace FarmsRamirezBML
             parametros.Add("@Nombres", Nombres);
             parametros.Add("@ApellidoPaterno", ApellidoPaterno);
             parametros.Add("@ApellidoMaterno", ApellidoMaterno);
-            parametros.Add("@celular", Celular);
-            parametros.Add("@telFijo", TelefonoFijo);
-            parametros.Add("@correo", Correo);
-            parametros.Add("@codigoPostal", CP);
-            parametros.Add("@estado", Estado);
-            parametros.Add("@ciudad", Ciudad);
-            parametros.Add("@municipio", Municipio);
-            parametros.Add("@colonia", Colonia);
-            parametros.Add("@calle", Calle);
+            parametros.Add("@Celular", Celular);
+            parametros.Add("@TelefonoFijo", TelefonoFijo);
+            parametros.Add("@Correo", Correo);
+            parametros.Add("@CP", CP);
+            parametros.Add("@Estado", Estado);
+            parametros.Add("@Ciudad", Ciudad);
+            parametros.Add("@Municipio", Municipio);
+            parametros.Add("@Colonia", Colonia);
+            parametros.Add("@Calle", Calle);
             parametros.Add("@NumeroInterior", NumeroInterior);
             parametros.Add("@NumeroExterior", NumeoExterior);
 
-            return dataAccess.Execute("stp_clientes_agregar", parametros);
+            return dataAccess.Execute("stp_clientes_add", parametros);
         }
 
         public int Delete()

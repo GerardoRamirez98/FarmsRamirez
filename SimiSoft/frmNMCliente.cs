@@ -119,129 +119,101 @@ namespace SimiSoft
         private bool Validar()
         {
             var ban = false;
-            //Nombres
-            if (string.IsNullOrEmpty(txtNombres.Text))
-            {
-                txtNombres.ErrorText = "Ingrese un nombre";
-                if (!ban)
-                {
-                    txtNombres.Focus();
-                    ban = true;
-                }
-            }
-            
-            //Apellido Paterno
-            if (string.IsNullOrEmpty(txtApellidoP.Text))
-            {
-                txtApellidoP.ErrorText = "Ingrese un apellido paterno";
-                if (!ban)
-                {
-                    txtApellidoP.Focus();
-                    ban = true;
-                }
-            }
-            //Apellido Materno
-            if (string.IsNullOrEmpty(txtApellidoM.Text))
-            {
-                txtApellidoM.ErrorText = "Ingrese un apellido materno";
-                if (!ban)
-                {
-                    txtApellidoM.Focus();
-                    ban = true;
-                }
-            }
-            //Celular
-            if (string.IsNullOrEmpty(txtCelular.Text))
-            {
-                txtCelular.ErrorText = "Ingrese un numero de celular";
-                if (!ban)
-                {
-                    txtCelular.Focus();
-                    ban = true;
-                }
-            }
-            //Telefono Fijo
-            if (string.IsNullOrEmpty(txtTelFijo.Text))
-            {
-                txtTelFijo.ErrorText = "Ingrese un numero de telefono fijo";
-                if (!ban)
-                {
-                    txtTelFijo.Focus();
-                    ban = true;
-                }
-            }
-            //Correo
-            if (string.IsNullOrEmpty(txtCorreo.Text))
-            {
-                txtCorreo.ErrorText = "Ingrese un correo";
-                if (!ban)
-                {
-                    txtCorreo.Focus();
-                    ban = true;
-                }
-            }
-            //CodigoPostal
-            if (string.IsNullOrEmpty(txtCodigoPostal.Text))
-            {
-                txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
-                if (!ban)
-                {
-                    txtCodigoPostal.Focus();
-                    ban = true;
-                }
-            }
-            //Estado
-            if (string.IsNullOrEmpty(txtEstado.Text))
-            {
-                txtEstado.ErrorText = "Ingrese un estado";
-                if (!ban)
-                {
-                    txtEstado.Focus();
-                    ban = true;
-                }
-            }
-            //Ciudad
-            if (string.IsNullOrEmpty(txtCiudad.Text))
-            {
-                txtCiudad.ErrorText = "Ingrese una ciudad";
-                if (!ban)
-                {
-                    txtCiudad.Focus();
-                    ban = true;
-                }
-            }
-            //Municipio
-            if (string.IsNullOrEmpty(txtMunicipio.Text))
-            {
-                txtMunicipio.ErrorText = "Ingrese un municipio";
-                if (!ban)
-                {
-                    txtMunicipio.Focus();
-                    ban = true;
-                }
-            }
-            //Colonia
-            if (string.IsNullOrEmpty(txtColonia.Text))
-            {
-                txtColonia.ErrorText = "Ingrese una colonia";
-                if (!ban)
-                {
-                    txtColonia.Focus();
-                    ban = true;
-                }
-            }
-            
             //Calle
             if (string.IsNullOrEmpty(txtCalle.Text))
             {
                 txtCalle.ErrorText = "Ingrese una calle";
-                if (!ban)
-                {
-                    txtCalle.Focus();
-                    ban = true;
-                }
+                txtCalle.Focus();
+                ban = true;
+            }
+
+            //Colonia
+            if (string.IsNullOrEmpty(txtColonia.Text))
+            {
+                txtColonia.ErrorText = "Ingrese una colonia";
+                txtColonia.Focus();
+                ban = true;
+            }
+
+            //Municipio
+            if (string.IsNullOrEmpty(txtMunicipio.Text))
+            {
+                txtMunicipio.ErrorText = "Ingrese un municipio";
+                txtMunicipio.Focus();
+                ban = true;
+            }
+
+            //Ciudad
+            if (string.IsNullOrEmpty(txtCiudad.Text))
+            {
+                txtCiudad.ErrorText = "Ingrese una ciudad";
+                txtCiudad.Focus();
+                ban = true;
+            }
+
+            //Estado
+            if (string.IsNullOrEmpty(txtEstado.Text))
+            {
+                txtEstado.ErrorText = "Ingrese un estado";
+                txtEstado.Focus();
+                ban = true;
+            }
+
+            //CodigoPostal
+            if (string.IsNullOrEmpty(txtCodigoPostal.Text))
+            {
+                txtCodigoPostal.ErrorText = "Ingrese un codigo postal";
+                txtCodigoPostal.Focus();
+                ban = true;
+            }
+
+            //Correo
+            if (string.IsNullOrEmpty(txtCorreo.Text))
+            {
+                txtCorreo.ErrorText = "Ingrese un correo";
+                txtCorreo.Focus();
+                ban = true;
+            }
+
+            //Telefono Fijo
+            if (string.IsNullOrEmpty(txtTelFijo.Text))
+            {
+                txtTelFijo.ErrorText = "Ingrese un numero de telefono fijo";
+                txtTelFijo.Focus();
+                ban = true;
+            }
+
+            //Celular
+            if (string.IsNullOrEmpty(txtCelular.Text))
+            {
+                txtCelular.ErrorText = "Ingrese un numero de celular";
+                txtCelular.Focus();
+                ban = true;
             }
             
+            //Apellido Materno
+            if (string.IsNullOrEmpty(txtApellidoM.Text))
+            {
+                txtApellidoM.ErrorText = "Ingrese un apellido materno";
+                txtApellidoM.Focus();
+                ban = true;
+            }
+
+            //Apellido Paterno
+            if (string.IsNullOrEmpty(txtApellidoP.Text))
+            {
+                txtApellidoP.ErrorText = "Ingrese un apellido paterno";
+                txtApellidoP.Focus();
+                ban = true;
+            }
+
+            //Nombres
+            if (string.IsNullOrEmpty(txtNombres.Text))
+            {
+                txtNombres.ErrorText = "Ingrese un nombre";
+                txtNombres.Focus();
+                ban = true;
+            }
             return !ban;
         }
     }
