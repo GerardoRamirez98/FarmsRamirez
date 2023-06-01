@@ -169,6 +169,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNMCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNMCategoria.Designer.cs">
+      <DependentUpon>frmNMCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNMCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,12 @@
     </Compile>
     <Compile Include="frmNMRoles.Designer.cs">
       <DependentUpon>frmNMRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNMUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNMUsuario.Designer.cs">
+      <DependentUpon>frmNMUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
@@ -233,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNMCategoria.resx">
+      <DependentUpon>frmNMCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNMCliente.resx">
       <DependentUpon>frmNMCliente.cs</DependentUpon>

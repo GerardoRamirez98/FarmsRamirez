@@ -91,24 +91,28 @@
             this.btnActualizarCategorias.Caption = "Actualizar";
             this.btnActualizarCategorias.Id = 0;
             this.btnActualizarCategorias.Name = "btnActualizarCategorias";
+            this.btnActualizarCategorias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActualizarCategorias_ItemClick);
             // 
             // btnNuevoCategoria
             // 
             this.btnNuevoCategoria.Caption = "Nuevo";
             this.btnNuevoCategoria.Id = 1;
             this.btnNuevoCategoria.Name = "btnNuevoCategoria";
+            this.btnNuevoCategoria.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoCategoria_ItemClick);
             // 
             // btnModificarCategoria
             // 
             this.btnModificarCategoria.Caption = "Modificar";
             this.btnModificarCategoria.Id = 2;
             this.btnModificarCategoria.Name = "btnModificarCategoria";
+            this.btnModificarCategoria.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificarCategoria_ItemClick);
             // 
             // btnEliminarCategoria
             // 
             this.btnEliminarCategoria.Caption = "Eliminar";
             this.btnEliminarCategoria.Id = 3;
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarCategoria_ItemClick);
             // 
             // skinBarSubItem2
             // 

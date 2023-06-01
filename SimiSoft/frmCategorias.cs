@@ -24,5 +24,25 @@ namespace SimiSoft
             categoriasBindingSource.DataSource = new Categorias().GetAll();
             gvCategorias.BestFitColumns();
         }
+
+        private void btnNuevoCategoria_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void btnModificarCategoria_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnEliminarCategoria_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnActualizarCategorias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

@@ -298,3 +298,4 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TECNIPRINT.exe.manife
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TECNIPRINT.application
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TECNIPRINT.exe
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TECNIPRINT.pdb
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TECNIPRINT.frmNMCategoria.resources
