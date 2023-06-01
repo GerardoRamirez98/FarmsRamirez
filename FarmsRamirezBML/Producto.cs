@@ -44,7 +44,7 @@ namespace FarmsRamirezBML
             parametros.Add("@StockMin", StockMin);
             parametros.Add("@StockMax", StockMax);
             
-            return dataAccess.Execute("stp_productos_agregar", parametros);
+            return dataAccess.Execute("stp_productos_add", parametros);
         }
 
         public int Delete()

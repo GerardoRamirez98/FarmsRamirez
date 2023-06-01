@@ -47,7 +47,7 @@ namespace FarmsRamirezBML
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@descripcion", Descripcion);
+            parametros.Add("@Descripcion", Descripcion);
             return dataAccess.Execute("stp_tipousuario_update", parametros);
         }
     }

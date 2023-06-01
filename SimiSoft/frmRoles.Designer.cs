@@ -47,9 +47,11 @@
             this.ColDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tipoUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager3
@@ -157,6 +159,7 @@
             // 
             // gcRoles
             // 
+            this.gcRoles.DataSource = this.tipoUsuarioBindingSource;
             this.gcRoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcRoles.Location = new System.Drawing.Point(0, 20);
             this.gcRoles.MainView = this.gvRoles;
@@ -222,6 +225,10 @@
             this.ColFechaRegistro.FieldName = "FechaRegistro";
             this.ColFechaRegistro.Name = "ColFechaRegistro";
             // 
+            // tipoUsuarioBindingSource
+            // 
+            this.tipoUsuarioBindingSource.DataSource = typeof(FarmsRamirezBML.TipoUsuario);
+            // 
             // frmRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRoles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +271,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn ColDescripcion;
         private DevExpress.XtraGrid.Columns.GridColumn ColActivo;
         private DevExpress.XtraGrid.Columns.GridColumn ColFechaRegistro;
+        private System.Windows.Forms.BindingSource tipoUsuarioBindingSource;
     }
 }
