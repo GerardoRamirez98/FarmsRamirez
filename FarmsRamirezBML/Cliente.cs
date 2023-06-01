@@ -74,10 +74,10 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@IdCliente", IdCliente);
             parametros.Add("@Nombres", Nombres);
-            parametros.Add("@ApellidoP", ApellidoPaterno);
-            parametros.Add("@ApellidoM", ApellidoMaterno);
+            parametros.Add("@ApellidoPaterno", ApellidoPaterno);
+            parametros.Add("@ApellidoMaterno", ApellidoMaterno);
             parametros.Add("@Celular", Celular);
-            parametros.Add("@TelefonoFijo", TelefonoFijo);
+            parametros.Add("@TelefonFijo", TelefonoFijo);
             parametros.Add("@Correo", Correo);
             parametros.Add("@CP", CP);
             parametros.Add("@Estado", Estado);

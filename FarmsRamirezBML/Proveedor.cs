@@ -64,14 +64,15 @@ namespace FarmsRamirezBML
         public Proveedor GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@IdProveedorID", IdProveedor);
+            parametros.Add("@IdProveedor", IdProveedor);
             return dataAccess.QuerySingle<Proveedor>("stp_proveedores_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@nombreEmpresa", NombreEmpresa);
+            parametros.Add("@IdProveedor", IdProveedor);
+            parametros.Add("@NombreEmpresa", NombreEmpresa);
             parametros.Add("@CP", CP);
             parametros.Add("@Estado", Estado);
             parametros.Add("@Ciudad", Ciudad);

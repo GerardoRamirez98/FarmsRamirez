@@ -33,6 +33,7 @@ namespace SimiSoft
                 Text = "Nueva Categoria"
             }.ShowDialog();
             categoriasBindingSource.DataSource = new Categorias().GetAll();
+            gvCategorias.BestFitColumns();
         }
 
         private void btnModificarCategoria_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -40,15 +40,16 @@ namespace FarmsRamirezBML
         public Categorias GetById()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("@Descripcion", Descripcion);
+            parametros.Add("@IdCategoria", IdCategoria);
             return dataAccess.QuerySingle<Categorias>("stp_categorias_getbyid", parametros);
         }
 
         public int Update()
         {
             var parametros = new DynamicParameters();
+            parametros.Add("@IdCategoria", IdCategoria);
             parametros.Add("@Descripcion", Descripcion);
-            return dataAccess.Execute("stp_categoria_update", parametros);
+            return dataAccess.Execute("stp_categorias_update", parametros);
         }
     }
 }
