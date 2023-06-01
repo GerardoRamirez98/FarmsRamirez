@@ -28,9 +28,9 @@ namespace SimiSoft
 
         private void frmAsignarPermisosRol_Load(object sender, EventArgs e)
         {
-            List<Roles> roles = new Roles().GetAll();
+            List<TipoUsuario> roles = new TipoUsuario().GetAll();
             cbRoles.Items.Add(new ComboBoxItem() { Value = 0, Text = "Seleccione Rol" });
-            foreach (Roles row in roles.Where(x => x.Activo == true))
+            foreach (TipoUsuario row in roles.Where(x => x.Activo == true))
             {
                 cbRoles.Items.Add(new ComboBoxItem() { Value = row.IdTipoUsuario, Text = row.Descripcion });
             }

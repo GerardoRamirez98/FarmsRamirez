@@ -14,7 +14,7 @@ namespace SimiSoft
 {
     public partial class frmNMRoles : DevExpress.XtraEditors.XtraForm
     {
-        private Roles roles;
+        private TipoUsuario roles;
         public frmNMRoles()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace SimiSoft
         public frmNMRoles(int IdTipoUsuario)
         {
             InitializeComponent();
-            roles = new Roles
+            roles = new TipoUsuario
             {
                 IdTipoUsuario = IdTipoUsuario
             }.GetById();
@@ -43,7 +43,7 @@ namespace SimiSoft
             {
                 if (roles == null)
                 {
-                    if (new Roles
+                    if (new TipoUsuario
                     {
                         Descripcion = txtDescripcion.Text
                     }.Add() > 0)
