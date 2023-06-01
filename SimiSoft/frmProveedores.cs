@@ -50,7 +50,7 @@ namespace SimiSoft
             {
                 Text = "Modificar Proveedor (" + (int)gvProveedores.GetFocusedRowCellValue("IdProveedor") + ")"
             }.ShowDialog();
-            proveedorBindingSource1.DataSource = new Producto().GetAll();
+            proveedorBindingSource1.DataSource = new Proveedor().GetAll();
             gvProveedores.BestFitColumns();
         }
 

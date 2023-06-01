@@ -258,6 +258,9 @@
     <EmbeddedResource Include="frmNMRoles.resx">
       <DependentUpon>frmNMRoles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNMUsuario.resx">
+      <DependentUpon>frmNMUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>

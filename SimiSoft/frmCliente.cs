@@ -46,7 +46,7 @@ namespace SimiSoft
             {
                 Text = "Modificar Cliente (" + (int)gvClientes.GetFocusedRowCellValue("IdCliente") + ")"
             }.ShowDialog();
-            clienteBindingSource1.DataSource = new Producto().GetAll();
+            clienteBindingSource1.DataSource = new Cliente().GetAll();
             gvClientes.BestFitColumns();
         }
 
@@ -56,7 +56,7 @@ namespace SimiSoft
             {
                 IdCliente = (int)gvClientes.GetFocusedRowCellValue("IdCliente")
             }.Delete();
-            clienteBindingSource1.DataSource = new Producto().GetAll();
+            clienteBindingSource1.DataSource = new Cliente().GetAll();
             gvClientes.BestFitColumns();
         }
 

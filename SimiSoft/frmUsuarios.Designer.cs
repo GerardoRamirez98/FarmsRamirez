@@ -100,18 +100,21 @@
             this.btnNuevoUsuario.Caption = "Nuevo";
             this.btnNuevoUsuario.Id = 1;
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
+            this.btnNuevoUsuario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoUsuario_ItemClick);
             // 
             // btnModificarUsuario
             // 
             this.btnModificarUsuario.Caption = "Modificar";
             this.btnModificarUsuario.Id = 2;
             this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificarUsuario_ItemClick);
             // 
             // btnEliminarUsuario
             // 
             this.btnEliminarUsuario.Caption = "Eliminar";
             this.btnEliminarUsuario.Id = 3;
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarUsuario_ItemClick);
             // 
             // skinBarSubItem2
             // 

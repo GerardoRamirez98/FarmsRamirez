@@ -42,10 +42,6 @@
             this.lblTelefonoFijo = new DevExpress.XtraEditors.LabelControl();
             this.lblCorreo = new DevExpress.XtraEditors.LabelControl();
             this.lblPaginaWeb = new DevExpress.XtraEditors.LabelControl();
-            this.lblNombreRepresentante = new DevExpress.XtraEditors.LabelControl();
-            this.lblCorreoRepresentante = new DevExpress.XtraEditors.LabelControl();
-            this.lblCelularRepresentante = new DevExpress.XtraEditors.LabelControl();
-            this.lblTelFijoRepresentante = new DevExpress.XtraEditors.LabelControl();
             this.txtID = new DevExpress.XtraEditors.TextEdit();
             this.txtNombreEmpresa = new DevExpress.XtraEditors.TextEdit();
             this.txtCodigoPostal = new DevExpress.XtraEditors.TextEdit();
@@ -60,12 +56,7 @@
             this.txtTelefonoFijo = new DevExpress.XtraEditors.TextEdit();
             this.txtCorreo = new DevExpress.XtraEditors.TextEdit();
             this.txtPaginaWeb = new DevExpress.XtraEditors.TextEdit();
-            this.txtCorreoRepresentante = new DevExpress.XtraEditors.TextEdit();
-            this.txtNombreRepresentante = new DevExpress.XtraEditors.TextEdit();
-            this.txtCelularRepresentante = new DevExpress.XtraEditors.TextEdit();
-            this.txtTelefonoFijoRepresentante = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.bntGuardar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
@@ -82,14 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefonoFijo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaginaWeb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreoRepresentante.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombreRepresentante.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCelularRepresentante.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefonoFijoRepresentante.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblID
@@ -204,38 +189,6 @@
             this.lblPaginaWeb.TabIndex = 13;
             this.lblPaginaWeb.Text = "PaginaWeb:";
             // 
-            // lblNombreRepresentante
-            // 
-            this.lblNombreRepresentante.Location = new System.Drawing.Point(5, 41);
-            this.lblNombreRepresentante.Name = "lblNombreRepresentante";
-            this.lblNombreRepresentante.Size = new System.Drawing.Size(41, 13);
-            this.lblNombreRepresentante.TabIndex = 14;
-            this.lblNombreRepresentante.Text = "Nombre:";
-            // 
-            // lblCorreoRepresentante
-            // 
-            this.lblCorreoRepresentante.Location = new System.Drawing.Point(5, 67);
-            this.lblCorreoRepresentante.Name = "lblCorreoRepresentante";
-            this.lblCorreoRepresentante.Size = new System.Drawing.Size(37, 13);
-            this.lblCorreoRepresentante.TabIndex = 15;
-            this.lblCorreoRepresentante.Text = "Correo:";
-            // 
-            // lblCelularRepresentante
-            // 
-            this.lblCelularRepresentante.Location = new System.Drawing.Point(209, 41);
-            this.lblCelularRepresentante.Name = "lblCelularRepresentante";
-            this.lblCelularRepresentante.Size = new System.Drawing.Size(37, 13);
-            this.lblCelularRepresentante.TabIndex = 16;
-            this.lblCelularRepresentante.Text = "Celular:";
-            // 
-            // lblTelFijoRepresentante
-            // 
-            this.lblTelFijoRepresentante.Location = new System.Drawing.Point(209, 67);
-            this.lblTelFijoRepresentante.Name = "lblTelFijoRepresentante";
-            this.lblTelFijoRepresentante.Size = new System.Drawing.Size(63, 13);
-            this.lblTelFijoRepresentante.TabIndex = 17;
-            this.lblTelFijoRepresentante.Text = "TelefonoFijo:";
-            // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(101, 30);
@@ -334,34 +287,6 @@
             this.txtPaginaWeb.Size = new System.Drawing.Size(100, 20);
             this.txtPaginaWeb.TabIndex = 31;
             // 
-            // txtCorreoRepresentante
-            // 
-            this.txtCorreoRepresentante.Location = new System.Drawing.Point(65, 60);
-            this.txtCorreoRepresentante.Name = "txtCorreoRepresentante";
-            this.txtCorreoRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txtCorreoRepresentante.TabIndex = 32;
-            // 
-            // txtNombreRepresentante
-            // 
-            this.txtNombreRepresentante.Location = new System.Drawing.Point(65, 34);
-            this.txtNombreRepresentante.Name = "txtNombreRepresentante";
-            this.txtNombreRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreRepresentante.TabIndex = 32;
-            // 
-            // txtCelularRepresentante
-            // 
-            this.txtCelularRepresentante.Location = new System.Drawing.Point(287, 34);
-            this.txtCelularRepresentante.Name = "txtCelularRepresentante";
-            this.txtCelularRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txtCelularRepresentante.TabIndex = 33;
-            // 
-            // txtTelefonoFijoRepresentante
-            // 
-            this.txtTelefonoFijoRepresentante.Location = new System.Drawing.Point(287, 60);
-            this.txtTelefonoFijoRepresentante.Name = "txtTelefonoFijoRepresentante";
-            this.txtTelefonoFijoRepresentante.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefonoFijoRepresentante.TabIndex = 34;
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.lblID);
@@ -398,25 +323,9 @@
             this.groupControl1.TabIndex = 35;
             this.groupControl1.Text = "Datos Empresa";
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.lblNombreRepresentante);
-            this.groupControl2.Controls.Add(this.txtNombreRepresentante);
-            this.groupControl2.Controls.Add(this.txtTelefonoFijoRepresentante);
-            this.groupControl2.Controls.Add(this.lblCorreoRepresentante);
-            this.groupControl2.Controls.Add(this.lblTelFijoRepresentante);
-            this.groupControl2.Controls.Add(this.txtCelularRepresentante);
-            this.groupControl2.Controls.Add(this.lblCelularRepresentante);
-            this.groupControl2.Controls.Add(this.txtCorreoRepresentante);
-            this.groupControl2.Location = new System.Drawing.Point(4, 281);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(425, 89);
-            this.groupControl2.TabIndex = 36;
-            this.groupControl2.Text = "Datos Representante";
-            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(127, 376);
+            this.btnCancelar.Location = new System.Drawing.Point(127, 281);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 37;
@@ -425,7 +334,7 @@
             // 
             // bntGuardar
             // 
-            this.bntGuardar.Location = new System.Drawing.Point(208, 376);
+            this.bntGuardar.Location = new System.Drawing.Point(208, 281);
             this.bntGuardar.Name = "bntGuardar";
             this.bntGuardar.Size = new System.Drawing.Size(75, 23);
             this.bntGuardar.TabIndex = 38;
@@ -436,10 +345,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 408);
+            this.ClientSize = new System.Drawing.Size(433, 317);
             this.Controls.Add(this.bntGuardar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "frmNMProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -458,16 +366,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefonoFijo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaginaWeb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreoRepresentante.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombreRepresentante.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCelularRepresentante.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefonoFijoRepresentante.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -488,10 +389,6 @@
         private DevExpress.XtraEditors.LabelControl lblTelefonoFijo;
         private DevExpress.XtraEditors.LabelControl lblCorreo;
         private DevExpress.XtraEditors.LabelControl lblPaginaWeb;
-        private DevExpress.XtraEditors.LabelControl lblNombreRepresentante;
-        private DevExpress.XtraEditors.LabelControl lblCorreoRepresentante;
-        private DevExpress.XtraEditors.LabelControl lblCelularRepresentante;
-        private DevExpress.XtraEditors.LabelControl lblTelFijoRepresentante;
         private DevExpress.XtraEditors.TextEdit txtID;
         private DevExpress.XtraEditors.TextEdit txtNombreEmpresa;
         private DevExpress.XtraEditors.TextEdit txtCodigoPostal;
@@ -506,12 +403,7 @@
         private DevExpress.XtraEditors.TextEdit txtTelefonoFijo;
         private DevExpress.XtraEditors.TextEdit txtCorreo;
         private DevExpress.XtraEditors.TextEdit txtPaginaWeb;
-        private DevExpress.XtraEditors.TextEdit txtCorreoRepresentante;
-        private DevExpress.XtraEditors.TextEdit txtNombreRepresentante;
-        private DevExpress.XtraEditors.TextEdit txtCelularRepresentante;
-        private DevExpress.XtraEditors.TextEdit txtTelefonoFijoRepresentante;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnCancelar;
         private DevExpress.XtraEditors.SimpleButton bntGuardar;
     }
