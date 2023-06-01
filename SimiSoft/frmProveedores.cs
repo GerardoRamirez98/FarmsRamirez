@@ -1,14 +1,5 @@
-﻿using DevExpress.XtraEditors;
-using FarmsRamirezBML;
+﻿using FarmsRamirezBML;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SimiSoft
 {
@@ -32,7 +23,7 @@ namespace SimiSoft
 
         private void btnActualizarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
         }
 
         private void btnNuevoProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -42,6 +33,7 @@ namespace SimiSoft
                 Text = "Nuevo Proveedor"
             }.ShowDialog();
             proveedorBindingSource1.DataSource = new Proveedor().GetAll();
+            gvProveedores.BestFitColumns();
         }
 
         private void btnModificarProducto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -64,6 +56,6 @@ namespace SimiSoft
             gvProveedores.BestFitColumns();
         }
 
-        
+
     }
 }

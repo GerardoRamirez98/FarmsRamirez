@@ -49,6 +49,39 @@ namespace FarmsRamirezBML
             return dataAccess.Execute("stp_proveedores_add");
         }
 
+        public int Update()
+        {
+            var parametros = new DynamicParameters();
+            parametros.Add("@IdProveedor", IdProveedor);
+            parametros.Add("@NombreEmpresa", NombreEmpresa);
+            parametros.Add("@CP", CP);
+            parametros.Add("@Estado", Estado);
+            parametros.Add("@Ciudad", Ciudad);
+            parametros.Add("@Municipio", Municipio);
+            parametros.Add("@Colonia", Colonia);
+            parametros.Add("@Calle", Calle);
+            parametros.Add("@NumeroInterior", NumeroInterior);
+            parametros.Add("@NumeroExterior", NumeroExterior);
+            parametros.Add("@Celular", Celular);
+            parametros.Add("@TelefonoFijo", TelefonoFijo);
+            parametros.Add("@Correo", Correo);
+            parametros.Add("@PaginaWeb", PaginaWeb);
+
+            return dataAccess.Execute("stp_proveedores_update");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         public int Delete()
         {
             var parametros = new DynamicParameters();
@@ -68,25 +101,6 @@ namespace FarmsRamirezBML
             return dataAccess.QuerySingle<Proveedor>("stp_proveedores_getbyid", parametros);
         }
 
-        public int Update()
-        {
-            var parametros = new DynamicParameters();
-            parametros.Add("@IdProveedor", IdProveedor);
-            parametros.Add("@NombreEmpresa", NombreEmpresa);
-            parametros.Add("@CP", CP);
-            parametros.Add("@Estado", Estado);
-            parametros.Add("@Ciudad", Ciudad);
-            parametros.Add("@Municipio", Municipio);
-            parametros.Add("@Colonia", Colonia);
-            parametros.Add("@Calle", Calle);
-            parametros.Add("@NumeroInterior", NumeroInterior);
-            parametros.Add("@NumeroExterior", NumeroExterior);
-            parametros.Add("@Celular", Celular);
-            parametros.Add("@TelefonoFijo", TelefonoFijo);
-            parametros.Add("@Correo", Correo);
-            parametros.Add("@PaginaWeb", PaginaWeb);
-            
-            return dataAccess.Execute("stp_proveedores_update");
-        }
+       
     }
 }
