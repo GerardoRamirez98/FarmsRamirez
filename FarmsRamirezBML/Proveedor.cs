@@ -46,7 +46,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Correo", Correo);
             parametros.Add("@PaginaWeb", PaginaWeb);
 
-            return dataAccess.Execute("stp_proveedores_agregar");
+            return dataAccess.Execute("stp_proveedores_add");
         }
 
         public int Delete()

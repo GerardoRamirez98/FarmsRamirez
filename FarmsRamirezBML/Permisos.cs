@@ -25,7 +25,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Menu", Menu);
             parametros.Add("@SubMenu", SubMenu);
 
-            return dataAccess.Execute("stp_permisos_agregar", parametros);
+            return dataAccess.Execute("stp_permisos_add", parametros);
         }
 
         public int Delete()

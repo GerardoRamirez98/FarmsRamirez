@@ -27,6 +27,24 @@ namespace FarmsRamirezBML
             return dataAccess.QuerySingleOrDefault<Usuario>("stp_usuarios_login", parametros);
         }
 
+        public int Add()
+        {
+            var parametros = new DynamicParameters();
+            parametros.Add("@Nombres", Nombres);
+            parametros.Add("@Apellidos", Apellidos);
+            parametros.Add("@Username", Username);
+            parametros.Add("@Password", Password);
+
+            return dataAccess.Execute("stp_usuarios_add");
+        }
+
+        public int Delete()
+        {
+            var parametros = new DynamicParameters();
+            parametros.Add("@IdUsuarios", IdUsuarios);
+            return dataAccess.Execute("stp_usuarios_delete", parametros);
+        }
+
         public List<Usuario> GetAll()
         {
             return dataAccess.Query<Usuario>("stp_usuarios_getall");
@@ -37,24 +55,6 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@IdUsuarios", IdUsuarios);
             return dataAccess.QuerySingle<Usuario>("stp_usuarios_getbyid", parametros);
-        }
-
-        public int Delete()
-        {
-            var parametros = new DynamicParameters();
-            parametros.Add("@IdUsuarios", IdUsuarios);
-            return dataAccess.Execute("stp_usuarios_delete", parametros);
-        }
-
-        public int Add()
-        {
-            var parametros = new DynamicParameters();
-            parametros.Add("@Nombres", Nombres);
-            parametros.Add("@Apellidos", Apellidos);
-            parametros.Add("@Username", Username);
-            parametros.Add("@Password", Password);
-
-            return dataAccess.Execute("stp_usuarios_update");
         }
 
         public int Update()

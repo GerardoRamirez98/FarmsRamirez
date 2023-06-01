@@ -22,7 +22,7 @@ namespace FarmsRamirezBML
             var parametros = new DynamicParameters();
             parametros.Add("@Descripcion", Descripcion);
 
-            return dataAccess.Execute("stp_categorias_agregar", parametros);
+            return dataAccess.Execute("stp_categorias_add", parametros);
         }
 
         public int Delete()

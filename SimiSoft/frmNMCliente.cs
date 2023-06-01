@@ -1,13 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimiSoft
@@ -57,7 +50,7 @@ namespace SimiSoft
             {
                 if (cliente == null)
                 {
-                    if(new Cliente
+                    if (new Cliente
                     {
                         Nombres = txtNombres.Text,
                         ApellidoPaterno = txtApellidoP.Text,
@@ -204,7 +197,7 @@ namespace SimiSoft
                 txtCelular.Focus();
                 ban = true;
             }
-            
+
             //Apellido Materno
             if (string.IsNullOrEmpty(txtApellidoM.Text))
             {

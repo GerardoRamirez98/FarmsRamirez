@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TECNIPRINT.exe.manifest" size="27451">
+    <dependentAssembly dependencyType="install" codebase="TECNIPRINT.exe.manifest" size="27605">
       <assemblyIdentity name="TECNIPRINT.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BI85ZUQOqp7PXGIehiPEQn18LddE8wWV/o4q/z68KNc=</dsig:DigestValue>
+        <dsig:DigestValue>fzW+EKXnoRWgv9i2EeupBJjZwK9qSHQIP+vYWlHI9+U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
