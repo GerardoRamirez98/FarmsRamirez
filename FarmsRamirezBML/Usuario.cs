@@ -35,7 +35,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Username", Username);
             parametros.Add("@Password", Password);
 
-            return dataAccess.Execute("stp_usuarios_add");
+            return dataAccess.Execute("stp_usuarios_add", parametros);
         }
 
         public int Delete()
@@ -65,7 +65,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Username", Username);
             parametros.Add("@Password", Password);
 
-            return dataAccess.Execute("stp_usuarios_update");
+            return dataAccess.Execute("stp_usuarios_update", parametros);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Correo", Correo);
             parametros.Add("@PaginaWeb", PaginaWeb);
 
-            return dataAccess.Execute("stp_proveedores_add");
+            return dataAccess.Execute("stp_proveedores_add", parametros);
         }
 
         public int Update()
@@ -68,7 +68,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Correo", Correo);
             parametros.Add("@PaginaWeb", PaginaWeb);
 
-            return dataAccess.Execute("stp_proveedores_update");
+            return dataAccess.Execute("stp_proveedores_update", parametros);
         }
 
         public int Delete()
