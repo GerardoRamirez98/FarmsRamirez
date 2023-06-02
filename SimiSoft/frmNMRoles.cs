@@ -7,7 +7,7 @@ namespace SimiSoft
 {
     public partial class frmNMRoles : DevExpress.XtraEditors.XtraForm
     {
-        private TipoUsuario roles;
+        private TipoUsuario tipousuario;
         public frmNMRoles()
         {
             InitializeComponent();
@@ -17,12 +17,12 @@ namespace SimiSoft
         public frmNMRoles(int IdTipoUsuario)
         {
             InitializeComponent();
-            roles = new TipoUsuario
+            tipousuario = new TipoUsuario
             {
                 IdTipoUsuario = IdTipoUsuario
             }.GetById();
-            txtID.Text = roles.IdTipoUsuario.ToString();
-            txtDescripcion.Text = roles.Descripcion;
+            txtID.Text = tipousuario.IdTipoUsuario.ToString();
+            txtDescripcion.Text = tipousuario.Descripcion;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace SimiSoft
         {
             if (Validar())
             {
-                if (roles == null)
+                if (tipousuario == null)
                 {
                     if (new TipoUsuario
                     {
@@ -52,9 +52,9 @@ namespace SimiSoft
                 }
                 else
                 {
-                    roles.Descripcion = txtDescripcion.Text;
+                    tipousuario.Descripcion = txtDescripcion.Text;
 
-                    if (roles.Update() > 0)
+                    if (tipousuario.Update() > 0)
                     {
                         XtraMessageBox.Show("Rol modificado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
@@ -81,9 +81,5 @@ namespace SimiSoft
             return !ban;
         }
 
-        private void frmNMRoles_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

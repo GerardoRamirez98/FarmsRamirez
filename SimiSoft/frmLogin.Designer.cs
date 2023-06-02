@@ -29,14 +29,17 @@ namespace SimiSoft
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
             this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.txtContrasena = new DevExpress.XtraEditors.TextEdit();
             this.lblContrasena = new DevExpress.XtraEditors.LabelControl();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasena.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -58,6 +61,7 @@ namespace SimiSoft
             // 
             this.txtContrasena.Location = new System.Drawing.Point(81, 35);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Properties.UseSystemPasswordChar = true;
             this.txtContrasena.Size = new System.Drawing.Size(132, 20);
             this.txtContrasena.TabIndex = 1;
             // 
@@ -111,6 +115,7 @@ namespace SimiSoft
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasena.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +129,6 @@ namespace SimiSoft
         private DevExpress.XtraEditors.LabelControl lblContrasena;
         private DevExpress.XtraEditors.SimpleButton btnOk;
         private DevExpress.XtraEditors.SimpleButton btnCancelar;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

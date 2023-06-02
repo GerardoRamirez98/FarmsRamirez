@@ -14,7 +14,6 @@ namespace SimiSoft
             txtID.Enabled = false;
         }
 
-        //modificar cliente
         public frmNMCliente(int IdCliente)
         {
             InitializeComponent();

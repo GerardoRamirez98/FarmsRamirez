@@ -8,7 +8,7 @@ namespace FarmsRamirezBML
     public class Proveedor
     {
         private DataAccess dataAccess = DataAccess.Instance();
-        public int  IdProveedor { get; set; }
+        public int IdProveedor { get; set; }
         public string NombreEmpresa { get; set; }
         public int CP { get; set; }
         public string Estado { get; set; }
@@ -52,6 +52,7 @@ namespace FarmsRamirezBML
         public int Update()
         {
             var parametros = new DynamicParameters();
+            
             parametros.Add("@IdProveedor", IdProveedor);
             parametros.Add("@NombreEmpresa", NombreEmpresa);
             parametros.Add("@CP", CP);
@@ -69,18 +70,6 @@ namespace FarmsRamirezBML
 
             return dataAccess.Execute("stp_proveedores_update");
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
         public int Delete()
         {

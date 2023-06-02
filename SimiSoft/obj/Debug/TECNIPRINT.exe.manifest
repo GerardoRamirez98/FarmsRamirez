@@ -279,7 +279,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BB6y5xY0wip3MWh8z461lsw36FeouBNs/uYuxlVqkTM=</dsig:DigestValue>
+        <dsig:DigestValue>HLPReKZ+D1uTcavp3xecq53HI4KjFwvKz7NmyDHX0iY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -428,14 +428,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TECNIPRINT.exe" size="371712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TECNIPRINT.exe" size="371200">
       <assemblyIdentity name="TECNIPRINT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0wwN/uxBs8pleCNtj+PEbQ6fDS5RNU0R6Z4Y2taf/CM=</dsig:DigestValue>
+        <dsig:DigestValue>NlDVFizQdsZdZn1UlfRLqerd0yldz5aFQwicFJM2HDw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

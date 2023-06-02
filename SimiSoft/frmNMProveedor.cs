@@ -1,15 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static DevExpress.XtraEditors.RoundedSkinPanel;
 
 namespace SimiSoft
 {
@@ -70,7 +62,7 @@ namespace SimiSoft
                         Celular = txtCelular.Text,
                         TelefonoFijo = txtTelefonoFijo.Text,
                         Correo = txtCorreo.Text,
-                        PaginaWeb = txtPaginaWeb.Text,
+                        PaginaWeb = txtPaginaWeb.Text
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Proveedor insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -84,6 +76,7 @@ namespace SimiSoft
                 }
                 else
                 {
+                    
                     proveedor.NombreEmpresa = txtNombreEmpresa.Text;
                     proveedor.CP = Convert.ToInt32(txtCodigoPostal.Text);
                     proveedor.Estado = txtEstado.Text;
