@@ -127,6 +127,9 @@ namespace SimiSoft
             // 
             this.txtPrecioV.Location = new System.Drawing.Point(86, 139);
             this.txtPrecioV.Name = "txtPrecioV";
+            this.txtPrecioV.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtPrecioV.Properties.MaskSettings.Set("mask", "c");
+            this.txtPrecioV.Properties.UseMaskAsDisplayFormat = true;
             this.txtPrecioV.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioV.TabIndex = 5;
             // 
@@ -142,6 +145,9 @@ namespace SimiSoft
             // 
             this.txtStock.Location = new System.Drawing.Point(278, 139);
             this.txtStock.Name = "txtStock";
+            this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtStock.Properties.MaskSettings.Set("mask", "d");
+            this.txtStock.Properties.UseMaskAsDisplayFormat = true;
             this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 11;
             // 
@@ -221,6 +227,9 @@ namespace SimiSoft
             // 
             this.txtPrecioC.Location = new System.Drawing.Point(86, 113);
             this.txtPrecioC.Name = "txtPrecioC";
+            this.txtPrecioC.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtPrecioC.Properties.MaskSettings.Set("mask", "c");
+            this.txtPrecioC.Properties.UseMaskAsDisplayFormat = true;
             this.txtPrecioC.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioC.TabIndex = 4;
             // 
@@ -236,6 +245,9 @@ namespace SimiSoft
             // 
             this.txtMargenG.Location = new System.Drawing.Point(278, 113);
             this.txtMargenG.Name = "txtMargenG";
+            this.txtMargenG.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtMargenG.Properties.MaskSettings.Set("mask", "P");
+            this.txtMargenG.Properties.UseMaskAsDisplayFormat = true;
             this.txtMargenG.Size = new System.Drawing.Size(100, 20);
             this.txtMargenG.TabIndex = 10;
             // 
@@ -259,6 +271,9 @@ namespace SimiSoft
             // 
             this.txtStockMin.Location = new System.Drawing.Point(86, 165);
             this.txtStockMin.Name = "txtStockMin";
+            this.txtStockMin.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtStockMin.Properties.MaskSettings.Set("mask", "d");
+            this.txtStockMin.Properties.UseMaskAsDisplayFormat = true;
             this.txtStockMin.Size = new System.Drawing.Size(100, 20);
             this.txtStockMin.TabIndex = 6;
             // 
@@ -266,6 +281,9 @@ namespace SimiSoft
             // 
             this.txtStockMax.Location = new System.Drawing.Point(278, 165);
             this.txtStockMax.Name = "txtStockMax";
+            this.txtStockMax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtStockMax.Properties.MaskSettings.Set("mask", "d");
+            this.txtStockMax.Properties.UseMaskAsDisplayFormat = true;
             this.txtStockMax.Size = new System.Drawing.Size(100, 20);
             this.txtStockMax.TabIndex = 12;
             // 
@@ -369,6 +387,7 @@ namespace SimiSoft
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmNMProducto";

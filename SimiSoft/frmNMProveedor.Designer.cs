@@ -76,6 +76,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(127, 224);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -305,8 +306,10 @@
             // 
             // frmNMProveedor
             // 
+            this.AcceptButton = this.bntGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(423, 256);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
@@ -338,6 +341,7 @@
             this.Controls.Add(this.lblNExterior);
             this.Controls.Add(this.bntGuardar);
             this.Controls.Add(this.btnCancelar);
+            this.KeyPreview = true;
             this.Name = "frmNMProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMProveedor";

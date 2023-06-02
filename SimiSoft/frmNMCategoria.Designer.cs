@@ -89,8 +89,10 @@
             // 
             // frmNMCategoria
             // 
+            this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(298, 113);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
@@ -98,6 +100,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtDescripcion);
+            this.KeyPreview = true;
             this.Name = "frmNMCategoria";
             this.Text = "frmNMCategoria";
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();

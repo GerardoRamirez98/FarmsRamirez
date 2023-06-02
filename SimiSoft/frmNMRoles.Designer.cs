@@ -100,6 +100,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtDescripcion);
+            this.KeyPreview = true;
             this.Name = "frmNMRoles";
             this.Text = "frmNMRoles";
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();

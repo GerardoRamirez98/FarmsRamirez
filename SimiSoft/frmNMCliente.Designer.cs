@@ -214,6 +214,9 @@
             // 
             this.txtCelular.Location = new System.Drawing.Point(119, 113);
             this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.txtCelular.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.txtCelular.Properties.MaskSettings.Set("mask", "(\\d\\d\\d) \\d\\d\\d-\\d\\d\\d\\d");
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
             this.txtCelular.TabIndex = 4;
             // 
@@ -221,6 +224,9 @@
             // 
             this.txtTelFijo.Location = new System.Drawing.Point(119, 139);
             this.txtTelFijo.Name = "txtTelFijo";
+            this.txtTelFijo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.txtTelFijo.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.txtTelFijo.Properties.MaskSettings.Set("mask", "(\\d\\d\\d) \\d\\d\\d-\\d\\d\\d\\d");
             this.txtTelFijo.Size = new System.Drawing.Size(100, 20);
             this.txtTelFijo.TabIndex = 5;
             // 
@@ -235,6 +241,8 @@
             // 
             this.txtCodigoPostal.Location = new System.Drawing.Point(119, 191);
             this.txtCodigoPostal.Name = "txtCodigoPostal";
+            this.txtCodigoPostal.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtCodigoPostal.Properties.MaskSettings.Set("mask", "d");
             this.txtCodigoPostal.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoPostal.TabIndex = 7;
             // 
@@ -277,6 +285,8 @@
             // 
             this.txtNInterior.Location = new System.Drawing.Point(348, 143);
             this.txtNInterior.Name = "txtNInterior";
+            this.txtNInterior.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtNInterior.Properties.MaskSettings.Set("mask", "d");
             this.txtNInterior.Size = new System.Drawing.Size(100, 20);
             this.txtNInterior.TabIndex = 13;
             // 
@@ -284,11 +294,14 @@
             // 
             this.txtNExterior.Location = new System.Drawing.Point(348, 169);
             this.txtNExterior.Name = "txtNExterior";
+            this.txtNExterior.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtNExterior.Properties.MaskSettings.Set("mask", "d");
             this.txtNExterior.Size = new System.Drawing.Size(100, 20);
             this.txtNExterior.TabIndex = 14;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(150, 218);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -323,8 +336,10 @@
             // 
             // frmNMCliente
             // 
+            this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(468, 253);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
@@ -358,6 +373,7 @@
             this.Controls.Add(this.lblApellidoM);
             this.Controls.Add(this.lblApellidoP);
             this.Controls.Add(this.lblNombres);
+            this.KeyPreview = true;
             this.Name = "frmNMCliente";
             this.Text = "frmNMCliente";
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
