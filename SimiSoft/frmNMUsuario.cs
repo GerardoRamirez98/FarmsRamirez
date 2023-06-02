@@ -1,13 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TECNIPRINT
@@ -44,13 +37,14 @@ namespace TECNIPRINT
         {
             if (Validar())
             {
-
-
                 if (usuario == null)
                 {
                     if (new Usuario()
                     {
-                        Nombres = txtUsuario.Text
+                        Nombres = txtNombres.Text,
+                        Apellidos = txtApellidos.Text,
+                        Username = txtUsuario.Text,
+                        Password = txtPassword.Text
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Usuario insertado correctamente", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,7 +58,7 @@ namespace TECNIPRINT
                 }
                 else
                 {
-                    usuario.Nombres = txtUsuario.Text;
+                    usuario.Nombres = txtNombres.Text;
                     usuario.Apellidos = txtApellidos.Text;
                     usuario.Username = txtUsuario.Text;
                     usuario.Password = txtPassword.Text;

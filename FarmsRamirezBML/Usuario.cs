@@ -12,7 +12,7 @@ namespace FarmsRamirezBML
         public string Apellidos { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int idTipoUsuario { get; set; }
+        public int IdTipoUsuario { get; set; }
         public bool Activo { get; set; }
 
         public Usuario()
@@ -60,6 +60,7 @@ namespace FarmsRamirezBML
         public int Update()
         {
             var parametros = new DynamicParameters();
+            parametros.Add("@IdUsuarios", IdUsuarios);
             parametros.Add("@Nombres", Nombres);
             parametros.Add("@Apellidos", Apellidos);
             parametros.Add("@Username", Username);
