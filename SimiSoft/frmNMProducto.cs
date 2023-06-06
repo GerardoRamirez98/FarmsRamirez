@@ -1,5 +1,6 @@
 ﻿using BarcodeLib;
 using DevExpress.Data.Browsing.Design;
+using DevExpress.Utils.Behaviors.Common;
 using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
@@ -80,7 +81,7 @@ namespace SimiSoft
             dibujar.DrawImage(imagenTitulo, new Point(0, 0));
             dibujar.DrawImage(imagenCodigoB, new Point(0, imagenTitulo.Height));
 
-            string filePath = "\\\\User6663-pc\\sistema\\" + codigo + ".png";
+            filePath = "\\\\User6663-pc\\sistema\\" + codigo + ".png";
 
             imagenNueva.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
 
@@ -88,6 +89,8 @@ namespace SimiSoft
 
             MessageBox.Show("Código de barras generado y guardado exitosamente");
         }
+
+        string filePath = "";
 
         public static Bitmap convertirTextoImagen(string texto, int ancho, Color color)
         {
@@ -154,7 +157,7 @@ namespace SimiSoft
         //VARIABLE PARA ALMACENAR LA URL DEL ARCHIVO A SUBIR
         string url = "";
 
-        //METODO PARA SUBIR ARCHIVO A CARPETA POR FTP
+        //METODO PARA SUBIR ARCHIVO A CARPETA 
         private string SubirArchivo(string codigo)
         {
             var rutaSMB = "\\\\User6663-pc\\sistema\\TECNIPRINT" + codigo + ".jpg";
@@ -192,7 +195,7 @@ namespace SimiSoft
                     if (new Producto
                     {
                         Codigo = txtCodigo.Text,
-                        CodigoBarras = txtCodigo.EditValue.ToString(),
+                        CodigoBarras = Convert.ToString(filePath),
                         Nombre = txtNombre.Text,
                         Descripcion = txtDescripcion.Text,
                         Marca = txtMarca.Text,
@@ -219,7 +222,7 @@ namespace SimiSoft
                 else
                 {
                     producto.Codigo = txtCodigo.Text;
-                    producto.CodigoBarras = txtCodigo.EditValue.ToString();
+                    producto.CodigoBarras = Convert.ToString(filePath);
                     producto.Nombre = txtNombre.Text;
                     producto.Descripcion = txtDescripcion.Text;
                     producto.Marca = txtMarca.Text;

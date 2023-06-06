@@ -50,6 +50,8 @@ namespace SimiSoft
             this.ColStockMin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColStockMax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColIdCategoria = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager3 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizarProducto = new DevExpress.XtraBars.BarButtonItem();
@@ -63,8 +65,7 @@ namespace SimiSoft
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.bar8 = new DevExpress.XtraBars.Bar();
-            this.ColIdCategoria = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColImagen = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
@@ -127,7 +128,8 @@ namespace SimiSoft
             this.ColStockMax,
             this.ColActivo,
             this.ColIdCategoria,
-            this.ColFechaRegistro});
+            this.ColFechaRegistro,
+            this.ColImagen});
             this.gvProductos.GridControl = this.gcProductos;
             this.gvProductos.Name = "gvProductos";
             this.gvProductos.OptionsBehavior.Editable = false;
@@ -323,6 +325,20 @@ namespace SimiSoft
             this.ColActivo.FieldName = "Activo";
             this.ColActivo.Name = "ColActivo";
             // 
+            // ColIdCategoria
+            // 
+            this.ColIdCategoria.Caption = "IdCategoria";
+            this.ColIdCategoria.FieldName = "IdCategoria";
+            this.ColIdCategoria.Name = "ColIdCategoria";
+            // 
+            // ColFechaRegistro
+            // 
+            this.ColFechaRegistro.Caption = "FechaRegistro";
+            this.ColFechaRegistro.FieldName = "FechaRegistro";
+            this.ColFechaRegistro.Name = "ColFechaRegistro";
+            this.ColFechaRegistro.Visible = true;
+            this.ColFechaRegistro.VisibleIndex = 13;
+            // 
             // barManager3
             // 
             this.barManager3.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -439,19 +455,13 @@ namespace SimiSoft
             this.bar8.OptionsBar.UseWholeRow = true;
             this.bar8.Text = "Barra de estado";
             // 
-            // ColIdCategoria
+            // ColImagen
             // 
-            this.ColIdCategoria.Caption = "IdCategoria";
-            this.ColIdCategoria.FieldName = "IdCategoria";
-            this.ColIdCategoria.Name = "ColIdCategoria";
-            // 
-            // ColFechaRegistro
-            // 
-            this.ColFechaRegistro.Caption = "FechaRegistro";
-            this.ColFechaRegistro.FieldName = "FechaRegistro";
-            this.ColFechaRegistro.Name = "ColFechaRegistro";
-            this.ColFechaRegistro.Visible = true;
-            this.ColFechaRegistro.VisibleIndex = 13;
+            this.ColImagen.Caption = "Imagen";
+            this.ColImagen.FieldName = "Imagen";
+            this.ColImagen.Name = "ColImagen";
+            this.ColImagen.Visible = true;
+            this.ColImagen.VisibleIndex = 14;
             // 
             // frmProductos
             // 
@@ -512,5 +522,6 @@ namespace SimiSoft
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem2;
         private DevExpress.XtraGrid.Columns.GridColumn ColIdCategoria;
         private DevExpress.XtraGrid.Columns.GridColumn ColFechaRegistro;
+        private DevExpress.XtraGrid.Columns.GridColumn ColImagen;
     }
 }
