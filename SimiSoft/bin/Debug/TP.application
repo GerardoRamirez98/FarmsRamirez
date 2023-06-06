@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TP.exe.manifest" size="27997">
+    <dependentAssembly dependencyType="install" codebase="TP.exe.manifest" size="30980">
       <assemblyIdentity name="TP.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rDxur5wP9CXFRqq2Y59wLwtjJXHtyds+yj5VDUEr1mI=</dsig:DigestValue>
+        <dsig:DigestValue>kNzUC/jr6yx2tosHFkKRAQ23JvUwvWUxwJzqvRZt7rQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

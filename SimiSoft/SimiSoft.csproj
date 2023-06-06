@@ -81,8 +81,8 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BarcodeStandard, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\BarcodeLib.3.0.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    <Reference Include="BarcodeStandard, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.0.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />

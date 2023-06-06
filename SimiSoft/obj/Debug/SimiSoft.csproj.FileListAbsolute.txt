@@ -301,3 +301,12 @@ C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TP.exe.manifest
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TP.application
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TP.exe
 C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\obj\Debug\TP.pdb
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\libSkiaSharp.dylib
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\arm64\libSkiaSharp.dll
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\SkiaSharp.dll
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Resources.Extensions.dll
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\SkiaSharp.pdb
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\SkiaSharp.xml
+C:\Users\USER\source\repos\FarmsRamirez\SimiSoft\bin\Debug\System.Resources.Extensions.xml
