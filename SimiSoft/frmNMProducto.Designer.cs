@@ -134,6 +134,9 @@ namespace SimiSoft
             this.txtPrecioV.Name = "txtPrecioV";
             this.txtPrecioV.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtPrecioV.Properties.MaskSettings.Set("mask", "c");
+            this.txtPrecioV.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtPrecioV.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtPrecioV.Properties.MaskSettings.Set("valueType", typeof(decimal));
             this.txtPrecioV.Properties.UseMaskAsDisplayFormat = true;
             this.txtPrecioV.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioV.TabIndex = 5;
@@ -152,6 +155,9 @@ namespace SimiSoft
             this.txtStock.Name = "txtStock";
             this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStock.Properties.MaskSettings.Set("mask", "d");
+            this.txtStock.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtStock.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtStock.Properties.MaskSettings.Set("valueType", typeof(int));
             this.txtStock.Properties.UseMaskAsDisplayFormat = true;
             this.txtStock.Size = new System.Drawing.Size(100, 20);
             this.txtStock.TabIndex = 11;
@@ -234,6 +240,9 @@ namespace SimiSoft
             this.txtPrecioC.Name = "txtPrecioC";
             this.txtPrecioC.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtPrecioC.Properties.MaskSettings.Set("mask", "c");
+            this.txtPrecioC.Properties.MaskSettings.Set("valueType", typeof(decimal));
+            this.txtPrecioC.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtPrecioC.Properties.MaskSettings.Set("culture", "es-MX");
             this.txtPrecioC.Properties.UseMaskAsDisplayFormat = true;
             this.txtPrecioC.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioC.TabIndex = 4;
@@ -252,6 +261,9 @@ namespace SimiSoft
             this.txtMargenG.Name = "txtMargenG";
             this.txtMargenG.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtMargenG.Properties.MaskSettings.Set("mask", "P");
+            this.txtMargenG.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtMargenG.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtMargenG.Properties.MaskSettings.Set("valueType", typeof(int));
             this.txtMargenG.Properties.UseMaskAsDisplayFormat = true;
             this.txtMargenG.Size = new System.Drawing.Size(100, 20);
             this.txtMargenG.TabIndex = 10;
@@ -278,6 +290,9 @@ namespace SimiSoft
             this.txtStockMin.Name = "txtStockMin";
             this.txtStockMin.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStockMin.Properties.MaskSettings.Set("mask", "d");
+            this.txtStockMin.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtStockMin.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtStockMin.Properties.MaskSettings.Set("valueType", typeof(int));
             this.txtStockMin.Properties.UseMaskAsDisplayFormat = true;
             this.txtStockMin.Size = new System.Drawing.Size(100, 20);
             this.txtStockMin.TabIndex = 6;
@@ -288,6 +303,9 @@ namespace SimiSoft
             this.txtStockMax.Name = "txtStockMax";
             this.txtStockMax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStockMax.Properties.MaskSettings.Set("mask", "d");
+            this.txtStockMax.Properties.MaskSettings.Set("culture", "es-MX");
+            this.txtStockMax.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtStockMax.Properties.MaskSettings.Set("valueType", typeof(int));
             this.txtStockMax.Properties.UseMaskAsDisplayFormat = true;
             this.txtStockMax.Size = new System.Drawing.Size(100, 20);
             this.txtStockMax.TabIndex = 12;

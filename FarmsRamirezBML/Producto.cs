@@ -15,9 +15,9 @@ namespace FarmsRamirezBML
         public string Descripcion { get; set; }
         public string Marca { get; set; }
         public string UnidadMedida { get; set; }
-        public decimal PrecioCompra { get; set; }
-        public int MargenGanancia { get; set; }
-        public decimal PrecioVenta { get; set; }
+        public string PrecioCompra { get; set; }
+        public string MargenGanancia { get; set; }
+        public string PrecioVenta { get; set; }
         public int Stock { get; set; }
         public int StockMin { get; set; }
         public int StockMax { get; set; }

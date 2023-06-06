@@ -197,9 +197,9 @@ namespace SimiSoft
                         Descripcion = txtDescripcion.Text,
                         Marca = txtMarca.Text,
                         UnidadMedida = txtUnidadM.Text,
-                        PrecioCompra = Convert.ToDecimal(txtPrecioC.Text),
-                        MargenGanancia = Convert.ToInt32(txtMargenG.Text),
-                        PrecioVenta = Convert.ToDecimal(txtPrecioV.Text),
+                        PrecioCompra = txtPrecioC.Text,
+                        MargenGanancia = txtMargenG.Text,
+                        PrecioVenta = txtPrecioV.Text,
                         Stock = Convert.ToInt32(txtStock.Text),
                         StockMin = Convert.ToInt32(txtStockMin.Text),
                         StockMax = Convert.ToInt32(txtStockMax.Text),
@@ -224,9 +224,9 @@ namespace SimiSoft
                     producto.Descripcion = txtDescripcion.Text;
                     producto.Marca = txtMarca.Text;
                     producto.UnidadMedida = txtUnidadM.Text;
-                    producto.PrecioCompra = Convert.ToDecimal(txtPrecioC.Text);
-                    producto.MargenGanancia = Convert.ToInt32(txtMargenG.Text);
-                    producto.PrecioVenta = Convert.ToDecimal(txtPrecioV.Text);
+                    producto.PrecioCompra = txtPrecioC.Text;
+                    producto.MargenGanancia = txtMargenG.Text;
+                    producto.PrecioVenta = txtPrecioV.Text;
                     producto.Stock = Convert.ToInt32(txtStock.Text);
                     producto.StockMin = Convert.ToInt32(txtStockMin.Text);
                     producto.StockMax = Convert.ToInt32(txtStockMax.Text);
