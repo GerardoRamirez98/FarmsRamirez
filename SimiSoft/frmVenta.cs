@@ -1,14 +1,8 @@
-﻿using DevExpress.XtraEditors;
-using FarmsRamirezBML;
+﻿using FarmsRamirezBML;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace TECNIPRINT
 {
@@ -30,6 +24,7 @@ namespace TECNIPRINT
             //fecha y hora en tiempo real del sistema
             timer1.Enabled = true;
 
+            //enlistar los productos
             List<Producto> productos = new Producto().GetAll();
             {
                 cbProducto.Items.Add(new ComboBoxItem() { Value = 0, Text = "Seleccione Producto" });
