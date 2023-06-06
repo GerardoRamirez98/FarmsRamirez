@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
+using System;
 using System.Collections.Generic;
 
 namespace FarmsRamirezBML
@@ -14,6 +15,7 @@ namespace FarmsRamirezBML
         public string Password { get; set; }
         public int IdTipoUsuario { get; set; }
         public bool Activo { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
         public Usuario()
         {

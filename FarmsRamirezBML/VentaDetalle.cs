@@ -1,28 +1,23 @@
 ﻿using Dapper;
 using FarmsRamirezDAL;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FarmsRamirezBML
 {
     class VentaDetalle
     {
         private DataAccess dataAccess = DataAccess.Instance();
-        public int idVentaDetalle { get; set; }
-        public int idVenta { get; set; }
-        public int idProducto { get; set; }
-        public int cantidad { get; set; }
-        public decimal precio { get; set; }
-        public decimal importe { get; set; }
-        public decimal dc { get; set; }
-        public decimal dv { get; set; }
-        public decimal dv2 { get; set; }
-        public decimal descuento { get; set; }
-        public decimal total { get; set; }
+        public int IdVentaDetalle { get; set; }
+        public int IdVenta { get; set; }
+        public int IdProducto { get; set; }
+        public int Cantidad { get; set; }
+        public decimal Precio { get; set; }
+        public decimal Importe { get; set; }
+        public decimal Dc { get; set; }
+        public decimal Dv { get; set; }
+        public decimal Dv2 { get; set; }
+        public decimal Descuento { get; set; }
+        public decimal Total { get; set; }
         public VentaDetalle() { }
 
         public int Add(DataTable ventaDetalle)
@@ -42,7 +37,7 @@ namespace FarmsRamirezBML
             foreach (DataRow item in ventaDetalle.Rows)
             {
                 DataRow row = dataTableVD.NewRow();
-                row["idVenta"] = idVenta;
+                row["idVenta"] = IdVenta;
                 row["idProducto"] = item["idProducto"];
                 row["cantidad"] = item["cantidad"];
                 row["precio"] = item["precio"];

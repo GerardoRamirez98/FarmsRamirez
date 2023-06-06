@@ -1,4 +1,5 @@
 ﻿using BarcodeLib;
+using DevExpress.Data.Browsing.Design;
 using DevExpress.XtraEditors;
 using FarmsRamirezBML;
 using System;
@@ -113,7 +114,6 @@ namespace SimiSoft
             }.GetById();
             txtID.Text = producto.IdProducto.ToString();
             txtCodigo.Text = producto.Codigo;
-            //txtCodigoBarra.Text = producto.codigoBarra;
             txtNombre.Text = producto.Nombre;
             txtDescripcion.Text = producto.Descripcion;
             txtMarca.Text = producto.Marca;
@@ -130,35 +130,18 @@ namespace SimiSoft
         {
             this.Close();
         }
-
+        
         //VARIABLE PARA ALMACENAR LA URL DEL ARCHIVO A SUBIR
         string url = "";
 
         //METODO PARA SUBIR ARCHIVO A CARPETA POR FTP
-        private int SubirArchivo()
+        private string SubirArchivo(string codigo)
         {
-            try
-            {
-                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.100.17/Imagen.jpg");
-                request.Method = WebRequestMethods.Ftp.UploadFile;
-                request.Credentials = new NetworkCredential("SISTEMA", "sistema");
-                request.UsePassive = true;
-                request.UseBinary = true;
-                request.KeepAlive = true;
-                FileStream stream = File.OpenRead(url);
-                byte[] buffer = new byte[stream.Length];
-                stream.Read(buffer, 0, buffer.Length);
-                stream.Close();
-                Stream reqStream = request.GetRequestStream();
-                reqStream.Write(buffer, 0, buffer.Length);
-                reqStream.Flush();
-                reqStream.Close();
-                return 1;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
+            var rutaSMB = "\\\\User6663-pc\\sistema\\i" + codigo + ".jpg";
+            if (File.Exists(rutaSMB))
+                return "";
+            File.Copy(url, rutaSMB);
+            return rutaSMB;
         }
 
         //BOTON PARA ABRIR IMAGEN
@@ -167,7 +150,8 @@ namespace SimiSoft
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             openFileDialog.InitialDirectory = "'c:\'";
-            openFileDialog.Filter = "jpg (*.jpg)|*.jpg|png (*.png)|*.png|gif (*.gif)|*.gif";
+            openFileDialog.Filter = "jpg (*.jpg)|*.jpg";
+
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -175,17 +159,6 @@ namespace SimiSoft
                 pbImagen.ImageLocation = url;
                 pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-        }
-
-        //BOTON PARA GUARDAR IMAGEN Y VALIDAR QUE SE HAYA ALMACENADO
-        private void btnGuardarImg_Click(object sender, EventArgs e)
-        {
-            int resultado = SubirArchivo();
-
-            if (resultado == 1)
-                MessageBox.Show("Archivo subido correctamente");
-            else
-                MessageBox.Show("Ha ocurrido un problema al subir el archivo");
         }
 
         //GUARDAR DATOS
@@ -199,7 +172,7 @@ namespace SimiSoft
                     if (new Producto
                     {
                         Codigo = txtCodigo.Text,
-                        //codigoBarra = txtCodigoBarra.Text,
+                        CodigoBarras = SubirArchivo(txtCodigo.EditValue.ToString()),
                         Nombre = txtNombre.Text,
                         Descripcion = txtDescripcion.Text,
                         Marca = txtMarca.Text,
@@ -210,6 +183,7 @@ namespace SimiSoft
                         Stock = Convert.ToInt32(txtStock.Text),
                         StockMin = Convert.ToInt32(txtStockMin.Text),
                         StockMax = Convert.ToInt32(txtStockMax.Text),
+                        Imagen = SubirArchivo(txtCodigo.EditValue.ToString())
 
                     }.Add() > 0)
                     {
@@ -236,6 +210,7 @@ namespace SimiSoft
                     producto.Stock = Convert.ToInt32(txtStock.Text);
                     producto.StockMin = Convert.ToInt32(txtStockMin.Text);
                     producto.StockMax = Convert.ToInt32(txtStockMax.Text);
+                    producto.Imagen = Convert.ToString(url);
 
                     if (producto.Update() > 0)
                     {

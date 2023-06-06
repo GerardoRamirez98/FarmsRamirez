@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using TECNIPRINT;
 
 namespace SimiSoft
 {
@@ -139,6 +140,25 @@ namespace SimiSoft
             SplashScreenManager.CloseDefaultWaitForm();
         }
 
+        private void btnVentas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmVenta))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargado Roles...");
+
+            new frmVenta() { MdiParent = this }.Show();
+
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
         private void btnCategorias_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (tabMdiManager.MdiParent == null)
@@ -177,6 +197,5 @@ namespace SimiSoft
                 }
         }
 
-        
     }
 }

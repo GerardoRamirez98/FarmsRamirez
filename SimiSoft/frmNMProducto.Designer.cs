@@ -56,11 +56,12 @@ namespace SimiSoft
             this.txtStockMax = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnAbrirImg = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGuardarImg = new DevExpress.XtraEditors.SimpleButton();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.pbCodigoBarra = new System.Windows.Forms.PictureBox();
             this.bntGenerarCodigo = new DevExpress.XtraEditors.SimpleButton();
             this.cboBarras = new System.Windows.Forms.ComboBox();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnidadM.Properties)).BeginInit();
@@ -75,6 +76,10 @@ namespace SimiSoft
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCodigoBarra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblID
@@ -95,14 +100,14 @@ namespace SimiSoft
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(278, 61);
+            this.txtDescripcion.Location = new System.Drawing.Point(304, 9);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 8;
             // 
             // lblDescripcion
             // 
-            this.lblDescripcion.Location = new System.Drawing.Point(192, 64);
+            this.lblDescripcion.Location = new System.Drawing.Point(218, 12);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(58, 13);
             this.lblDescripcion.TabIndex = 2;
@@ -110,14 +115,14 @@ namespace SimiSoft
             // 
             // txtUnidadM
             // 
-            this.txtUnidadM.Location = new System.Drawing.Point(278, 87);
+            this.txtUnidadM.Location = new System.Drawing.Point(304, 35);
             this.txtUnidadM.Name = "txtUnidadM";
             this.txtUnidadM.Size = new System.Drawing.Size(100, 20);
             this.txtUnidadM.TabIndex = 9;
             // 
             // lblUnidadM
             // 
-            this.lblUnidadM.Location = new System.Drawing.Point(192, 90);
+            this.lblUnidadM.Location = new System.Drawing.Point(218, 38);
             this.lblUnidadM.Name = "lblUnidadM";
             this.lblUnidadM.Size = new System.Drawing.Size(74, 13);
             this.lblUnidadM.TabIndex = 4;
@@ -143,7 +148,7 @@ namespace SimiSoft
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(278, 139);
+            this.txtStock.Location = new System.Drawing.Point(304, 87);
             this.txtStock.Name = "txtStock";
             this.txtStock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStock.Properties.MaskSettings.Set("mask", "d");
@@ -153,7 +158,7 @@ namespace SimiSoft
             // 
             // lblStock
             // 
-            this.lblStock.Location = new System.Drawing.Point(192, 142);
+            this.lblStock.Location = new System.Drawing.Point(218, 90);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(30, 13);
             this.lblStock.TabIndex = 10;
@@ -177,7 +182,7 @@ namespace SimiSoft
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(197, 201);
+            this.btnCancelar.Location = new System.Drawing.Point(137, 372);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 16;
@@ -186,7 +191,7 @@ namespace SimiSoft
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(278, 201);
+            this.btnGuardar.Location = new System.Drawing.Point(218, 372);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 15;
@@ -243,7 +248,7 @@ namespace SimiSoft
             // 
             // txtMargenG
             // 
-            this.txtMargenG.Location = new System.Drawing.Point(278, 113);
+            this.txtMargenG.Location = new System.Drawing.Point(304, 61);
             this.txtMargenG.Name = "txtMargenG";
             this.txtMargenG.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtMargenG.Properties.MaskSettings.Set("mask", "P");
@@ -253,7 +258,7 @@ namespace SimiSoft
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(192, 116);
+            this.labelControl4.Location = new System.Drawing.Point(218, 64);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(87, 13);
             this.labelControl4.TabIndex = 20;
@@ -279,7 +284,7 @@ namespace SimiSoft
             // 
             // txtStockMax
             // 
-            this.txtStockMax.Location = new System.Drawing.Point(278, 165);
+            this.txtStockMax.Location = new System.Drawing.Point(304, 113);
             this.txtStockMax.Name = "txtStockMax";
             this.txtStockMax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStockMax.Properties.MaskSettings.Set("mask", "d");
@@ -289,7 +294,7 @@ namespace SimiSoft
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(192, 168);
+            this.labelControl7.Location = new System.Drawing.Point(218, 116);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(69, 13);
             this.labelControl7.TabIndex = 26;
@@ -297,33 +302,24 @@ namespace SimiSoft
             // 
             // btnAbrirImg
             // 
-            this.btnAbrirImg.Location = new System.Drawing.Point(384, 187);
+            this.btnAbrirImg.Location = new System.Drawing.Point(68, 125);
             this.btnAbrirImg.Name = "btnAbrirImg";
             this.btnAbrirImg.Size = new System.Drawing.Size(75, 23);
             this.btnAbrirImg.TabIndex = 13;
             this.btnAbrirImg.Text = "Abrir";
             this.btnAbrirImg.Click += new System.EventHandler(this.btnAbrirImg_Click);
             // 
-            // btnGuardarImg
-            // 
-            this.btnGuardarImg.Location = new System.Drawing.Point(483, 187);
-            this.btnGuardarImg.Name = "btnGuardarImg";
-            this.btnGuardarImg.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarImg.TabIndex = 14;
-            this.btnGuardarImg.Text = "Guardar";
-            this.btnGuardarImg.Click += new System.EventHandler(this.btnGuardarImg_Click);
-            // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(384, 81);
+            this.pbImagen.Location = new System.Drawing.Point(5, 24);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(174, 95);
+            this.pbImagen.Size = new System.Drawing.Size(200, 95);
             this.pbImagen.TabIndex = 32;
             this.pbImagen.TabStop = false;
             // 
             // pbCodigoBarra
             // 
-            this.pbCodigoBarra.Location = new System.Drawing.Point(384, 1);
+            this.pbCodigoBarra.Location = new System.Drawing.Point(24, 24);
             this.pbCodigoBarra.Name = "pbCodigoBarra";
             this.pbCodigoBarra.Size = new System.Drawing.Size(150, 74);
             this.pbCodigoBarra.TabIndex = 33;
@@ -331,7 +327,7 @@ namespace SimiSoft
             // 
             // bntGenerarCodigo
             // 
-            this.bntGenerarCodigo.Location = new System.Drawing.Point(278, 31);
+            this.bntGenerarCodigo.Location = new System.Drawing.Point(54, 125);
             this.bntGenerarCodigo.Name = "bntGenerarCodigo";
             this.bntGenerarCodigo.Size = new System.Drawing.Size(100, 23);
             this.bntGenerarCodigo.TabIndex = 36;
@@ -342,10 +338,31 @@ namespace SimiSoft
             // 
             this.cboBarras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBarras.FormattingEnabled = true;
-            this.cboBarras.Location = new System.Drawing.Point(192, 33);
+            this.cboBarras.Location = new System.Drawing.Point(42, 102);
             this.cboBarras.Name = "cboBarras";
-            this.cboBarras.Size = new System.Drawing.Size(80, 21);
+            this.cboBarras.Size = new System.Drawing.Size(121, 21);
             this.cboBarras.TabIndex = 37;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.pbCodigoBarra);
+            this.groupControl1.Controls.Add(this.bntGenerarCodigo);
+            this.groupControl1.Controls.Add(this.cboBarras);
+            this.groupControl1.Location = new System.Drawing.Point(12, 191);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(200, 155);
+            this.groupControl1.TabIndex = 38;
+            this.groupControl1.Text = "Codigo de barras";
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.pbImagen);
+            this.groupControl2.Controls.Add(this.btnAbrirImg);
+            this.groupControl2.Location = new System.Drawing.Point(218, 191);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(210, 155);
+            this.groupControl2.TabIndex = 39;
+            this.groupControl2.Text = "Imagen";
             // 
             // frmNMProducto
             // 
@@ -353,13 +370,9 @@ namespace SimiSoft
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(574, 235);
-            this.Controls.Add(this.cboBarras);
-            this.Controls.Add(this.bntGenerarCodigo);
-            this.Controls.Add(this.pbCodigoBarra);
-            this.Controls.Add(this.pbImagen);
-            this.Controls.Add(this.btnGuardarImg);
-            this.Controls.Add(this.btnAbrirImg);
+            this.ClientSize = new System.Drawing.Size(441, 408);
+            this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.txtStockMax);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.txtStockMin);
@@ -408,6 +421,10 @@ namespace SimiSoft
             ((System.ComponentModel.ISupportInitialize)(this.txtStockMax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCodigoBarra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,10 +459,11 @@ namespace SimiSoft
         private DevExpress.XtraEditors.TextEdit txtStockMax;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SimpleButton btnAbrirImg;
-        private DevExpress.XtraEditors.SimpleButton btnGuardarImg;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.PictureBox pbCodigoBarra;
         private DevExpress.XtraEditors.SimpleButton bntGenerarCodigo;
         private System.Windows.Forms.ComboBox cboBarras;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
     }
 }

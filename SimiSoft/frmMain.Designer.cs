@@ -35,13 +35,13 @@ namespace SimiSoft
             this.mnArchivo = new DevExpress.XtraBars.BarSubItem();
             this.btnSalir = new DevExpress.XtraBars.BarButtonItem();
             this.mnCatalogo = new DevExpress.XtraBars.BarSubItem();
-            this.btnRoles = new DevExpress.XtraBars.BarButtonItem();
             this.btnAsignarPermisosRol = new DevExpress.XtraBars.BarButtonItem();
-            this.btnUsuarios = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCategorias = new DevExpress.XtraBars.BarButtonItem();
             this.btnClientes = new DevExpress.XtraBars.BarButtonItem();
             this.btnProveedores = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCategorias = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRoles = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUsuarios = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -49,6 +49,7 @@ namespace SimiSoft
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.tabMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnVentas = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +75,10 @@ namespace SimiSoft
             this.barButtonItem2,
             this.btnRoles,
             this.btnAsignarPermisosRol,
-            this.btnUsuarios});
+            this.btnUsuarios,
+            this.btnVentas});
             this.bManager.MainMenu = this.bar2;
-            this.bManager.MaxItemId = 11;
+            this.bManager.MaxItemId = 12;
             this.bManager.StatusBar = this.bar3;
             // 
             // bar2
@@ -120,15 +122,9 @@ namespace SimiSoft
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProveedores),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProductos),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnRoles),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnUsuarios)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnUsuarios),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnVentas)});
             this.mnCatalogo.Name = "mnCatalogo";
-            // 
-            // btnRoles
-            // 
-            this.btnRoles.Caption = "Rol";
-            this.btnRoles.Id = 8;
-            this.btnRoles.Name = "btnRoles";
-            this.btnRoles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRoles_ItemClick);
             // 
             // btnAsignarPermisosRol
             // 
@@ -137,12 +133,12 @@ namespace SimiSoft
             this.btnAsignarPermisosRol.Name = "btnAsignarPermisosRol";
             this.btnAsignarPermisosRol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAsignarPermisosRol_ItemClick);
             // 
-            // btnUsuarios
+            // btnCategorias
             // 
-            this.btnUsuarios.Caption = "Usuarios";
-            this.btnUsuarios.Id = 10;
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUsuarios_ItemClick);
+            this.btnCategorias.Caption = "Categorias";
+            this.btnCategorias.Id = 6;
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCategorias_ItemClick);
             // 
             // btnClientes
             // 
@@ -165,12 +161,19 @@ namespace SimiSoft
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductos_ItemClick);
             // 
-            // btnCategorias
+            // btnRoles
             // 
-            this.btnCategorias.Caption = "Categorias";
-            this.btnCategorias.Id = 6;
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCategorias_ItemClick);
+            this.btnRoles.Caption = "Rol";
+            this.btnRoles.Id = 8;
+            this.btnRoles.Name = "btnRoles";
+            this.btnRoles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRoles_ItemClick);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Caption = "Usuarios";
+            this.btnUsuarios.Id = 10;
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUsuarios_ItemClick);
             // 
             // bar3
             // 
@@ -226,6 +229,13 @@ namespace SimiSoft
             // 
             this.tabMdiManager.MdiParent = this;
             // 
+            // btnVentas
+            // 
+            this.btnVentas.Caption = "Ventas";
+            this.btnVentas.Id = 11;
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVentas_ItemClick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +279,7 @@ namespace SimiSoft
         private DevExpress.XtraBars.BarButtonItem btnUsuarios;
         private DevExpress.XtraBars.BarButtonItem btnCategorias;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnVentas;
     }
 }
 

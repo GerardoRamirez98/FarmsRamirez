@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="TECNIPRINT.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="logo.ico" asmv2:publisher="Juan Gerardo Tovar Ramirez" asmv2:product="SISTEMA TECNIPRINT" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="Sin_título-1-removebg-preview.ico" asmv2:publisher="Juan Gerardo Tovar Ramirez" asmv2:product="SISTEMA TECNIPRINT" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="TECNIPRINT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -279,7 +279,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8SVoXvEeyPb5ivyfcijuwiUQt++A9oPCDhyhmzrrSqw=</dsig:DigestValue>
+        <dsig:DigestValue>fRQw7z4unbVaIXSTBeMtakGNSZ1l62Toc4iKPnK+fUk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -428,14 +428,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TECNIPRINT.exe" size="373248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TECNIPRINT.exe" size="286208">
       <assemblyIdentity name="TECNIPRINT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mtW9PPXKY3xrwcQrqs+vFyW7lUhWLwPDrFITtWFcKKk=</dsig:DigestValue>
+        <dsig:DigestValue>kBMNaPkZ3wAz3d3LpXV9YceSpYCIZbm+CepEA4YH05A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -446,6 +446,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>0/r1sKuYu7ez1+zHQQzj4P0VA42uZZ64D6aF5PJDN98=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sin_título-1-removebg-preview.ico" size="177778">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Uf+WFx/hbMcNCd2olJBwcSRcsyVSRVX3Upbi5ip8aI8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TECNIPRINT.exe.config" size="3090">

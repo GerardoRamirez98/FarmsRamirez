@@ -23,6 +23,7 @@ namespace FarmsRamirezBML
         public int StockMax { get; set; }
         public bool Activo { get; set; }
         public DateTime FechaRegistro { get; set; }
+        public string Imagen { get; set; }
 
         public Producto()
         {
@@ -43,6 +44,7 @@ namespace FarmsRamirezBML
             parametros.Add("@Stock", Stock);
             parametros.Add("@StockMin", StockMin);
             parametros.Add("@StockMax", StockMax);
+            parametros.Add("@Imagen", Imagen);
             
             return dataAccess.Execute("stp_productos_add", parametros);
         }
