@@ -37,6 +37,18 @@ namespace TECNIPRINT
                 cbProducto.SelectedIndex = 0;
             }
 
+            //enlistar los clientes
+            List<Cliente> clientes = new Cliente().GetAll();
+            {
+                cbCliente.Items.Add(new ComboBoxItem() { Value = 0, Text = "Seleccione Producto" });
+                foreach (Cliente row in clientes.Where(x => x.Activo == true))
+                {
+                    cbCliente.Items.Add(new ComboBoxItem() { Value = row.IdCliente, Text = row.Nombres + " " + row.ApellidoPaterno + " " + row.ApellidoMaterno});
+                }
+                cbCliente.DisplayMember = "Text";
+                cbCliente.ValueMember = "Value";
+                cbCliente.SelectedIndex = 0;
+            }
 
         }
 

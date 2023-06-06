@@ -52,6 +52,7 @@ namespace SimiSoft
             this.ColActivo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColIdCategoria = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColFechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ColImagen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager3 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnActualizarProducto = new DevExpress.XtraBars.BarButtonItem();
@@ -65,7 +66,6 @@ namespace SimiSoft
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.bar8 = new DevExpress.XtraBars.Bar();
-            this.ColImagen = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProductos)).BeginInit();
@@ -339,6 +339,20 @@ namespace SimiSoft
             this.ColFechaRegistro.Visible = true;
             this.ColFechaRegistro.VisibleIndex = 13;
             // 
+            // ColImagen
+            // 
+            this.ColImagen.Caption = "Imagen";
+            this.ColImagen.FieldName = "Imagen";
+            this.ColImagen.Name = "ColImagen";
+            this.ColImagen.OptionsColumn.AllowEdit = false;
+            this.ColImagen.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.ColImagen.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.ColImagen.OptionsColumn.AllowMove = false;
+            this.ColImagen.OptionsColumn.AllowSize = false;
+            this.ColImagen.OptionsColumn.FixedWidth = true;
+            this.ColImagen.Visible = true;
+            this.ColImagen.VisibleIndex = 14;
+            // 
             // barManager3
             // 
             this.barManager3.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -454,14 +468,6 @@ namespace SimiSoft
             this.bar8.OptionsBar.DrawDragBorder = false;
             this.bar8.OptionsBar.UseWholeRow = true;
             this.bar8.Text = "Barra de estado";
-            // 
-            // ColImagen
-            // 
-            this.ColImagen.Caption = "Imagen";
-            this.ColImagen.FieldName = "Imagen";
-            this.ColImagen.Name = "ColImagen";
-            this.ColImagen.Visible = true;
-            this.ColImagen.VisibleIndex = 14;
             // 
             // frmProductos
             // 
