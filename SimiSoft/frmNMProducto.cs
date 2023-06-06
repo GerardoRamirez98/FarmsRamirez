@@ -42,19 +42,33 @@ namespace SimiSoft
             cboBarras.SelectedIndex = 31;
         }
 
+        private bool ExisteCodigoDeBarras(string codigo)
+        {
+            string filePath = "\\\\User6663-pc\\sistema\\" + codigo + ".png";
+            return File.Exists(filePath);
+        }
+
         private void bntGenerarCodigo_Click(object sender, EventArgs e)
         {
+            string codigo = txtCodigo.Text;
+
+            if (ExisteCodigoDeBarras(codigo))
+            {
+                MessageBox.Show("El código de barras ya existe");
+                return;
+            }
+
             Image imagenCodigoB;
 
             int indice = (cboBarras.SelectedItem as TipoCodigoBarras).Valor;
 
             BarcodeLib.TYPE tipoCodigo = (BarcodeLib.TYPE)indice;
 
-            Barcode codigo = new Barcode();
-            codigo.IncludeLabel = true;
-            codigo.LabelPosition = LabelPositions.BOTTOMCENTER;
+            Barcode codigoBarra = new Barcode();
+            codigoBarra.IncludeLabel = true;
+            codigoBarra.LabelPosition = LabelPositions.BOTTOMCENTER;
 
-            imagenCodigoB = codigo.Encode(tipoCodigo, txtCodigo.Text, Color.Black, Color.White, 150, 50);
+            imagenCodigoB = codigoBarra.Encode(tipoCodigo, codigo, Color.Black, Color.White, 150, 50);
 
             Bitmap imagenTitulo = convertirTextoImagen(txtNombre.Text, 150, Color.White);
 
@@ -66,7 +80,13 @@ namespace SimiSoft
             dibujar.DrawImage(imagenTitulo, new Point(0, 0));
             dibujar.DrawImage(imagenCodigoB, new Point(0, imagenTitulo.Height));
 
+            string filePath = "\\\\User6663-pc\\sistema\\" + codigo + ".png";
+
+            imagenNueva.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+
             pbCodigoBarra.BackgroundImage = imagenNueva;
+
+            MessageBox.Show("Código de barras generado y guardado exitosamente");
         }
 
         public static Bitmap convertirTextoImagen(string texto, int ancho, Color color)
@@ -137,7 +157,7 @@ namespace SimiSoft
         //METODO PARA SUBIR ARCHIVO A CARPETA POR FTP
         private string SubirArchivo(string codigo)
         {
-            var rutaSMB = "\\\\User6663-pc\\sistema\\i" + codigo + ".jpg";
+            var rutaSMB = "\\\\User6663-pc\\sistema\\TECNIPRINT" + codigo + ".jpg";
             if (File.Exists(rutaSMB))
                 return "";
             File.Copy(url, rutaSMB);
@@ -172,7 +192,7 @@ namespace SimiSoft
                     if (new Producto
                     {
                         Codigo = txtCodigo.Text,
-                        CodigoBarras = SubirArchivo(txtCodigo.EditValue.ToString()),
+                        CodigoBarras = txtCodigo.EditValue.ToString(),
                         Nombre = txtNombre.Text,
                         Descripcion = txtDescripcion.Text,
                         Marca = txtMarca.Text,
@@ -199,7 +219,7 @@ namespace SimiSoft
                 else
                 {
                     producto.Codigo = txtCodigo.Text;
-                    //producto.codigoBarra = txtCodigoBarra.Text;
+                    producto.CodigoBarras = txtCodigo.EditValue.ToString();
                     producto.Nombre = txtNombre.Text;
                     producto.Descripcion = txtDescripcion.Text;
                     producto.Marca = txtMarca.Text;
