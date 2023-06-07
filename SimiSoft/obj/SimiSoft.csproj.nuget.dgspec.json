@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj": {}
+    "C:\\Users\\USER\\Source\\Repos\\Sistema\\SimiSoft\\SimiSoft.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj": {
+    "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezBML\\FarmsRamirezBML.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezBML\\FarmsRamirezBML.csproj",
         "projectName": "FarmsRamirezBML",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj",
+        "projectPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezBML\\FarmsRamirezBML.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj": {
-                "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj"
+              "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj": {
+                "projectPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj"
               }
             }
           }
@@ -23,14 +23,14 @@
         "net472": {}
       }
     },
-    "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj": {
+    "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
         "projectName": "FarmsRamirezDAL",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
+        "projectPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezDAL\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
@@ -104,14 +104,14 @@
         }
       }
     },
-    "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj": {
+    "C:\\Users\\USER\\Source\\Repos\\Sistema\\SimiSoft\\SimiSoft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\Sistema\\SimiSoft\\SimiSoft.csproj",
         "projectName": "TP",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
+        "projectPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\SimiSoft\\SimiSoft.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\SimiSoft\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
@@ -135,8 +135,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj": {
-                "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj"
+              "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezBML\\FarmsRamirezBML.csproj": {
+                "projectPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezBML\\FarmsRamirezBML.csproj"
               }
             }
           }
