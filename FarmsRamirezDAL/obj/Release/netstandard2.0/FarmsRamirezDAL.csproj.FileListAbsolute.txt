@@ -1,0 +1,8 @@
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\bin\Release\netstandard2.0\FarmsRamirezDAL.deps.json
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\bin\Release\netstandard2.0\FarmsRamirezDAL.dll
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\bin\Release\netstandard2.0\FarmsRamirezDAL.pdb
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\obj\Release\netstandard2.0\FarmsRamirezDAL.csproj.AssemblyReference.cache
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\obj\Release\netstandard2.0\FarmsRamirezDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\obj\Release\netstandard2.0\FarmsRamirezDAL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\obj\Release\netstandard2.0\FarmsRamirezDAL.dll
+C:\Users\USER\Source\Repos\FarmsRamirez\FarmsRamirezDAL\obj\Release\netstandard2.0\FarmsRamirezDAL.pdb
