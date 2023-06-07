@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ktaKko6yOh5D1+RzwpQ8PZlXSbsHEpDhqBHkeIFQi66WZ9IKohgxVztWYDvFzkC33oSn2s9w2hqM1vR6gsnEGA==",
+  "dgSpecHash": "TPRS7rjMu9E5tZtIea+3X0NPbxolMqyKvbPfibc23CMKCKnC5MNQi0tvJWWUg6nFRSfG2Z10dcf9qUkucNliUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\SimiSoft\\SimiSoft.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\barcodelib\\2.0.0\\barcodelib.2.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

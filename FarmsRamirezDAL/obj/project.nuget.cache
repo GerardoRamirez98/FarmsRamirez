@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "miWT3IGsxP0EHrmuQrDJ5j+fwxRNRMjTHvHsYkHk3WOEOlyrYvUYRsD/iIJUlGCnkQDiao5N7pKSshfXRo3ToQ==",
+  "dgSpecHash": "owl439AQHBEtad42FX87cs4zbk0SkrYRYiLL6YA+YoOUjIBammP+OO7irmbZmnpFFq18E0g9LCZxajghodxmBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

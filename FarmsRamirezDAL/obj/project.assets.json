@@ -1195,11 +1195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
       "projectName": "FarmsRamirezDAL",
-      "projectPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
+      "projectPath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\FarmsRamirezDAL\\FarmsRamirezDAL.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Source\\Repos\\Sistema\\FarmsRamirezDAL\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\FarmsRamirezDAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
