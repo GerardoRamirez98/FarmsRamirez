@@ -64,13 +64,13 @@
       <dsig:DigestValue>LW/X0XQnM+pBgeLv21j433SFuMMIhwZdEGZiC54GNDs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BarcodeStandard.dll" size="99840">
+  <file name="BarcodeStandard.dll" size="98304">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vNE/g+jGVMYqnyaWlxdyjYxLdqCyjT5hfSFLRWdxZxQ=</dsig:DigestValue>
+      <dsig:DigestValue>bEG3O/GP2VBxJVgmVJYnfNfRrc6yV4zV7m58Ji0dprI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Dapper.dll" size="202752">
@@ -655,7 +655,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/9/x7YjRaxXvbYS2FMgf2DSCUcD0gBB/iTQh9bdEdwo=</dsig:DigestValue>
+      <dsig:DigestValue>HS0F6sdwe2OizqH1qi52l0Zq7cIHwJ1EyD93Dfr2qDs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="FarmsRamirezDAL.dll" size="7168">
@@ -664,7 +664,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Y0Waj992wYUUMHWw3Z28iUSXivz74azgwvmiSLmGroA=</dsig:DigestValue>
+      <dsig:DigestValue>/ty3bUVrF2JONgtiHlGGcZ3hd5s91vl1/0dG50PjgEg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="libSkiaSharp.dylib" size="15852880">
@@ -1168,7 +1168,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BJLQg214LM4xWqwk0palAFGIfqw9thAcT5GG7xey690=</dsig:DigestValue>
+      <dsig:DigestValue>Pb8l027g/Qo9CrPyMt6nyAwNZiTzohQN5emWlU9ii8g=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TP.dll.config" size="4314">

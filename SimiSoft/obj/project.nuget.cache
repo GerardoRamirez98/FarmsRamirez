@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TPRS7rjMu9E5tZtIea+3X0NPbxolMqyKvbPfibc23CMKCKnC5MNQi0tvJWWUg6nFRSfG2Z10dcf9qUkucNliUA==",
+  "dgSpecHash": "8r4KoPiBt31+D6Pcfb5wU86LsvHKVV8bK8urhGXRVzyniC8MRkxd+3QqQoBXByFMyb+6y9Iv1iCzDbteAmVIbQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\barcodelib\\2.0.0\\barcodelib.2.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\barcodelib\\2.4.0\\barcodelib.2.4.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.charts\\22.2.3\\devexpress.charts.22.2.3.nupkg.sha512",
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.charts.core\\22.2.3\\devexpress.charts.core.22.2.3.nupkg.sha512",

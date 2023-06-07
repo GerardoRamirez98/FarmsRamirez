@@ -66,6 +66,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "BarcodeLib": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
@@ -153,7 +157,7 @@
           "dependencies": {
             "BarcodeLib": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[2.4.0, )"
             },
             "DevExpress.Win.BonusSkins": {
               "target": "Package",

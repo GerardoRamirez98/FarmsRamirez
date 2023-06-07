@@ -2,10 +2,11 @@
   "version": 3,
   "targets": {
     "net7.0-windows7.0": {
-      "BarcodeLib/2.0.0": {
+      "BarcodeLib/2.4.0": {
         "type": "package",
         "dependencies": {
-          "System.Drawing.Common": "4.5.1"
+          "System.Drawing.Common": "5.0.2",
+          "System.Text.Json": "5.0.2"
         },
         "compile": {
           "lib/netstandard2.0/BarcodeStandard.dll": {}
@@ -2407,6 +2408,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BarcodeLib": "2.4.0",
           "Dapper": "2.0.123",
           "Microsoft.CSharp": "4.7.0",
           "System.Data.DataSetExtensions": "4.5.0",
@@ -2422,16 +2424,18 @@
     }
   },
   "libraries": {
-    "BarcodeLib/2.0.0": {
-      "sha512": "B1SYnwBxTrBs9hrIBzSo2mXwkhTUw8gQcVA4ic5w6kV96sSiLu6Dm+PV76jHJXUNsqZzrqd/lOtU2SF1yczyRw==",
+    "BarcodeLib/2.4.0": {
+      "sha512": "SXMILkQm3jpngFmSa6AafsaJNid8UWCZh1v4w2oWxBzXnuVaL/S7H+nMxslWbPOPz1AVaLenRbFgy3OtX9J4dQ==",
       "type": "package",
-      "path": "barcodelib/2.0.0",
+      "path": "barcodelib/2.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "barcodelib.2.0.0.nupkg.sha512",
+        "LICENSE.txt",
+        "barcodelib.2.4.0.nupkg.sha512",
         "barcodelib.nuspec",
-        "lib/netstandard2.0/BarcodeStandard.dll"
+        "lib/netstandard2.0/BarcodeStandard.dll",
+        "upca.jpg"
       ]
     },
     "Dapper/2.0.123": {
@@ -6068,7 +6072,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "BarcodeLib >= 2.0.0",
+      "BarcodeLib >= 2.4.0",
       "DevExpress.Win.BonusSkins >= 22.2.*-*",
       "DevExpress.Win.Design >= 22.2.*-*",
       "DevExpress.Win.Grid >= 22.2.*-*",
@@ -6144,7 +6148,7 @@
         "dependencies": {
           "BarcodeLib": {
             "target": "Package",
-            "version": "[2.0.0, )"
+            "version": "[2.4.0, )"
           },
           "DevExpress.Win.BonusSkins": {
             "target": "Package",
