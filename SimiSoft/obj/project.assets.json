@@ -6102,9 +6102,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
       "projectName": "TP",
-      "projectPath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\SimiSoft\\SimiSoft.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\SimiSoft\\obj\\",
       "projectStyle": "PackageReference",
@@ -6130,8 +6130,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj": {
-              "projectPath": "C:\\Users\\USER\\Source\\Repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj"
+            "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj": {
+              "projectPath": "C:\\Users\\USER\\source\\repos\\FarmsRamirez\\FarmsRamirezBML\\FarmsRamirezBML.csproj"
             }
           }
         }
